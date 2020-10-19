@@ -169,12 +169,12 @@ display:inline-block;
 .banner1{
 	background:url("../imagesOfUs/engineer.jpg") no-repeat 0px 0px;
 	background-size:cover;
-	min-height:585px;
+	min-height:500px;
 }
 .banner2{
 	background:url("../imagesOfUs/key1.jpg") no-repeat 0px 0px;
 	background-size:cover;
-	min-height:585px;
+	min-height:500px;
 }
 .banner3{
 	background:url(../images/bnr3.jpg) no-repeat 0px 0px;
