@@ -243,12 +243,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <%String msg = (String)session.getAttribute("message");%>
 </script>
 
-
+<%--
 <script type="javascript">
   if(<%=msg%> != null) {
       alert(<%=msg%>);
   }
-</script>
+</script>--%>
 
 <script type="text/jsp">
 <!--此处将msg信息归零-->
