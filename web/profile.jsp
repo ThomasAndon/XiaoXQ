@@ -249,6 +249,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       alert(<%=msg%>);
   }
 </script>--%>
+<%--
 
 <script type="text/jsp">
 <!--此处将msg信息归零-->
@@ -257,6 +258,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   %>
 </script>
 
+--%>
 
 
   <script src="js/Profile.js"></script>
