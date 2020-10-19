@@ -291,17 +291,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div id="changeinfobox" class="changebox">
   <button type="button" class="btn btn-danger" id="closechangeinfobtn" onClick="showorclose('changeinfobox',0)">Close</button>
 <div class="cif-inputbox" id="pwcheck">
-    <p class="prompt">We need to verify your password</p>
-    <input type="password" width="50px" id="veripw">
+    <p class="prompt">We need to verify your password</p><br><br>
+    <input type="password" width="50px" id="veripw"><br><br>
     <button onClick="showchangebar(<%=password%>)">Verify</button>
-    <br>
+    <br><br>
     <p id="rightorwrong">Waiting for verification...</p>
   </div>
   <form method="post" action="${pageContext.request.contextPath}/changepi">
     <div class="cif-inputbox" id="showchange" >
-      <p>Change your real name "<%=realname%>" to:</p>
-      <input id="changern" name="rninput">
-      <p>Change your address "<%=addr%>" to:</p>
+      <p>Change your real name "<%=realname%>" to:</p><br><br>
+      <input id="changern" name="rninput"><br><br>
+      <p>Change your address "<%=addr%>" to:</p><br><br>
       <input id="changeaddr" name="addrinput">
       <br>
       <br>
@@ -315,10 +315,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <button type="button" class="btn btn-danger" id="closechangepwbtn" onClick="showorclose('changepwbox',0)">Close</button>
   <form method="post" action="${pageContext.request.contextPath}/changepw">
     <div id='check-and-new'>
-      <p class="changepwprompt">Enter your original password:</p>
-      <input type="password" name="enter-ori">
-      <p class="changepwprompt">Enter your new password:</p>
-      <input name="enter-new" type='password'>
+      <p class="changepwprompt">Enter your original password:</p><br><br>
+      <input type="password" name="enter-ori"><br><br>
+      <p class="changepwprompt">Enter your new password:</p><br><br>
+      <input name="enter-new" type='password'><br><br>
     </div>
     <div id='submit-changepw-btn'>
       <input type='submit' value='Submit' class='btn btn-success' >
