@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Login</title>
-	<link rel="stylesheet" type="text/css" href="css/profilepage.css.css">
+
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/docs.min.css" rel="stylesheet">
 <!-- Custom Theme files -->
