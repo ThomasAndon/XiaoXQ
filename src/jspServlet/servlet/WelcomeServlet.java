@@ -32,8 +32,8 @@ public class WelcomeServlet extends HttpServlet {
         commodity.setPrice(Float.parseFloat(req.getParameter("price")));
         commodity.setInstructions(req.getParameter("instructions"));
         commodity.setName(req.getParameter("name"));
-        commodity.setLargeClass(req.getParameter("largeClass"));
-        commodity.setSmallClass(req.getParameter("smallClass"));
+        commodity.setTheColor(req.getParameter("largeClass"));
+        commodity.setTheClass(req.getParameter("smallClass"));
         commodity.setUserId(Integer.parseInt(req.getParameter("userId")));
         CommodityDAO dao=new CommodityDAOImpl();
         try {
