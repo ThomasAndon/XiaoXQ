@@ -44,7 +44,7 @@
 /*这个是弹出对话框的总div的样式控制部分*/
 #changeinfobox {
   background-color: whitesmoke;
-  height: 600px;
+  height: 500px;
   width: 600px;
   position: absolute;
   top:50%;

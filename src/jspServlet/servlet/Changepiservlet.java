@@ -29,6 +29,8 @@ public class Changepiservlet extends HttpServlet {
 
         } else if (m == 1) {
             //todo 修改信息成功 Info changed successfully!
+            req.getSession().setAttribute("realName", newrn);
+            req.getSession().setAttribute("address", newaddr);
             req.getSession().setAttribute("message", "Info Changed SUCCESSFULLY");
         }
 
