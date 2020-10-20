@@ -83,13 +83,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!---->
         <div class="top-nav">
             <ul class="memenu skyblue">
-                <li class="active"><a href="index(welcome).jsp">Home</a>
-                </li>
-
-                <li class="grid"><a href="products.jsp">Products</a>
-                </li>
-                <li class="grid"><a href="./aboutus.jsp">About Us</a>
-                </li>
+                <li class="active"><a href="index(welcome).jsp">Home</a></li>
+                <li class="grid"><a href="products.jsp">Products</a></li>
+                <li class="grid"><a id="order" href="order.jsp">Order</a></li>
+                <li class="grid"><a href="./aboutus.jsp">About Us</a></li>
             </ul>
         </div>
         <!---->
@@ -174,8 +171,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             document.getElementById("user").style.display='inline';
             document.getElementById("rl1").style.display='none';
             document.getElementById("rl2").style.display='inline';
+            document.getElementById("order").style.display='inline';
 
         }else{
+            document.getElementById("order").style.display='none';
             document.getElementById("user").style.display='none';
             document.getElementById("rl1").style.display='inline';
             document.getElementById("rl2").style.display='none';
@@ -191,21 +190,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!---->
 <div class="login_sec">
-    <div class="container">
+    <div class="container" style="font-size: 21px;">
         <ol class="breadcrumb">
             <li><a href="index(welcome).jsp">Home</a></li>
             <li class="active">Register</li>
         </ol>
         <h2>Register</h2>
         <div class="col-md-6 log">
-            <form method="post" action="./logup" >
+            <form method="post" action="./logup">
                 <h5>User Name</h5>
                 <input type="text" value="" name="Name">
                 <h5>Account</h5>
                 <input type="text" value="" name="Account">
                 <h5>Password</h5>
                 <input id="P" type="text" value="" name="Password">
-                <span style="color: red" position: absolute id="PT"></span>
+                <span style="color: red" position:="" absolute="" id="PT"></span>
                 <h5>Gender</h5>
                 <input type="text" value="" name="Gender">
                 <h5>Address</h5>

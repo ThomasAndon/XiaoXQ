@@ -108,13 +108,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!---->
 		<div class="top-nav">
 			<ul class="memenu skyblue">
-				<li class="grid"><a href="index(welcome).jsp">Home</a>
-				</li>
-
-				<li class="grid"><a href="products.jsp">Products</a>
-				</li>
-				<li class="active"><a href="./aboutus.jsp">About Us</a>
-				</li>
+				<li class="grid"><a href="index(welcome).jsp">Home</a></li>
+				<li class="grid"><a href="products.jsp">Products</a></li>
+				<li class="grid"><a id="order" href="order.jsp">Order</a></li>
+				<li class="active"><a href="./aboutus.jsp">About Us</a></li>
 			</ul>
 		</div>
 		<!---->
@@ -199,8 +196,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			document.getElementById("user").style.display='inline';
 			document.getElementById("rl1").style.display='none';
 			document.getElementById("rl2").style.display='inline';
+			document.getElementById("order").style.display='inline';
 
 		}else{
+			document.getElementById("order").style.display='none';
 			document.getElementById("user").style.display='none';
 			document.getElementById("rl1").style.display='inline';
 			document.getElementById("rl2").style.display='none';
