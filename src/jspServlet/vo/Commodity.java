@@ -6,9 +6,11 @@ package jspServlet.vo;
  */
 public class Commodity {
 
+    private int CommodityId;
     private String Name;
-    private String LargeClass;
-    private String SmallClass;
+    private Float Price;
+    private String TheColor;
+    private String TheClass;
     private String Instructions;
     private int CommodityId;
     private int UserId;

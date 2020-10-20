@@ -1,3 +1,4 @@
+<%@ page import="jspServlet.vo.Commodity" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,6 +77,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--header-->
 
 <%
+	System.out.println("---single---");
+	/*
 	Double totalPrice = (Double)session.getAttribute("totalPrice");
 	if(totalPrice == null){
 		totalPrice = 0.;
@@ -85,6 +88,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	if(cmAmount == null){
 		cmAmount = 0;
 	}
+
+	 */
 %>
 
 <div id="identifier" class="modal" data-toggle="modal" tabindex="-1" role="dialog">
@@ -150,15 +155,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="row justify-content-md-center">
 
 						<div class="col-md12">
-							<%String name=(String)session.getAttribute("username");%>
-							<a href="profile.jsp"><h4 style="line-height: 2.8">Welcome! <%=name%></h4></a>
+							<%//String name=(String)session.getAttribute("username");%>
+							<a href="profile.jsp"><h4 style="line-height: 2.8">Welcome! <%=(String)session.getAttribute("username")%></h4></a>
 						</div>
 					</div>
+					<%-->
+					下面这段是购物车的金额
+
 					<div class="row justify-content-md-center">
 						<div class="col-md12">
 							<h5 style="line-height: 36px"><span class="simpleCart_total"></span></h5>
 						</div>
 					</div>
+					<--%>
 					<div class="row justify-content-md-center">
 						<div class="col-md12">
 							<a href="javascript:;" class="btn btn-success btn-sm" style="font-size: 1.4rem;">Empty Cart</a>
@@ -228,10 +237,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 		<div class="product-price1">
 			<div class="top-sing">
+				<!--
+
+				-->
 				<%
-					int cmId = Integer.parseInt(request.getParameter("CommdityId"));
-					StringBuffer cmName = new StringBuffer();
-					Double cmPrice = 0.;
+					/**
+					 *
+					 * @商品加载功能author Luo Deng
+					 */
+
+
+					//根据cmId为页面显示准备变量，保证不同Id对应不同页面信息
+					Commodity tempCm = (Commodity)session.getAttribute("tempCm");
+					int cmId = tempCm.getCommodityId();
+					System.out.println("cmId = " + cmId);
+					//int cmId = Integer.parseInt(request.getParameter("CommodityId"));
+					//StringBuffer cmName = new StringBuffer();
+					//Double cmPrice = 0.;
 					StringBuffer descText = new StringBuffer();
 					StringBuffer imageUrl1 = new StringBuffer();
 					StringBuffer imageUrl2 = new StringBuffer();
@@ -239,23 +261,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					switch(cmId){
 						case 1:
-							cmName.append("Electronic organ1");
-							cmPrice = 1200.;
+							//cmName.append("Electronic organ1");
+							//cmPrice = 1200.;
 							descText.append("The keyboard comes with world leading digital audio technology, " +
 									"with professional quality and gives you the best experience.");
+
 							imageUrl1.append("imagesOfUs/key1.jpg");
 							imageUrl2.append("imagesOfUs/key2.jpg");
 							imageUrl3.append("imagesOfUs/key3.png");
 							break;
 
 						case 2:
-							cmName.append("Electronic organ2");
-							cmPrice = 1400.;
+							//cmName.append("Electronic organ2");
+							//cmPrice = 1400.;
 							descText.append("The keyboard comes with world leading digital audio technology, " +
 									"with professional quality and gives you the best experience.");
-							imageUrl1.append("imagesOfUs/key2.jpg");
-							imageUrl2.append("imagesOfUs/key3.png");
-							imageUrl3.append("imagesOfUs/key4.jpg");
+							imageUrl1.append("imagesOfUs/key5.jpg");
+							imageUrl2.append("imagesOfUs/key7.jpg");
+							imageUrl3.append("imagesOfUs/key8.jpg");
 							break;
 
 						default:
@@ -264,15 +287,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							break;
 					}
 
+					/*
 					session.setAttribute("cmName", cmName);
 					session.setAttribute("cmPrice", cmPrice);
 					session.setAttribute("cmId", cmId);
+
+					 */
+
+
 				%>
+
+				<!--
+				 这段代码无法显示图片，全部无法运行
+
 
 				<div class="col-md-7 single-top">
 					<div class="flexslider">
 						<ul class="slides">
 							<li data-thumb=<%=imageUrl1.toString()%>>
+								<h6>Yahu</h6>
 								<div class="thumb-image"> <img src="imagesOfUs/key1.jpg", data-imagezoom="true", class="img-responsive", alt=""/> </div>
 							</li>
 							<li data-thumb=<%=imageUrl2.toString()%>>
@@ -296,11 +329,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</script>
 
 				</div>
+				-->
 				<div class="col-md-5 single-top-in simpleCart_shelfItem">
 					<div class="single-para ">
-
-						<h4><%=cmName.toString()%></h4>
-						<h5 class="item_price">$ <%=cmPrice%></h5>
+						<h4><%=tempCm.getName()%></h4>
+						<h5 class="item_price">$ <%=tempCm.getPrice()%></h5>
 						<p class="para"><%=descText.toString()%></p>
 						<div class="prdt-info-grid">
 							<ul>
@@ -350,14 +383,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								if(a != 'ok' || !a){
 									document.addingCart.action="./login.jsp";
 								}else{
-									document.addingCart.action="./checkout.jsp";
+									document.addingCart.action="./shop";
 								}
 							}
 						</script>
 						<form name="addingCart" method="post" action="" onsubmit="IdCheck();">
 							<%--System.out.println(session.getAttribute("try"));--%>
 							<input type="button" onclick="decrease()" value="-"/>
-							<input id="Bnumber" type="text" size="5" name="number" value="0">
+							<!--
+							input id="Bnumber" type="text" size="5" name="number" value="0"
+							--><input id="Bnumber" type="text" size="5" name="count" value="0">
 							<input type="button" onclick="increase()" value="+"/><br/>
 							<input type="submit" value="Add to Cart" class="add-cart item_add">
 

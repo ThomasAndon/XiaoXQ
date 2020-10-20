@@ -5,11 +5,16 @@ package jspServlet.vo;
  * @author Zeyang Sun
  */
 public class Customer {
+    private Integer ID;
     private String Name;
     private String Account;
     private String Password;
     private String Gender;
     private String Address;
+
+    public Integer getID() { return ID; }
+
+    public void setID(Integer id) { ID = id; }
 
     public String getName() {
         return Name;
