@@ -32,6 +32,6 @@ public class Changepiservlet extends HttpServlet {
             req.getSession().setAttribute("message", "Info Changed SUCCESSFULLY");
         }
 
-        resp.sendRedirect("./profile.jsp");
+        resp.sendRedirect(req.getContextPath()+"/profile.jsp");
     }
 }
