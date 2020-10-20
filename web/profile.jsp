@@ -291,7 +291,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div id="changeinfobox" class="changebox">
   <button type="button" class="btn btn-danger" id="closechangeinfobtn" onClick="showorclose('changeinfobox',0)">Close</button>
 <div class="cif-inputbox" id="pwcheck">
-    <p class="prompt">We need to verify your password</p><br><br>
+    <p class="prompt">We need to verify your password</p><br>
     <input type="password" width="50px" id="veripw"><br><br>
     <button onClick="showchangebar(<%=password%>)">Verify</button>
     <br><br>
