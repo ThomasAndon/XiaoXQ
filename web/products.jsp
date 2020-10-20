@@ -511,11 +511,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				var Pname5 = Pname + (PN+4) +".jpg";
 				var Pname6 = Pname + (PN+5) +".jpg";
 				document.getElementById("product1").src = Pname1;
+				document.getElementById("name1").innerText = "key"+PN;
 				document.getElementById("product2").src = Pname2;
+				document.getElementById("name2").innerText = "key"+(PN+1);
 				document.getElementById("product3").src = Pname3;
+				document.getElementById("name3").innerText = "key"+(PN+2);
 				document.getElementById("product4").src = Pname4;
+				document.getElementById("name4").innerText = "key"+(PN+3);
 				document.getElementById("product5").src = Pname5;
+				document.getElementById("name5").innerText = "key"+(PN+4);
 				document.getElementById("product6").src = Pname6;
+				document.getElementById("name6").innerText = "key"+(PN+5);
 			}
 
 			window.onload=Pic;
