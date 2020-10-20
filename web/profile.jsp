@@ -299,9 +299,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   </div>
   <form method="post" action="${pageContext.request.contextPath}/changepi">
     <div class="cif-inputbox" id="showchange" >
-      <p>Change your real name "<%=realname%>" to:</p><br><br>
+      <p>Change your real name "<%=realname%>" to:</p><br>
       <input id="changern" name="rninput"><br><br>
-      <p>Change your address "<%=addr%>" to:</p><br><br>
+      <p>Change your address "<%=addr%>" to:</p><br>
       <input id="changeaddr" name="addrinput">
       <br>
       <br>
