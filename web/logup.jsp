@@ -108,7 +108,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <%--				 <div class="col-md-1">cmd1</div>--%>
                 <div class="col-md-3 col-md-offset-10" id="logg">
                     <a href="login.jsp">
-                        <img style="margin-top: 30px" src="imagesOfUs/Login_P.png" height="50px" width="50px">
+                        <span style="font-size: 35px;line-height: 2.2;" class="glyphicon glyphicon-log-in btn-lg"></span>
                     </a>
                 </div>
                 <div class="col-md-3 col-md-offset-9" id="user">
@@ -119,14 +119,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <a href="profile.jsp"><h4 style="line-height: 2.8">Welcome! <%=name%></h4></a>
                         </div>
                     </div>
+<%--                    <div class="row justify-content-md-center">--%>
+<%--                        <div class="col-md12">--%>
+<%--                            <h5 style="line-height: 36px"><span class="simpleCart_total"></span></h5>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
                     <div class="row justify-content-md-center">
                         <div class="col-md12">
-                            <h5 style="line-height: 36px"><span class="simpleCart_total"></span></h5>
-                        </div>
-                    </div>
-                    <div class="row justify-content-md-center">
-                        <div class="col-md12">
-                            <a href="javascript:;" class="btn btn-success btn-sm" style="font-size: 1.4rem;">Empty Cart</a>
+                            <a href="profile.jsp" class="btn btn-success btn-sm" style="font-size: 1.4rem;">Information</a>
                         </div>
                     </div>
                     <div class="row justify-content-md-center">
