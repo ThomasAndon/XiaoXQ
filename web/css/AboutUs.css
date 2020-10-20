@@ -1,0 +1,66 @@
+#mainContainer {
+    height: 1200px;
+}
+
+#contentContainer1 {
+  padding-top: 29px;
+  padding-right: 29px;
+  padding-bottom: 29px;
+  padding-left: 29px;
+  width: 819px;
+  float: left;
+  margin-top: 81px;
+  margin-left: 11%;
+}
+
+.textcontent {
+  font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+  font-size: 30px;
+}
+
+#containpic1 {
+  float: right;
+  width: 283px;
+  height: 110px;
+  transform: translate(-100px,100px);
+  margin-right: 22%;
+  border-radius: 0px;
+}
+
+#pic1 {
+  height: 200px;
+  width: 400px;
+  border-radius: 37px;
+}
+
+#section1 {
+    height: 300px;
+}
+
+
+#pic2 {
+    height: 210px;
+    width: 420px;
+    border-radius: 35px;
+}
+
+#containpic2 {
+  width: 200px;
+  height: 100px;
+  transform: translate(50px,50px);
+  margin-left: 19%;
+}
+#contentContainer2 {
+  float: right;
+  width: 559px;
+  margin-right: 10%;
+}
+
+#section2 {
+    height: 400px;
+}
+
+#contentContainer3 {
+  margin-left: 50%;
+  transform: translate(-50%,0);
+}

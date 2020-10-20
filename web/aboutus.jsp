@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>single</title>
+  <link href="css/AboutUs.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <!-- Custom Theme files -->
@@ -214,54 +215,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="clearfix"> </div>
 			<h1 class="text-center">&nbsp;</h1>
 			<h1 class="text-center">&nbsp;</h1>
-  <h1 class="text-center"><strong>About Us </strong></h1>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-</div>
-<!--header//-->
-<img src="imagesOfUs/add1/building1.jpg" width="300" height="214" alt=""/>
-<div class="product col-xs-6">
-<div>
-    <article class="col-xs-9"><strong>NiceKey, as one of the world leading digital audio device company, has been the trend-setter and innovator for the past few decade. A long history of audio engineering and circuit designing offer us insights and opportunities to accomplish so much more.</strong></article>
-    &nbsp;</div>
-</div>
-<p class="text-left">&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<!---->
-<div>&nbsp;</div>
-<div class="col-xs-6"><img src="imagesOfUs/add1/prod1.png" alt="" width="325" height="170" class="pic2"/>&nbsp;</div>
-<article class="para2"><strong>As a company that keep close relationships with customers' voices, we keep our business based on customers' feedbacks and we do prompt communications for incoming products.</strong></article>
-<div>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-</div>
-<div>
-  <div class="col-xs-8">
-    <article class="para3"><strong> In the future, we would keep delivering good products by innovating and keeping up with customers voices and needs. With the trend of self-media, we would believe that there's a bigger opportunity awaits. </strong></article>
-  &nbsp;</div>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-<p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-</div>
+  <h1 class="text-center" ><strong>About Us </strong></h1>
+  <div id="mainContainer">
+    <div id="section1">
+      <div id="contentContainer1" class="textcontent">
+      <p>NiceKey, as one of the world leading digital audio device company, has been the trend-setter and innovator for the past few decade. A long history of audio engineering and circuit designing offer us insights and opportunities to accomplish so much more.</p>
+    </div>
+    <div id="containpic1">
+      <img src="imagesOfUs/add1/building1.jpg" id="pic1">
+    </div>
+      </div>
+    <div id="section2">
+      <div id="containpic2">
+        <img src="imagesOfUs/add1/prod1.png" id="pic2">
+      </div>
+      <div id="contentContainer2" class="textcontent">
+        <P>As a company that keep close relationships with customers' voices, we keep our business based on customers' feedbacks and we do prompt communications for incoming products.</P>
+        </div>
+    </div>
+    <div id="section3">
+      <div id="contentContainer3" class="textcontent">
+        <p>In the future, we would keep delivering good products by innovating and keeping up with customers voices and needs. With the trend of self-media, we would believe that there's a bigger opportunity awaits.</p>
+      </div>
+    </div>
+    
+  </div>
 
 
 <!---->
