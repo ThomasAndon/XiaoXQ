@@ -226,12 +226,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
       </div>
     <div id="section2">
-      <div id="containpic2">
+
+      <div id="contentContainer2" class="textcontent">
+        <p>As a company that keep close relationships with customers' voices, we keep our business based on customers' feedbacks and we do prompt communications for incoming products.</p>
+        </div>
+            <div id="containpic2">
         <img src="imagesOfUs/add1/prod1.png" id="pic2">
       </div>
-      <div id="contentContainer2" class="textcontent">
-        <P>As a company that keep close relationships with customers' voices, we keep our business based on customers' feedbacks and we do prompt communications for incoming products.</P>
-        </div>
     </div>
     <div id="section3">
       <div id="contentContainer3" class="textcontent">
