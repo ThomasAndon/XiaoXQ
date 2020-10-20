@@ -179,7 +179,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<%--				 <div class="col-md-1">cmd1</div>--%>
 				<div id="logg" class="col-md-3 col-md-offset-10"  >
 					<a href="login.jsp">
-						<img style="margin-top: 30px" src="imagesOfUs/Login_P.png" height="50px" width="50px">
+						<span class="glyphicon glyphicon-log-in"></span>
 					</a>
 				</div>
 				<div class="col-md-3 col-md-offset-9" id="user">
