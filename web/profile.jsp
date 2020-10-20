@@ -122,7 +122,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!---->
 		<div class="top-nav">
 			<ul class="memenu skyblue">
-				<li class="active"><a href="index(welcome).jsp">Home</a>
+				<li class="grid"><a href="index(welcome).jsp">Home</a>
 				</li>
 
 				<li class="grid"><a href="products.jsp">Products</a>
@@ -413,37 +413,7 @@ alerting();
 
 -->--%>
 
-<div class="subscribe">
-	 <div class="container">
-		 <h3>NiceKey</h3>
-	   <form action="${pageContext.request.contextPath}/search"  method="get">
-			 <input type="text" name="SC" class="text" value="Search"
-					onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-			 <input type="submit" value="Go"><br/>
-			 Query method:
-			 <div id="searchway">
-				 <input type="radio" name="Search" value="SN" checked>Search by name
-				 <input type="radio" name="Search" value="SLC">Search by large class
-				 <input type="radio" name="Search" value="SSC">Search by small class
-			 </div><br/>
-			 Order method:
-			 <div id="orderway">
-				 <input type="radio" name="Order" value="asc" checked>Increase
-				 <input type="radio" name="Order" value="desc">Decrease
-			 </div><br/>
-		 </form>
-  </div>
-</div>
 <!---->
-<div class="footer">
-  <h3 class="text-center"><strong>OUR PARTNERS</strong></h3>
-  <p>
-		<a href="https://www.apple.com.cn/"><img  src="imagesOfUs/partner/PA1.jpg" style="margin-left:80px;" width="200" height="100" class="img-rounded"/></a>
-		<a href="https://www.qualcomm.cn/"><img  src="imagesOfUs/partner/PA2.jpg" style="margin-left:80px;" width="200" height="100" class="img-rounded"/></a>
-		<a href="https://www.dolby.com/"><img  src="imagesOfUs/partner/PA3.jpg" style="margin-left:80px;" width="200" height="100" class="img-rounded"/></a>
-		<a href="https://www.yamaha.com.cn/"><img href="https://www.yamaha.com.cn/" src="imagesOfUs/partner/PA4.jpg" style="margin-left:80px;" width="200" height="100" class="img-rounded"/></a>
-		<a href="https://www.qualcomm.cn/"><img src="imagesOfUs/partner/PA5.jpg" style="margin-left:80px;"width="200" height="100" class="img-rounded"/></a>	</p>
-</div>
 <div class="copywrite">
 	 <div class="container">
 		 <div class="copy">
