@@ -31,6 +31,7 @@ public class ChangepwServelet extends HttpServlet {
             req.getSession().setAttribute("message", "Password changed SUCCESSFULLY!");
 
 
+
         } else if (m==0) {
             //todo 提示输入原始密码错误 Input pw is wrong!
             req.getSession().setAttribute("message", "Wrong password!");
@@ -39,7 +40,7 @@ public class ChangepwServelet extends HttpServlet {
             req.getSession().setAttribute("message", "Unknown Failure");
         }
 
-        resp.sendRedirect("./profile.jsp");
+        resp.sendRedirect(req.getContextPath()+"/profile.jsp");
 
     }
 }

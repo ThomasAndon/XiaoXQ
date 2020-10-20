@@ -238,18 +238,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <%String password=(String)session.getAttribute("password");%>
 </script>
 
-<script type="text/jsp">
+
+
+<%--<script type="text/jsp">
 <!--  此处加入检测页面是否有Attribute需要提示内容。-->
   <%String msg = (String)session.getAttribute("message");%>
+</script>--%>
+
+
+
+<%--
+<script type="text/javascript">
+
+function alerting() {
+	var alertinfo = <%=msg%>;
+	if(alertinfo != null) {
+		alert(alertinfo);
+	}
+}
+alerting();
 </script>
+
+<script type="text/jsp">
+	<% msg = null; %>
+</script>
+--%>
 
 <%--
 <script type="javascript">
-  if(<%=msg%> != null) {
+  if((string)<%=msg%> != null) {
       alert(<%=msg%>);
   }
-</script>--%>
-<%--
+</script>
 
 <script type="text/jsp">
 <!--此处将msg信息归零-->
@@ -325,6 +345,49 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
     </form>
 </div>
+
+
+<%--<script type="text/jsp">
+	<!--  此处加入检测页面是否有Attribute需要提示内容。-->
+	<%String msg = (String)session.getAttribute("message");%>
+</script>--%>
+
+
+<%
+	String mess = (String) session.getAttribute("message");
+	if ("".equals(mess) || mess == null) {
+	} else {
+%>
+<script type="text/javascript">
+	alert("<%=mess%>");
+</script>
+<%session.setAttribute("message", "");
+ }
+%>
+
+
+
+
+
+<%--
+<script type="text/javascript">
+
+	function alerting() {
+		<%String msg = (String)session.getAttribute("message");%>
+		var alertinfo = <%=msg%>;
+		if(alertinfo != null) {
+			alert(alertinfo);
+		}
+	}
+	alerting();
+</script>
+
+<script type="text/jsp">
+	<% msg = null; %>
+</script>
+
+--%>
+
 
 <%--
 <!--
