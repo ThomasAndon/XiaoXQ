@@ -326,7 +326,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="onon card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
 								<img src="imagesOfUs/key1.jpg" style="width: 200px;height: 150px" class="card-img-top center-block" alt="Product">
 								<div class="card-body">
-									<h5 class="card-title" style="font-size: 3rem;">Product Name</h5>
+									<h5 class="card-title" style="font-size: 3rem;"><b>Key1</b></h5>
 									<p class="card-text" style="font-size: 16px;">Price: Price</p>
 									<a href="single.jsp?CommdityId=1" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 								</div>
@@ -338,7 +338,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="onon card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
 								<img src="imagesOfUs/key2.jpg" style="width: 200px;height: 150px" class="card-img-top center-block" alt="Product">
 								<div class="card-body">
-									<h5 class="card-title" style="font-size: 3rem;">Product Name</h5>
+									<h5 class="card-title" style="font-size: 3rem;"><b>Key2</b></h5>
 									<p class="card-text" style="font-size: 16px;">Price: Price</p>
 									<a href="single.jsp?CommdityId=2" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 								</div>
@@ -349,7 +349,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="onon card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
 								<img src="imagesOfUs/key3.jpg" style="width: 200px;height: 150px" class="card-img-top center-block" alt="Product">
 								<div class="card-body">
-									<h5 class="card-title" style="font-size: 3rem;">Product Name</h5>
+									<h5 class="card-title" style="font-size: 3rem;"><b>Key3</b></h5>
 									<p class="card-text" style="font-size: 16px;">Price: Price</p>
 									<a href="single.jsp?CommdityId=3" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 								</div>
@@ -378,11 +378,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<%--				<div class="col-md-2">cmd2</div>--%>
 				<%--					第二行开始--%>
 
-				<div class="col-md-4">
+				<div id="TF" class="col-md-4">
 					<div class="popo card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
 						<img id="product1" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
-							<h5 id="name1" class="card-title" style="font-size: 3rem;">Product Name</h5>
+							<h5 id="name1" class="card-title" style="font-size: 3rem;"><b>Product Name</b></h5>
 							<p class="card-text" style="font-size: 16px;">Price: Price</p>
 							<a href="single.jsp?CommdityId=4" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 						</div>
@@ -394,7 +394,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="popo card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
 						<img id="product2" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
-							<h5 id="name2" class="card-title" style="font-size: 3rem;">Product Name</h5>
+							<h5 id="name2" class="card-title" style="font-size: 3rem;"><b>Product Name</b></h5>
 							<p class="card-text" style="font-size: 16px;">Price: Price</p>
 							<a href="single.jsp?CommdityId=5" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 						</div>
@@ -405,7 +405,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="popo  card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
 						<img id="product3" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
-							<h5 id="name3" class="card-title" style="font-size: 3rem;">Product Name</h5>
+							<h5 id="name3" class="card-title" style="font-size: 3rem;"><b>Product Name</b></h5>
 							<p class="card-text" style="font-size: 16px;">Price: Price</p>
 							<a href="single.jsp?CommdityId=5" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 						</div>
@@ -424,7 +424,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="popo card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
 						<img id="product4" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
-							<h5 id="name4" class="card-title" style="font-size: 3rem;">Product Name</h5>
+							<h5 id="name4" class="card-title" style="font-size: 3rem;"><b>Product Name</b></h5>
 							<p class="card-text" style="font-size: 16px;">Price: Price</p>
 							<a href="single.jsp?CommdityId=4" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 						</div>
@@ -436,7 +436,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="popo card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
 						<img id="product5" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
-							<h5 id="name5" class="card-title" style="font-size: 3rem;">Product Name</h5>
+							<h5 id="name5" class="card-title" style="font-size: 3rem;"><b>Product Name</b></h5>
 							<p class="card-text" style="font-size: 16px;">Price: Price</p>
 							<a href="single.jsp?CommdityId=5" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 						</div>
@@ -447,7 +447,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="popo card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
 						<img id="product6" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
-							<h5 id="name6" class="card-title" style="font-size: 3rem;">Product Name</h5>
+							<h5 id="name6" class="card-title" style="font-size: 3rem;"><b>Product Name</b></h5>
 							<p class="card-text" style="font-size: 16px;">Price: Price</p>
 							<a href="single.jsp?CommdityId=5" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 						</div>
@@ -461,17 +461,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 			<div class="row">
 				<ul class="center-block pagination pagination-lg">
-					<li><a id="left" href="#"  >&laquo;</a></li>
-					<li><a id="1"  onclick="CP(1)" >1</a></li>
-					<li><a id="2"  onclick="CP(2)">2</a></li>
-					<li><a id="3"  onclick="CP(3)">3</a></li>
-					<li><a id="4"  onclick="CP(4)">4</a></li>
-					<li><a id="5"  onclick="CP(5)">5</a></li>
-					<li><a id="right" href="#" >&raquo;</a></li>
+<%--					<li><a id="left" href="#TF"  >&laquo;</a></li>--%>
+					<li><a  id="1" href="#TF"  onclick="CP(1)" >1</a></li>
+					<li><a  id="2" href="#TF"  onclick="CP(2)">2</a></li>
+					<li><a  id="3" href="#TF"  onclick="CP(3)">3</a></li>
+					<li><a  id="4" href="#TF"  onclick="CP(4)">4</a></li>
+					<li><a  id="5" href="#TF"  onclick="CP(5)">5</a></li>
+<%--					<li><a id="right" href="#TF" >&raquo;</a></li>--%>
 				</ul>
 			</div>
 		</div>
-
+<%--		换页js--%>
 		<script>
 			// $(document).ready(function h(){
 			// 	document.getElementById("product4").src="/key5.jpg";
@@ -479,6 +479,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			// })
 			function Pic() {
 				var Pnumber = 1;
+				document.getElementById(1).style.backgroundColor="#ac00dc";
+				document.getElementById(1).style.color="#ffffff"
 				var PN = (Pnumber-1)*6+4;
 				var Pname = "imagesOfUs/key";
 				var Pname1 = Pname + PN +".jpg";
@@ -488,20 +490,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				var Pname5 = Pname + (PN+4) +".jpg";
 				var Pname6 = Pname + (PN+5) +".jpg";
 				document.getElementById("product1").src = Pname1;
-				document.getElementById("name1").innerText = "key"+PN;
+				document.getElementById("name1").innerHTML = "<b>key"+PN+"</b>";
 				document.getElementById("product2").src = Pname2;
-				document.getElementById("name2").innerText = "key"+(PN+1);
+				document.getElementById("name2").innerHTML = "<b>key"+(PN+1)+"</b>";
 				document.getElementById("product3").src = Pname3;
-				document.getElementById("name3").innerText = "key"+(PN+2);
+				document.getElementById("name3").innerHTML = "<b>key"+(PN+2)+"</b>";
 				document.getElementById("product4").src = Pname4;
-				document.getElementById("name4").innerText = "key"+(PN+3);
+				document.getElementById("name4").innerHTML = "<b>key"+(PN+3)+"</b>";
 				document.getElementById("product5").src = Pname5;
-				document.getElementById("name5").innerText = "key"+(PN+4);
+				document.getElementById("name5").innerHTML = "<b>key"+(PN+4)+"</b>";
 				document.getElementById("product6").src = Pname6;
-				document.getElementById("name6").innerText = "key"+(PN+5);
+				document.getElementById("name6").innerHTML = "<b>key"+(PN+5)+"</b>";
 			}
 
 			function CP(n){
+				for(var i=1;i<=5;i++){
+					document.getElementById(i).style.backgroundColor="#ffffff";
+					document.getElementById(i).style.color="#000000";
+				}
+				document.getElementById(n).style.backgroundColor="#ac00dc";
+				document.getElementById(n).style.color="#ffffff"
 				var PN = (n-1)*6+4;
 				var Pname = "imagesOfUs/key";
 				var Pname1 = Pname + PN +".jpg";
@@ -511,17 +519,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				var Pname5 = Pname + (PN+4) +".jpg";
 				var Pname6 = Pname + (PN+5) +".jpg";
 				document.getElementById("product1").src = Pname1;
-				document.getElementById("name1").innerText = "key"+PN;
+				document.getElementById("name1").innerHTML = "<b>key"+PN+"</b>";
 				document.getElementById("product2").src = Pname2;
-				document.getElementById("name2").innerText = "key"+(PN+1);
+				document.getElementById("name2").innerHTML = "<b>key"+(PN+1)+"</b>";
 				document.getElementById("product3").src = Pname3;
-				document.getElementById("name3").innerText = "key"+(PN+2);
+				document.getElementById("name3").innerHTML = "<b>key"+(PN+2)+"</b>";
 				document.getElementById("product4").src = Pname4;
-				document.getElementById("name4").innerText = "key"+(PN+3);
+				document.getElementById("name4").innerHTML = "<b>key"+(PN+3)+"</b>";
 				document.getElementById("product5").src = Pname5;
-				document.getElementById("name5").innerText = "key"+(PN+4);
+				document.getElementById("name5").innerHTML = "<b>key"+(PN+4)+"</b>";
 				document.getElementById("product6").src = Pname6;
-				document.getElementById("name6").innerText = "key"+(PN+5);
+				document.getElementById("name6").innerHTML = "<b>key"+(PN+5)+"</b>";
 			}
 
 			window.onload=Pic;
