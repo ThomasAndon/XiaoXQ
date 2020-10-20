@@ -33,14 +33,38 @@
         <servlet-name>Servley3</servlet-name>
         <url-pattern>/god</url-pattern>
     </servlet-mapping>
-<!--
+
+
+
     <servlet>
-        <servlet-name>logoutServley</servlet-name>
-        <servlet-class>jspServlet.servlet.LogoutServlet</servlet-class>
+        <servlet-name>Servlet4</servlet-name>
+        <servlet-class>jspServlet.servlet.ChangepwServelet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>logoutServley</servlet-name>
-        <url-pattern>/logout</url-pattern>
+        <servlet-name>Servlet4</servlet-name>
+        <url-pattern>/changepw</url-pattern>
     </servlet-mapping>
-    -->
+
+    <servlet>
+        <servlet-name>Servlet5</servlet-name>
+        <servlet-class>jspServlet.servlet.Changepiservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet5</servlet-name>
+        <url-pattern>/changepi</url-pattern>
+    </servlet-mapping>
+
+
+
+
+    <!--
+        <servlet>
+            <servlet-name>logoutServley</servlet-name>
+            <servlet-class>jspServlet.servlet.LogoutServlet</servlet-class>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>logoutServley</servlet-name>
+            <url-pattern>/logout</url-pattern>
+        </servlet-mapping>
+        -->
 </web-app>
