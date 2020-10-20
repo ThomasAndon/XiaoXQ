@@ -70,6 +70,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <body>
 <!-- header -->
+<%
+	//初始化接口元素
+	System.out.println("---checkout---");
+	ArrayList<Commodity> cmArray = (ArrayList<Commodity>) session.getAttribute("cmArray");
+	HashMap<Integer, Integer> shopList = (HashMap<Integer, Integer>) session.getAttribute("shopList");
+	Float totalPrice = (Float) session.getAttribute("totalPrice");
+%>
 <div id="identifier" class="modal" data-toggle="modal" tabindex="-1" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -80,7 +87,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</button>
 			</div>
 			<div class="modal-body">
-				<p>Are you sure you want to log out?</p>
+				<p>Are you sure you want to log out?<br/>Current shopcart will be <b>lost</b>></p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
@@ -214,22 +221,26 @@ check out
 <div class="container">
 	<div class="check-sec">
 		<div class="col-md-3 cart-total" style="float:left;">
-			<a class="continue" href="products.jsp">Continue to basket</a>
+			<a class="continue" href="products.jsp"><h4>Continue to basket</h4></a>
 			<div class="price-details">
 				<h3>Price Details</h3>
 				<span>Total</span>
 				<span class="total1">
 
 				</span>
+				<!--
 				<span>Discount</span>
 				<span class="total1">0%(Festival Offer)</span>
+
 				<span>Delivery Charges</span>
-				<span class="total1">0.00</span>
+				<span class="total1">total1></span>
+				-->
+
 				<div class="clearfix"></div>
 			</div>
 			<ul class="total_price">
 				<li class="last_price"> <h4>TOTAL</h4></li>
-				<li class="last_price"><span><%=session.getAttribute("totalPrice")%></span></li>
+				<li class="last_price"><span><%=totalPrice%></span></li>
 			</ul>
 			<div class="clearfix"></div>
 			<div class="clearfix"></div>
@@ -268,9 +279,6 @@ check out
 			用for循环遍历cmArray，到处每一个cm并生成对应的购物车卡品啊
 			-->
 			<%
-				ArrayList<Commodity> cmArray = (ArrayList<Commodity>) session.getAttribute("cmArray");
-				HashMap<Integer, Integer> shopList = (HashMap<Integer, Integer>) session.getAttribute("shopList");
-				Float totalPrice = (Float) session.getAttribute("totalPrice");
 
 				Iterator cmIt = cmArray.iterator();
 				Commodity cm = new Commodity();

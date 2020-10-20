@@ -98,6 +98,8 @@ public class ShopServlet extends HttpServlet {
             userPrice.replace(tempCm.getUserId(), price);
         }
 
+        //没有计算totalPrice和cmAmount！！！
+
         //传入session！回到checkout.jsp
         session.setAttribute("cmAmount", cmAmount);
         session.setAttribute("userPrice", userPrice);
