@@ -4,10 +4,11 @@ import jspServlet.DAO.CommodityDAO;
 import jspServlet.db.DBConnect;
 import jspServlet.vo.Commodity;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
 
 public class CommodityDAOImpl implements CommodityDAO {
     @Override
@@ -151,4 +152,73 @@ public class CommodityDAOImpl implements CommodityDAO {
         return vogue;
     }
 
+    @Override
+    /**  对单个商品进行编号搜索
+     * @return Commodity 对象
+     * @exception
+     * @author Luo Deng
+     */
+    public Commodity SingleIdSearch(Integer cmId) throws Exception{
+        String sql = "Select * from Commodity where CommodityId = ?";
+
+        DBConnect dbc = null;
+        PreparedStatement ps;
+        Commodity cm = new Commodity();
+
+        try{
+            dbc = new DBConnect();
+            ps = dbc.getConnection().prepareStatement(sql);
+            ps.setInt(1, cmId);
+            ResultSet re = ps.executeQuery();
+            while (re.next()) {
+                cm.setName(re.getString("name"));
+                cm.setTheClass(re.getString("TheClass"));
+                cm.setTheColor(re.getString("TheColor"));
+                cm.setInstructions(re.getString("Instructions"));
+                cm.setPrice(re.getFloat("Price"));
+                cm.setUserId(re.getInt("UserId"));
+                cm.setCommodityId(re.getInt("CommodityId"));
+            }
+            re.close();
+        } catch (SQLException throwables) {
+            System.out.println("Error in search!!!");
+            throwables.printStackTrace();
+        }
+        dbc.close();
+        return cm;
+    }
+
+    @Override
+    /**   将购物车内的所有商品存入订单数据库
+     *
+     */
+    public void OrderCm(Integer customerID, HashMap<Integer, Integer> shopList, Float totalPrice) throws Exception {
+        /*
+        String indentSql = "INSERT INTO `managementsystem`.`indent` (`TotalPrice`, `OrderTime`, `State`, `CustomerId`, `UserId`) " +
+                "VALUES (?, ?, ?, ?, ?);";
+        String detailSql = "INSERT INTO `managementsystem`.`itemdetail` (`OrderId`, `CommodityId`, `Number`) " +
+                "VALUES (?, ?, ?);";
+        DBConnect dbc = null;
+        PreparedStatement ps;
+        String state = "ordered";
+        Date date = new Date();
+        Timestamp ts = new Timestamp(date.getTime());
+
+        try{
+            dbc = new DBConnect();
+            ps = dbc.getConnection().prepareStatement(indentSql);
+            ps.setFloat(1, totalPrice);
+            ps.setTimestamp(2, ts);
+            ps.setString(3, state);
+            ps.setInt(4, customerID);
+            ps.setInt(5, );
+        }catch(SQLException throwables){
+            System.out.println("Error in MAKING order!!!");
+            throwables.printStackTrace();
+        }
+        dbc.close();
+    }
+
+         */
+    }
 }

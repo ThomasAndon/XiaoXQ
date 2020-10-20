@@ -110,8 +110,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     });
   </script>
 
+<!--jsp session枚举及处理
+@author Luo Deng
+-->
 <%
-	Enumeration<?> enumeration = session.getAttributeNames();
+	/*
+    Enumeration<?> enumeration = session.getAttributeNames();
 	while (enumeration.hasMoreElements()) {
 		String name = enumeration.nextElement().toString();
 		// 根据键值取session中的值
@@ -128,6 +132,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	if(session.getAttribute("cmAmount") == null){
 		cmAmount = 0;
 	}
+    */
+
+    //打印目前session所有的值
+    System.out.println("---index---");
+    Enumeration<?> enumeration1 = session.getAttributeNames();
+    while (enumeration1.hasMoreElements()) {
+        String name = enumeration1.nextElement().toString();
+        // 根据键值取session中的值
+        Object value = session.getAttribute(name);
+        // 打印结果
+        System.out.println(name+ "=" + value);
+    }
 %>
 
 
@@ -178,11 +194,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<a href="profile.jsp"><h4 style="line-height: 2.8">Welcome! <%=name%></h4></a>
 						</div>
 					</div>
+					<%-->
+					下面这段是购物车的金额
+
 					<div class="row justify-content-md-center">
 						<div class="col-md12">
 							<h5 style="line-height: 36px"><span class="simpleCart_total"></span></h5>
 						</div>
 					</div>
+					<--%>
 					<div class="row justify-content-md-center">
 						<div class="col-md12">
 							<a href="javascript:;" class="btn btn-success btn-sm" style="font-size: 1.4rem;line-height: 0.7;">Empty Cart</a>
@@ -282,9 +302,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <div class="items">
 	<div class="container">
+        <%--
+        首页的产品展示
+        @functionAuthor Luo Deng
+        --%>
 		<div class="items-sec">
 			<div class="col-md-3 feature-grid">
-				<a href="single.jsp?CommdityId=1"><img src="imagesOfUs/key1.jpg" alt=""/>
+				<!--
+                <a href="single.jsp?CommdityId=1"><img src="imagesOfUs/key1.jpg" alt=""/>
 					<div class="arrival-info">
 						<h4>Electronic organ1</h4>
 						<p>$1200</p>
@@ -297,23 +322,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<a href="single.jsp?CommdityId=1"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>View</a>
 					</div>
 				</a>
+				-->
+                <!--
+                通过超链接带cmId值跳入servlet，在servlet进行数据库访问获取商品信息，再跳到single产品展示界面
+                -->
+                <a href=<%=request.getContextPath()+"/view?CommodityId=1"%>><img src="imagesOfUs/key1.jpg" alt=""/>
+                    <div class="arrival-info">
+                        <h4>Electronic organ1</h4>
+                        <p>$1200-1600</p>
+                        <%--form name = "viewingCm" method="post" action="./view"></form>
+						<%--
+                        <span class="pric1"><del>18000</del></span>
+                        <span class="disc">[12% Off]</span>
+                        --%>
+                    </div>
+                    <div class="viw">
+                        <a href=<%=request.getContextPath()+"/view?CommodityId=1"%>><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>View</a>
+                    </div>
+                </a>
 			</div>
 			<div class="col-md-3 feature-grid">
-				<a href="single.jsp?CommdityId=2"><img src="imagesOfUs/key2.jpg" alt=""/>
+				<a href=<%=request.getContextPath()+"/view?CommodityId=2"%>><img src="imagesOfUs/key2.jpg" alt=""/>
 					<div class="arrival-info">
 						<h4>Electronic organ2</h4>
-						<p>$1400</p>
+						<p>$2400-2800</p>
 						<%--
                         <span class="pric1"><del>18000</del></span>
                         <span class="disc">[12% Off]</span>
                         --%>
 					</div>
 					<div class="viw">
-						<a href="single.jsp?CommdityId=2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>View</a>
+						<a href=<%=request.getContextPath()+"/view?CommodityId=1"%>><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>View</a>
 					</div>
 				</a>
 			</div>
 
+			<!--
 			<div class="col-md-3 feature-grid">
 				<a href="errorpage.jsp"><img src="imagesOfUs/key3.jpg" alt=""/>
 					<div class="arrival-info">
@@ -328,6 +372,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</a>
 			</div>
+			-->
 
 			<div class="clearfix"></div>
 		</div>

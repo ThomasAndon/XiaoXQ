@@ -26,6 +26,24 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>ViewingCmServlet</servlet-name>
+        <servlet-class>jspServlet.servlet.ViewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewingCmServlet</servlet-name>
+        <url-pattern>/view</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShoppingServlet</servlet-name>
+        <servlet-class>jspServlet.servlet.ShopServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShoppingServlet</servlet-name>
+        <url-pattern>/shop</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>Servley3</servlet-name>
         <servlet-class>jspServlet.servlet.WelcomeServlet</servlet-class>
     </servlet>

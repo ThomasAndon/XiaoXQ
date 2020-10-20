@@ -78,7 +78,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!-- header -->
 		<%
-			session.setAttribute("cmCount", request.getParameter("number"));
+			/*
+			//session.setAttribute("cmCount", request.getParameter("number"));
+			session.setAttribute("cmCount", request.getParameter("count"));
 			HashMap<Integer, Integer> shopCart = (HashMap<Integer, Integer>)session.getAttribute("shopCart");
 			if(shopCart == null){
 				shopCart = new HashMap<Integer, Integer>();
@@ -143,6 +145,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				// 打印结果
 				System.out.println(name+ "=" + value);
 			}
+
+			 */
 
 		%>
 
@@ -288,7 +292,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <div class="clearfix"> </div>
 </div>
-<!-- check out -->
+
+<!--
+check out
+购物车
+-->
 <div class="container">
 	<div class="check-sec">
 		<div class="col-md-3 cart-total">
@@ -307,7 +315,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<ul class="total_price">
 				<li class="last_price"> <h4>TOTAL</h4></li>
-				<li class="last_price"><span><%=(Double)session.getAttribute("totalPrice")%></span></li>
+				<li class="last_price"><span><%=session.getAttribute("totalPrice")%></span></li>
 			</ul>
 			<div class="clearfix"></div>
 			<div class="clearfix"></div>
@@ -356,12 +364,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<h3>Electronic organ1</h3>
 						<ul class="qty">
 							<%
-								Integer count1 = (Integer)shopCart.get(1);
+								/**
+								Integer count1 = (Integer)shopList.get(1);
 								if((Integer)shopCart.get(1) == null){
 									count1 = 0;
 								}
+								*/
 							%>
-							<li><p>Count : <%=count1%></p></li>
+							<li><p>Count : <%//=count1%></p></li>
 						</ul>
 						<div class="delivery">
 							<p>Service Charges : Rs.0</p>
@@ -391,12 +401,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<h3>Electronic organ2</h3>
 						<ul class="qty">
 							<%
-								Integer count2 = (Integer)shopCart.get(2);
-								if((Integer)shopCart.get(2) == null){
-									count2 = 0;
-								}
+								//Integer count2 = (Integer)shopCart.get(2);
+								//if((Integer)shopCart.get(2) == null){
+								//	count2 = 0;
+								//}
 							%>
-							<li><p>Count : <%=count2%></p></li>
+							<li><p>Count : <%//=count2%></p></li>
 						</ul>
 						<div class="delivery">
 							<p>Service Charges : Rs.0</p>

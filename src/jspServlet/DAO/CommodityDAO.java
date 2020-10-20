@@ -1,8 +1,13 @@
 package jspServlet.DAO;
 
+import jspServlet.db.DBConnect;
 import jspServlet.vo.Commodity;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public interface CommodityDAO {
     /**
@@ -42,4 +47,7 @@ public interface CommodityDAO {
      */
     public ArrayList<Commodity> ClassSearch(String string,String Order) throws Exception;
 
+    public Commodity SingleIdSearch(Integer cmId) throws Exception;
+
+    public void OrderCm(Integer customerID, HashMap<Integer, Integer> shopList, Float totalPrice) throws Exception;
 }
