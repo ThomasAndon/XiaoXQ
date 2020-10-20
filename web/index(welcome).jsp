@@ -351,7 +351,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         --%>
 					</div>
 					<div class="viw">
-						<a href=<%=request.getContextPath()+"/view?CommodityId=1"%>><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>View</a>
+						<a href=<%=request.getContextPath()+"/view?CommodityId=2"%>><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>View</a>
 					</div>
 				</a>
 			</div>

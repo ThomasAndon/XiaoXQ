@@ -21,7 +21,6 @@ public class ShopServlet extends HttpServlet {
         System.out.println("---ShopServlet---");
         Integer count = Integer.parseInt(req.getParameter("count"));
         HttpSession session = req.getSession();
-
         /*
         Enumeration<?> enumeration1 = session.getAttributeNames();
         while (enumeration1.hasMoreElements()) {
@@ -33,8 +32,6 @@ public class ShopServlet extends HttpServlet {
         }
 
          */
-
-
 
         Integer cmAmount = (Integer) session.getAttribute("cmAmount");
         Float totalPrice = (Float) session.getAttribute("totalPrice");
@@ -100,43 +97,6 @@ public class ShopServlet extends HttpServlet {
             price += userPrice.get((Integer)tempCm.getUserId());
             userPrice.replace(tempCm.getUserId(), price);
         }
-
-        /*
-        Enumeration<?> enumeration1 = session.getAttributeNames();
-        while (enumeration1.hasMoreElements()) {
-            String name = enumeration1.nextElement().toString();
-            // 根据键值取session中的值
-            Object value = session.getAttribute(name);
-            // 打印结果
-            System.out.println(name+ "=" + value);
-        }
-
-         */
-
-        //更新cmAmount和totalPrice
-        /**
-        Iterator shopIt = shopList.entrySet().iterator();
-        Integer tempAmount = 0;
-        ;
-        while(shopIt.hasNext()){
-            //System.out.println("2nd loop");
-            Map.Entry entry = (Map.Entry)shopIt.next();
-            cmIt = cmArray.iterator();
-            while(cmIt.hasNext()){
-                //System.out.println("3rd loop");
-                cm = (Commodity) cmIt.next();
-                if((Integer)entry.getKey() == cm.getCommodityId()){
-                    price = cm.getPrice();
-                    break;
-                }
-            }
-            tempAmount = (Integer)entry.getValue();
-            cmAmount += tempAmount;
-            //System.out.println(tempAmount);
-            //System.out.println(price);
-            totalPrice += (price * tempAmount);
-        }
-         */
 
         //传入session！回到checkout.jsp
         session.setAttribute("cmAmount", cmAmount);

@@ -69,87 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 
 <body>
-
-
-<%
-
-
-%>
-
 <!-- header -->
-		<%
-			/*
-			//session.setAttribute("cmCount", request.getParameter("number"));
-			session.setAttribute("cmCount", request.getParameter("count"));
-			HashMap<Integer, Integer> shopCart = (HashMap<Integer, Integer>)session.getAttribute("shopCart");
-			if(shopCart == null){
-				shopCart = new HashMap<Integer, Integer>();
-			}
-
-			if(session.getAttribute("cmId")!=null && session.getAttribute("cmCount")!=null){
-				Collection cl = shopCart.values();
-				Iterator it = shopCart.entrySet().iterator();
-				int isRepeated = 0;
-				while(it.hasNext()) {
-					Map.Entry entry = (Map.Entry) it.next();
-					if((Integer)session.getAttribute("cmId") == (Integer) entry.getKey()){
-						isRepeated = 1;
-						break;
-					}
-				}
-				if(isRepeated == 0){
-					shopCart.put(Integer.parseInt(session.getAttribute("cmId").toString()), Integer.parseInt(session.getAttribute("cmCount").toString()));
-				}else{
-					Integer amount = (Integer)(shopCart.get((Integer)session.getAttribute("cmId")));
-					amount += (Integer)session.getAttribute("cmCount");
-					shopCart.replace(shopCart.get((Integer)session.getAttribute("cmId")), amount);
-				}
-			}
-
-			Integer amount = 0;
-			Double total = 0.;
-
-			Collection cl = shopCart.values();
-			Iterator it = shopCart.entrySet().iterator();
-			while(it.hasNext()){
-				Map.Entry entry = (Map.Entry)it.next();
-
-				double price = 0.;
-				switch((Integer) entry.getKey()){
-					case 1:
-						price = 1200.;
-						break;
-					case 2:
-						price = 1400.;
-						break;
-					default:
-						price = 0.;
-				}
-				amount += (Integer)entry.getValue();
-				total += price * (Integer) entry.getValue();
-			}
-
-			Integer cmAmount = new Integer(amount.intValue());
-			Double totalPrice = new Double(total.doubleValue());
-			session.setAttribute("cmAmount", amount);
-			session.setAttribute("totalPrice", total);
-			session.setAttribute("shopCart", shopCart);
-
-			Double interview =new Double(23.4);
-			session.setAttribute("interview", interview);
-			Enumeration<?> enumeration = session.getAttributeNames();
-			while (enumeration.hasMoreElements()) {
-				String name = enumeration.nextElement().toString();
-				// 根据键值取session中的值
-				Object value = session.getAttribute(name);
-				// 打印结果
-				System.out.println(name+ "=" + value);
-			}
-
-			 */
-
-		%>
-
 <div id="identifier" class="modal" data-toggle="modal" tabindex="-1" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -214,6 +134,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<a href="profile.jsp"><h4 style="line-height: 2.8">Welcome! <%=name%></h4></a>
 						</div>
 					</div>
+					<%--金额显示已注释掉--%>
 <%--					<div class="row justify-content-md-center">--%>
 <%--						<div class="col-md12">--%>
 <%--							<h5 style="line-height: 36px"><span class="simpleCart_total"></span></h5>--%>
@@ -234,8 +155,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 		</div>
-
-
 
 		<%--		 <div id="user" class="cart box_1">--%>
 		<%--			 <a href="checkout.jsp"><img  src="imagesOfUs/user.jpg" href="#"/>--%>
@@ -294,8 +213,8 @@ check out
 -->
 <div class="container">
 	<div class="check-sec">
-		<div class="col-md-3 cart-total">
-			<a class="continue" href="product.html">Continue to basket</a>
+		<div class="col-md-3 cart-total" style="float:left;">
+			<a class="continue" href="products.jsp">Continue to basket</a>
 			<div class="price-details">
 				<h3>Price Details</h3>
 				<span>Total</span>
@@ -338,20 +257,70 @@ check out
 				<a class="cpns" href="#">Apply Coupons</a>
 			</div>
 		</div>
-		<div class="col-md-9 cart-items">
-			<h1>My Shopping Bag</h1>
-			<!--<% %>-->
-			<script>$(document).ready(function(c) {
-				$('.close1').on('click', function(c){
-					$('.cart-header').fadeOut('slow', function(c){
-						$('.cart-header').remove();
-					});
-				});
-			});
-			</script>
+
+		<%--
+		下面看购物车的要放到右边
+		--%>
+		<%--div class="col-md-9 cart-items"--%>
+		<div style="float:right;width:73%;">
+			<h1>My Shopping Cart</h1>
+			<!--
+			用for循环遍历cmArray，到处每一个cm并生成对应的购物车卡品啊
+			-->
+			<%
+				ArrayList<Commodity> cmArray = (ArrayList<Commodity>) session.getAttribute("cmArray");
+				HashMap<Integer, Integer> shopList = (HashMap<Integer, Integer>) session.getAttribute("shopList");
+				Float totalPrice = (Float) session.getAttribute("totalPrice");
+
+				Iterator cmIt = cmArray.iterator();
+				Commodity cm = new Commodity();
+				String picString = new String();
+				while (cmIt.hasNext()) {
+					cm = (Commodity) cmIt.next();
+					System.out.println("cmId = " + cm.getCommodityId());
+					%>
 			<div class="cart-header">
 				<div class="close1"> </div>
 				<div class="cart-sec simpleCart_shelfItem">
+					<%
+					switch (cm.getCommodityId()){
+						case 1: picString = "<div class=\"cart-item cyc\">\n" +
+								"\t\t\t\t\t\t<img src=\"imagesOfUs/key1.jpg\" class=\"img-responsive\" alt=\"\"/>\n" +
+								"\t\t\t\t\t</div>";break;
+						case 2: picString = "<div class=\"cart-item cyc\">\n" +
+								"\t\t\t\t\t\t<img src=\"imagesOfUs/key2.jpg\" class=\"img-responsive\" alt=\"\"/>\n" +
+								"\t\t\t\t\t</div>";break;
+						//随便选了一张图片
+						default: picString = "<div class=\"cart-item cyc\">\n" +
+								"\t\t\t\t\t\t<img src=\"imagesOfUs/key10.jpg\" class=\"img-responsive\" alt=\"\"/>\n" +
+								"\t\t\t\t\t</div>";break;
+					}
+					out.println(picString);
+					%>
+					<div class="cart-item-info">
+						<b><h1><%=cm.getName()%></h1></b>
+						<ul class="qty">
+							<%
+								Integer count = shopList.get(cm.getCommodityId());
+							%>
+							<p><li><h3>Count : <%=count%></h3></li></p>
+						</ul>
+						<div class="delivery">
+							<p><h3>Charges : <%=count * cm.getPrice()%></h3></p>
+							<span>Delivered in 2-3 bussiness days</span>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+					<%
+					}
+					%>
+			<%--
+			<div class="cart-header">
+				<div class="close1"> </div>
+				<div class="cart-sec simpleCart_shelfItem">
+
 					<div class="cart-item cyc">
 						<img src="images/p4.jpg" class="img-responsive" alt=""/>
 					</div>
@@ -374,6 +343,7 @@ check out
 							<div class="clearfix"></div>
 						</div>
 					</div>
+
 					<div class="clearfix"></div>
 
 				</div>
@@ -414,7 +384,10 @@ check out
 				</div>
 			</div>
 		</div>
+		--%>
+
 		<div class="clearfix"> </div>
+		</div>
 	</div>
 </div>
 <!-- //check out -->
@@ -468,6 +441,6 @@ check out
 		<div class="clearfix"></div>
 	</div>
 </div>
-<!---->
+
 </body>
 </html>
