@@ -19,7 +19,7 @@ public class CommodityDAOImpl implements CommodityDAO {
      * @author Zeyang Sun
      */
     public void InsertCommodity(Commodity commodity) throws Exception {
-        String sql="INSERT INTO `managementsystem`.`commodity` (`Name`, `Price`, `LargeClass`, `SmallClass`, `Instructions`, `UserId`) " +
+        String sql="INSERT INTO `managementsystem`.`commodity` (`Name`, `Price`, `TheColor`, `TheClass`, `Instructions`, `UserId`) " +
                 "VALUES (?, ?, ?, ?, ?, ?);";
         PreparedStatement PS;
         DBConnect DBC=null;
@@ -28,8 +28,8 @@ public class CommodityDAOImpl implements CommodityDAO {
             PS = DBC.getConnection().prepareStatement(sql);
             PS.setString(1,commodity.getName());
             PS.setString(2,""+commodity.getPrice());
-            PS.setString(3,commodity.getLargeClass());
-            PS.setString(4,commodity.getSmallClass());
+            PS.setString(3,commodity.getTheColor());
+            PS.setString(4,commodity.getTheClass());
             PS.setString(5,commodity.getInstructions());
             PS.setString(6,""+commodity.getUserId());
             PS.executeUpdate();
@@ -64,8 +64,8 @@ public class CommodityDAOImpl implements CommodityDAO {
             while (re.next()) {
                 Commodity C=new Commodity();
                 C.setName(re.getString("name"));
-                C.setLargeClass(re.getString("LargeClass"));
-                C.setSmallClass(re.getString("SmallClass"));
+                C.setTheColor(re.getString("LargeClass"));
+                C.setTheClass(re.getString("SmallClass"));
                 C.setInstructions(re.getString("Instructions"));
                 C.setPrice(re.getFloat("Price"));
                 C.setUserId(re.getInt("UserId"));
@@ -102,8 +102,8 @@ public class CommodityDAOImpl implements CommodityDAO {
                 temp.setName(result.getString("name"));
                 temp.setCommodityId(result.getInt("CommodityId"));
                 temp.setInstructions(result.getString("Instructions"));
-                temp.setLargeClass(result.getString("LargeClass"));
-                temp.setSmallClass(result.getString("SmallClass"));
+                temp.setTheColor(result.getString("LargeClass"));
+                temp.setTheClass(result.getString("SmallClass"));
                 temp.setPrice(result.getFloat("Price"));
                 temp.setUserId(result.getInt("UserId"));
                 vogue.add(temp);
@@ -139,8 +139,8 @@ public class CommodityDAOImpl implements CommodityDAO {
                 temp.setName(result.getString("name"));
                 temp.setCommodityId(result.getInt("CommodityId"));
                 temp.setInstructions(result.getString("Instructions"));
-                temp.setLargeClass(result.getString("LargeClass"));
-                temp.setSmallClass(result.getString("SmallClass"));
+                temp.setTheColor(result.getString("LargeClass"));
+                temp.setTheClass(result.getString("SmallClass"));
                 temp.setPrice(result.getFloat("Price"));
                 temp.setUserId(result.getInt("UserId"));
                 vogue.add(temp);

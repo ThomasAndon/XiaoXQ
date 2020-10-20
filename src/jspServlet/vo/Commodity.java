@@ -12,6 +12,27 @@ public class Commodity {
     private String TheColor;
     private String TheClass;
     private String Instructions;
+
+    public void setPrice(Float price) {
+        Price = price;
+    }
+
+    public String getTheColor() {
+        return TheColor;
+    }
+
+    public void setTheColor(String theColor) {
+        TheColor = theColor;
+    }
+
+    public String getTheClass() {
+        return TheClass;
+    }
+
+    public void setTheClass(String theClass) {
+        TheClass = theClass;
+    }
+
     private int UserId;
 
     public String getName() {
@@ -22,21 +43,12 @@ public class Commodity {
         Name = name;
     }
 
-//    public String getLargeClass() {
-//        return LargeClass;
-//    }
 
-//    public void setLargeClass(String largeClass) {
-//        LargeClass = largeClass;
-//    }
-//
-//    public String getSmallClass() {
-//        return SmallClass;
-//    }
-//
-//    public void setSmallClass(String smallClass) {
-//        SmallClass = smallClass;
-//    }
+
+
+
+
+
 
     public String getInstructions() {
         return Instructions;
