@@ -34,11 +34,13 @@ public class ShopServlet extends HttpServlet {
 
          */
 
+
+
         Integer cmAmount = (Integer) session.getAttribute("cmAmount");
         Float totalPrice = (Float) session.getAttribute("totalPrice");
         ArrayList<Commodity> cmArray = (ArrayList<Commodity>) session.getAttribute("cmArray");
         HashMap<Integer, Integer> shopList = (HashMap<Integer, Integer>) session.getAttribute("shopList");
-        HashMap<Integer, Float> userPrice = new HashMap<Integer, Float>();
+        HashMap<Integer, Float> userPrice = (HashMap<Integer, Float>) session.getAttribute("userPrice");
         Commodity tempCm = (Commodity) session.getAttribute("tempCm");
 
         Iterator cmIt = cmArray.iterator();
@@ -86,9 +88,15 @@ public class ShopServlet extends HttpServlet {
             //System.out.println("true");
             //Integer amount = (Integer)(shopList.get((Integer)tempCm.getCommodityId()));
             //有时，将该商品数量与价格加和更新
+            //System.out.println("amount = "+amount);
             amount += (Integer)(shopList.get((Integer)tempCm.getCommodityId()));
-            shopList.replace(shopList.get((Integer)tempCm.getCommodityId()), amount);
-            System.out.println(userPrice.get((Integer)tempCm.getUserId()));
+            //System.out.println("then, amount = "+amount);
+            Integer num = amount;
+            //???
+            shopList.replace(shopList.get((Integer)tempCm.getCommodityId()), num);
+            //???
+            //System.out.println(shopList.get((Integer)tempCm.getCommodityId()));
+            //System.out.println(userPrice.get((Integer)tempCm.getUserId()));
             price += userPrice.get((Integer)tempCm.getUserId());
             userPrice.replace(tempCm.getUserId(), price);
         }
