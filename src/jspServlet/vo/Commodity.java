@@ -12,9 +12,7 @@ public class Commodity {
     private String TheColor;
     private String TheClass;
     private String Instructions;
-    private int CommodityId;
     private int UserId;
-    private float Price;
 
     public String getName() {
         return Name;
@@ -24,21 +22,21 @@ public class Commodity {
         Name = name;
     }
 
-    public String getLargeClass() {
-        return LargeClass;
-    }
+//    public String getLargeClass() {
+//        return LargeClass;
+//    }
 
-    public void setLargeClass(String largeClass) {
-        LargeClass = largeClass;
-    }
-
-    public String getSmallClass() {
-        return SmallClass;
-    }
-
-    public void setSmallClass(String smallClass) {
-        SmallClass = smallClass;
-    }
+//    public void setLargeClass(String largeClass) {
+//        LargeClass = largeClass;
+//    }
+//
+//    public String getSmallClass() {
+//        return SmallClass;
+//    }
+//
+//    public void setSmallClass(String smallClass) {
+//        SmallClass = smallClass;
+//    }
 
     public String getInstructions() {
         return Instructions;
