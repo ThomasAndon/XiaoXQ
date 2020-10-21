@@ -392,12 +392,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</script>
 						<form name="addingCart" method="post" action="" onsubmit="IdCheck();">
 							<%--System.out.println(session.getAttribute("try"));--%>
+
+							<div style="width:50%;float:left;">
+								<p><h3>Choose the amount: </h3></p>
 							<input type="button" onclick="decrease()" value="-"/>
 							<!--
 							input id="Bnumber" type="text" size="5" name="number" value="0"
-							--><input id="Bnumber" type="text" size="5" name="count" value="0">
-							<input type="button" onclick="increase()" value="+"/><br/>
-							<input type="submit" value="Add to Cart" class="add-cart item_add">
+							-->
+							<input id="Bnumber" type="text" size="5" name="count" value="0">
+							<input type="button" onclick="increase()" value="+"/>
+							</div>
+								<div style="width:50%;float:right;">
+									<p><h3>Choose the color: </h3></p>
+									<input type="radio" method="post" value="white"><b>white</b><br/>
+									<input type="radio" method="post" value="black"><b>black</b>
+								</div>
+								<br/>
+							<input type="submit" value="Add to Cart" class="add-cart item_add" style="width:100%;">
 
 						</form>
 					</div>
