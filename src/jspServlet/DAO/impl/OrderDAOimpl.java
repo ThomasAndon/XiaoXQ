@@ -41,7 +41,7 @@ public class OrderDAOimpl implements OrderDAO {
             ResultSet rs = pstmt.executeQuery();
             while(rs.next()){
                 Order order= new Order();
-                order.setCustomerID(1);
+                order.setCustomerID(CustomerID);
                 order.setOrderID(rs.getInt("Orderid"));
                 order.setTotalPrice(rs.getFloat("TotalPrice"));
                 order.setState(rs.getString("State"));
