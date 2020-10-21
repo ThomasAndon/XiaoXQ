@@ -3,7 +3,7 @@
 <%@ page import="jspServlet.DAO.impl.OrderDAOimpl" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="netscape.javascript.JSObject" %>
-<%@ page import="" %>
+<%@ page import="com.google.gson.Gson" %>
 <!DOCTYPE html>
 <html>
 <head>
