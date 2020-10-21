@@ -31,4 +31,12 @@ public interface CustomerDAO {
      * @author Zeyang Sun
      */
     public  Customer CustomerInfo(Customer customer) throws Exception;
+
+    /**
+     * 获取登录用户的customerID
+     *
+     * @return 登陆用户的ID
+     * @throws Exception
+     * @author Luo Deng
+     */
 }

@@ -69,6 +69,7 @@ public class LoginServlet extends HttpServlet {
             HttpSession session = req.getSession();
             session.setAttribute("try","ok");
             session.setAttribute("customerID", customer1.getID());
+            System.out.println(session.getAttribute("customerID"));
             session.setAttribute("username",customer.getAccount());
             //下面部分由 Thomas Andon加入
             session.setAttribute("realName", customer1.getName());

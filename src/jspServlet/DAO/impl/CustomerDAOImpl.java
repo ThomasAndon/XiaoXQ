@@ -114,6 +114,7 @@ public class CustomerDAOImpl implements CustomerDAO {
                 customer.setName(rs.getString("Name"));
                 customer.setAddress(rs.getString("Address"));
                 customer.setGender(rs.getString("Gender"));
+                customer.setID(rs.getInt("CustomerId"));
             }
             rs.close() ;
             pstmt.close() ;

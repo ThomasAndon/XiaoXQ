@@ -270,7 +270,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							imageUrl3.append("imagesOfUs/key3.png");
 							break;
 
-						case 2:
+						case 10:
 							//cmName.append("Electronic organ2");
 							//cmPrice = 1400.;
 							descText.append("The keyboard comes with world leading digital audio technology, " +

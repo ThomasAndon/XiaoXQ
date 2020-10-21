@@ -247,7 +247,7 @@ check out
 			<script>
 
 			</script>
-			<a class="order" href="index(welcome).jsp" onclick="orderPlace()">Place Order
+			<a class="order" href=<%=request.getContextPath()+"/order"%> onclick="orderPlace()">Place Order
 				<script>
 					function orderPlace() {
 						alert("Order placed successfully!");
@@ -287,7 +287,7 @@ check out
 						case 1: picString = "<div class=\"cart-item cyc\">\n" +
 								"\t\t\t\t\t\t<img src=\"imagesOfUs/key1.jpg\" class=\"img-responsive\" alt=\"\"/>\n" +
 								"\t\t\t\t\t</div>";break;
-						case 2: picString = "<div class=\"cart-item cyc\">\n" +
+						case 10: picString = "<div class=\"cart-item cyc\">\n" +
 								"\t\t\t\t\t\t<img src=\"imagesOfUs/key2.jpg\" class=\"img-responsive\" alt=\"\"/>\n" +
 								"\t\t\t\t\t</div>";break;
 						//随便选了一张图片
