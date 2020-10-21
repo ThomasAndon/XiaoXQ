@@ -1,4 +1,7 @@
 <%@ page import="java.util.Enumeration" %>
+<%@ page import="jspServlet.vo.Order" %>
+<%@ page import="jspServlet.DAO.impl.OrderDAOimpl" %>
+<%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -113,6 +116,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--jsp session枚举及处理
 @author Luo Deng
 -->
+<script>
 <%
 	/*
     Enumeration<?> enumeration = session.getAttributeNames();
@@ -145,7 +149,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         System.out.println(name+ "=" + value);
     }
 %>
-
+</script>
 
 
 
@@ -239,6 +243,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<div class="clearfix"> </div>
 </div>
+
+<script src="js/vue.js"></script>
+
+<script type="text/javascript">
+	<% ArrayList<Order> a = new OrderDAOimpl().OrderSearch((Integer) session.getAttribute("customerID"));%>
+	var tl = <%=a%>;
+	alert("111");
+	</script>
 
 
 <script type="text/javascript">
