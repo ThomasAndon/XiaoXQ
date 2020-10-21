@@ -80,6 +80,7 @@ public class OrderDAOimpl implements OrderDAO {
         }catch (SQLException | IOException e){
             System.out.println(e.getMessage());
         }finally{
+//            System.out.println(orders.get(0).getCommodities().get(0).getName()+"%%%%%######");
 
             dbc.close() ;
         }
