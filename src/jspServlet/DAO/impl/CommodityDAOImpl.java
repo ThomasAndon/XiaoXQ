@@ -125,7 +125,7 @@ public class CommodityDAOImpl implements CommodityDAO {
      */
     public ArrayList<Commodity> ClassSearch(String string,String Order) throws Exception {
         ArrayList<Commodity> vogue = new ArrayList<>();
-        String sql = "Select * from Commodity Where SmallClass Like ? order by Price "+Order;
+        String sql = "Select * from Commodity Where TheClass Like ? order by Price "+Order;
         DBConnect dbc = null;
         PreparedStatement ps;
         try {

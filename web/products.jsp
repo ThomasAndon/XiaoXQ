@@ -296,21 +296,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 				</div>
 			</div>
-			<div class="row">
+<%--			<div class="row">--%>
 
-				<div class="bourdkey col-md-1"></div>
-				<div class="bourdkey col-md-1"style="background-color: #1a1818"></div>
-				<div class="bourdkey col-md-1"></div>
-				<div class="bourdkey col-md-1"style="background-color: #1a1818"></div>
-				<div class="bourdkey col-md-1"></div>
-				<div class="bourdkey col-md-1"style="background-color: #1a1818"></div>
-				<div class="bourdkey col-md-1"></div>
-				<div class="bourdkey col-md-1"style="background-color: #1a1818"></div>
-				<div class="bourdkey col-md-1"></div>
-				<div class="bourdkey col-md-1"style="background-color: #1a1818"></div>
-				<div class="bourdkey col-md-1"></div>
-				<div class="bourdkey col-md-1"style="background-color: #1a1818"></div>
-			</div>
+<%--				<div class="bourdkey col-md-1"></div>--%>
+<%--				<div class="bourdkey col-md-1"style="background-color: #1a1818"></div>--%>
+<%--				<div class="bourdkey col-md-1"></div>--%>
+<%--				<div class="bourdkey col-md-1"style="background-color: #1a1818"></div>--%>
+<%--				<div class="bourdkey col-md-1"></div>--%>
+<%--				<div class="bourdkey col-md-1"style="background-color: #1a1818"></div>--%>
+<%--				<div class="bourdkey col-md-1"></div>--%>
+<%--				<div class="bourdkey col-md-1"style="background-color: #1a1818"></div>--%>
+<%--				<div class="bourdkey col-md-1"></div>--%>
+<%--				<div class="bourdkey col-md-1"style="background-color: #1a1818"></div>--%>
+<%--				<div class="bourdkey col-md-1"></div>--%>
+<%--				<div class="bourdkey col-md-1"style="background-color: #1a1818"></div>--%>
+<%--			</div>--%>
 			<%--产品开始--%>
 			<div class="row" style="margin-top: 50px">
 				<%--				<div class="col-md-2">cmd2</div>--%>
@@ -478,7 +478,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			// })
 			function Pic() {
 				var Pnumber = 1;
-				document.getElementById(1).style.backgroundColor="#ac00dc";
+				document.getElementById(1).style.backgroundColor="#f60202";
 				document.getElementById(1).style.color="#ffffff"
 				var PN = (Pnumber-1)*6+4;
 				var Pname = "imagesOfUs/key";
@@ -507,7 +507,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					document.getElementById(i).style.backgroundColor="#ffffff";
 					document.getElementById(i).style.color="#000000";
 				}
-				document.getElementById(n).style.backgroundColor="#ac00dc";
+				document.getElementById(n).style.backgroundColor="#dc0000";
 				document.getElementById(n).style.color="#ffffff"
 				var PN = (n-1)*6+4;
 				var Pname = "imagesOfUs/key";
