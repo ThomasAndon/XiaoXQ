@@ -248,7 +248,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <script type="text/javascript">
 	<% ArrayList<Order> a = new OrderDAOimpl().OrderSearch((Integer) session.getAttribute("customerID"));%>
-	var tl = <%=a%>;
+	var olist = <%=a%>;
 	alert("111");
 	</script>
 
@@ -290,6 +290,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
+<div id="app">
+	<div v-for="i in <%=a%>">
+		{{i}}
+	</div>
+</div>
 
 
 
@@ -299,6 +304,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
+
+<script type="text/javascript">
+	var vue = new Vue({
+		el: '#app',
+		data:{
+			<%=a%>
+
+		}
+	})
+</script>
 
 
 
