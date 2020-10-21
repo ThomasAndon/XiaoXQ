@@ -255,11 +255,7 @@ check out
 				</script>
 				<form method="post" action="index(welcome).jsp">
 					<input type=hidden>
-				<%
-					session.removeAttribute("totalPrice");
-					session.removeAttribute("cmAmount");
-					session.removeAttribute("shopCart");
-				%>
+
 				</form>
 			</a>
 			<div class="total-item">
@@ -276,7 +272,7 @@ check out
 		<div style="float:right;width:73%;">
 			<h1>My Shopping Cart</h1>
 			<!--
-			用for循环遍历cmArray，到处每一个cm并生成对应的购物车卡品啊
+			用for循环遍历cmArray，到处每一个cm并生成对应的购物车卡片
 			-->
 			<%
 
@@ -285,7 +281,7 @@ check out
 				String picString = new String();
 				while (cmIt.hasNext()) {
 					cm = (Commodity) cmIt.next();
-					System.out.println("cmId = " + cm.getCommodityId());
+					//System.out.println("cmId = " + cm.getCommodityId());
 					%>
 			<div class="cart-header">
 				<div class="close1"> </div>
@@ -311,10 +307,13 @@ check out
 							<%
 								Integer count = shopList.get(cm.getCommodityId());
 							%>
-							<p><li><h3>Count : <%=count%></h3></li></p>
+							<p><h2>Count : <%=shopList.get(cm.getCommodityId())%></h2></p>
 						</ul>
 						<div class="delivery">
 							<p><h3>Charges : <%=count * cm.getPrice()%></h3></p>
+							<p><h3>Class : <%=cm.getTheClass()%></h3></p>
+							<p><h3>Color : <%=cm.getTheColor()%></h3></p>
+							<p><h3>SellerID : <%=cm.getUserId()%></h3></p>
 							<span>Delivered in 2-3 bussiness days</span>
 							<div class="clearfix"></div>
 						</div>

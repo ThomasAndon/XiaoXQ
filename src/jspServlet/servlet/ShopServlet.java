@@ -48,6 +48,8 @@ public class ShopServlet extends HttpServlet {
         Integer amount = count;//tempCm的数量，初始化为此次购买的数量
         float price = amount * tempCm.getPrice();//在该商家下的花费，初始化此次购买的花费
 
+        cmAmount += amount;
+        totalPrice += price;
         //看该tempCm有无在cmArray里，没有的话就添加,并一起添加shopList；有的话就不理，直接进入shopList和userPrice的更新
         //而后再判断userPrice里有无tempCm对应的userID，没有的话就添加到userPrice，有的话就更新
         while (cmIt.hasNext()) {
@@ -59,7 +61,7 @@ public class ShopServlet extends HttpServlet {
             }
         }
         if(!cmIsRepeated){
-            //没有时，将tempCm和数量插入shopList
+            //没有时，将tempCm和数量插入shopList,并更新cmAmount
             //System.out.println("false");
             cmArray.add(tempCm);
             shopList.put(tempCm.getCommodityId(),amount);
@@ -73,7 +75,7 @@ public class ShopServlet extends HttpServlet {
                 }
             }
             if(!userIsRepeated){
-                //没有时直接插入
+                //没有时直接插入,并更新totalPrice
                 userPrice.put(tempCm.getUserId(), price);
             }else{
                 //有时，将价格加和，更新为商家下所有商品的总价
@@ -97,8 +99,6 @@ public class ShopServlet extends HttpServlet {
             price += userPrice.get((Integer)tempCm.getUserId());
             userPrice.replace(tempCm.getUserId(), price);
         }
-
-        //没有计算totalPrice和cmAmount！！！
 
         //传入session！回到checkout.jsp
         session.setAttribute("cmAmount", cmAmount);
