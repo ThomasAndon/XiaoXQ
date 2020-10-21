@@ -6,9 +6,8 @@ import jspServlet.vo.Commodity;
 
 import java.sql.*;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.Date;
-import java.util.HashMap;
 
 public class CommodityDAOImpl implements CommodityDAO {
     @Override
@@ -192,33 +191,69 @@ public class CommodityDAOImpl implements CommodityDAO {
     /**   将购物车内的所有商品存入订单数据库
      *
      */
-    public void OrderCm(Integer customerID, HashMap<Integer, Integer> shopList, Float totalPrice) throws Exception {
-        /*
+    public void OrderCm(Integer customerID, ArrayList<Commodity> cmArray, HashMap<Integer, Integer> shopList, HashMap<Integer, Float> userPrice) throws Exception {
+
         String indentSql = "INSERT INTO `managementsystem`.`indent` (`TotalPrice`, `OrderTime`, `State`, `CustomerId`, `UserId`) " +
                 "VALUES (?, ?, ?, ?, ?);";
         String detailSql = "INSERT INTO `managementsystem`.`itemdetail` (`OrderId`, `CommodityId`, `Number`) " +
                 "VALUES (?, ?, ?);";
+        String searchSql = "SELECT OrderId FROM indent ORDER BY OrderId desc limit 1";
         DBConnect dbc = null;
         PreparedStatement ps;
         String state = "ordered";
         Date date = new Date();
         Timestamp ts = new Timestamp(date.getTime());
 
+        Iterator priceIt = userPrice.entrySet().iterator();
+        Integer userID;
+        float singlePrice = (float)0.;
         try{
-            dbc = new DBConnect();
-            ps = dbc.getConnection().prepareStatement(indentSql);
-            ps.setFloat(1, totalPrice);
-            ps.setTimestamp(2, ts);
-            ps.setString(3, state);
-            ps.setInt(4, customerID);
-            ps.setInt(5, );
+            //获取数据库中所需的userID与其对应的totalPrice，和与其对应的cmID
+            while(priceIt.hasNext()){
+                dbc = new DBConnect();
+                ps = dbc.getConnection().prepareStatement(indentSql);
+                Map.Entry priceEntry = (Map.Entry)priceIt.next();
+                userID = (Integer) priceEntry.getKey();
+                singlePrice = (float)priceEntry.getValue();
+                //生成indentsql，向indent表插入订单数据
+                ps.setFloat(1, singlePrice);
+                ps.setTimestamp(2, ts);
+                ps.setString(3, state);
+                ps.setInt(4, customerID);
+                ps.setInt(5, userID);
+                ps.executeUpdate();
+                ps.close();
+                //获取刚刚的记录的订单号
+                ps = dbc.getConnection().prepareStatement(searchSql);
+                ResultSet re = ps.executeQuery();
+                Integer orderID = 0;
+                while(re.next()){
+                    orderID = re.getInt("OrderId");
+                }
+                ps.close();
+                //获取userID下的cm和shopList里对应cm的数量
+                // 并生成detailsql，向itemdetail插入订单细节数据
+                Integer cmID = 0;
+                Integer count = 0;
+                for(Commodity cm : cmArray){
+                    if(cm.getUserId() == userID){
+                        cmID = cm.getCommodityId();
+                        count = shopList.get(cmID);
+                        ps = dbc.getConnection().prepareStatement(detailSql);
+                        ps.setInt(1, orderID);
+                        ps.setInt(2, cmID);
+                        ps.setInt(3, count);
+                        ps.executeUpdate();
+                        ps.close();
+                    }
+                }
+
+            }
+
         }catch(SQLException throwables){
             System.out.println("Error in MAKING order!!!");
             throwables.printStackTrace();
         }
         dbc.close();
-    }
-
-         */
     }
 }

@@ -253,10 +253,6 @@ check out
 						alert("Order placed successfully!");
 					}
 				</script>
-				<form method="post" action="index(welcome).jsp">
-					<input type=hidden>
-
-				</form>
 			</a>
 			<div class="total-item">
 				<h3>OPTIONS</h3>

@@ -44,6 +44,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>MakingOrderServlet</servlet-name>
+        <servlet-class>jspServlet.servlet.OrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MakingOrderServlet</servlet-name>
+        <url-pattern>/order</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>Servley3</servlet-name>
         <servlet-class>jspServlet.servlet.WelcomeServlet</servlet-class>
     </servlet>

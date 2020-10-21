@@ -49,5 +49,5 @@ public interface CommodityDAO {
 
     public Commodity SingleIdSearch(Integer cmId) throws Exception;
 
-    public void OrderCm(Integer customerID, HashMap<Integer, Integer> shopList, Float totalPrice) throws Exception;
+    public void OrderCm(Integer customerID, ArrayList<Commodity> cmArray, HashMap<Integer, Integer> shopList, HashMap<Integer, Float> userPrice) throws Exception;
 }
