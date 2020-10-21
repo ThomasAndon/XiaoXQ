@@ -301,21 +301,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 				%>
 
-				<!--
-				 这段代码无法显示图片，全部无法运行
+
 
 
 				<div class="col-md-7 single-top">
 					<div class="flexslider">
 						<ul class="slides">
-							<li data-thumb=<%=imageUrl1.toString()%>>
-								<h6>Yahu</h6>
+							<li data-thumb=“imagesOfUs/key1.jpg”>
 								<div class="thumb-image"> <img src="imagesOfUs/key1.jpg", data-imagezoom="true", class="img-responsive", alt=""/> </div>
 							</li>
-							<li data-thumb=<%=imageUrl2.toString()%>>
+							<li data-thumb=“imagesOfUs/key1.jpg”>
 								<div class="thumb-image"> <img src="imagesOfUs/key2.jpg", data-imagezoom="true", class="img-responsive", alt=""/> </div>
 							</li>
-							<li data-thumb=<%=imageUrl3.toString()%>>
+							<li data-thumb=“imagesOfUs/key1.jpg”>
 								<div class="thumb-image"> <img src="imagesOfUs/key3.png", data-imagezoom="true", class="img-responsive", alt=""/> </div>
 							</li>
 						</ul>
@@ -333,7 +331,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</script>
 
 				</div>
-				-->
+
 				<div class="col-md-5 single-top-in simpleCart_shelfItem">
 					<div class="single-para ">
 						<h4><%=cmName%></h4>
