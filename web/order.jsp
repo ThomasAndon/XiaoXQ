@@ -1,4 +1,9 @@
 <%@ page import="java.util.Enumeration" %>
+<%@ page import="jspServlet.vo.Order" %>
+<%@ page import="jspServlet.DAO.impl.OrderDAOimpl" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="netscape.javascript.JSObject" %>
+<%@ page import="com.google.gson.Gson" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -113,39 +118,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--jsp session枚举及处理
 @author Luo Deng
 -->
-<%
-	/*
-    Enumeration<?> enumeration = session.getAttributeNames();
-	while (enumeration.hasMoreElements()) {
-		String name = enumeration.nextElement().toString();
-		// 根据键值取session中的值
-		Object value = session.getAttribute(name);
-		// 打印结果
-		System.out.println(name+ "=" + value);
-	}
-	Double totalPrice = (Double)session.getAttribute("totalPrice");
-	if(totalPrice == null){
-		totalPrice = 0.;
-	}
+<script>
+	<%
+        /*
+        Enumeration<?> enumeration = session.getAttributeNames();
+        while (enumeration.hasMoreElements()) {
+            String name = enumeration.nextElement().toString();
+            // 根据键值取session中的值
+            Object value = session.getAttribute(name);
+            // 打印结果
+            System.out.println(name+ "=" + value);
+        }
+        Double totalPrice = (Double)session.getAttribute("totalPrice");
+        if(totalPrice == null){
+            totalPrice = 0.;
+        }
 
-	Integer cmAmount = (Integer)session.getAttribute("cmAmount");
-	if(session.getAttribute("cmAmount") == null){
-		cmAmount = 0;
-	}
-    */
+        Integer cmAmount = (Integer)session.getAttribute("cmAmount");
+        if(session.getAttribute("cmAmount") == null){
+            cmAmount = 0;
+        }
+        */
 
-    //打印目前session所有的值
-    System.out.println("---index---");
-    Enumeration<?> enumeration1 = session.getAttributeNames();
-    while (enumeration1.hasMoreElements()) {
-        String name = enumeration1.nextElement().toString();
-        // 根据键值取session中的值
-        Object value = session.getAttribute(name);
-        // 打印结果
-        System.out.println(name+ "=" + value);
-    }
-%>
-
+        //打印目前session所有的值
+        System.out.println("---index---");
+        Enumeration<?> enumeration1 = session.getAttributeNames();
+        while (enumeration1.hasMoreElements()) {
+            String name = enumeration1.nextElement().toString();
+            // 根据键值取session中的值
+            Object value = session.getAttribute(name);
+            // 打印结果
+            System.out.println(name+ "=" + value);
+        }
+    %>
+</script>
 
 
 
@@ -240,6 +246,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="clearfix"> </div>
 </div>
 
+<script src="js/vue.js"></script>
+
+<script type="text/javascript">
+	<%
+	 ArrayList<Order> a = new OrderDAOimpl().OrderSearch((Integer) session.getAttribute("customerID"));
+//	 JSObject
+
+	%>
+	var olist = <%=a%>;
+	alert("111");
+	</script>
+
 
 <script type="text/javascript">
 	// alert("test alert");
@@ -278,6 +296,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
+<div id="app">
+	<div v-for="i in <%=a%>">
+		{{i}}
+	</div>
+</div>
 
 
 
@@ -287,6 +310,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
+
+<script type="text/javascript">
+	var vue = new Vue({
+		el: '#app',
+		data:{
+			<%=a%>
+
+		}
+	})
+</script>
 
 
 

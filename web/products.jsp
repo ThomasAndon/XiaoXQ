@@ -622,7 +622,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
-
+<!-- Single button -->
 
 
 <div class="subscribe">
@@ -631,16 +631,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<form action="<%=request.getContextPath()%>/search"  method="get">
 			<input id="search" type="text" name="SC" class="text">
 			<input type="submit" value="Go"><br/>
-			Query method:
+			<b style="color: whitesmoke">Query method:</b>
 			<div id="searchway">
-				<input type="radio" name="Search" value="SN" checked>Search by name
-				<input type="radio" name="Search" value="SLC">Search by Color
-				<input type="radio" name="Search" value="SSC">Search by Class
+				<input type="radio" name="Search" value="SN" checked><b style="color: whitesmoke">Search by Name</b>
+				<input type="radio" name="Search" value="SLC"><b style="color: whitesmoke">Search by Color</b>
+				<input type="radio" name="Search" value="SSC"><b style="color: whitesmoke">Search by Class</b>
 			</div><br/>
-			Order method:
+			<b style="color: whitesmoke">Order method:</b>
 			<div id="orderway">
-				<input type="radio" name="Order" value="asc" checked>Increase
-				<input type="radio" name="Order" value="desc">Decrease
+				<input type="radio" name="Order" value="asc" checked><b style="color: whitesmoke">Increase</b>
+				<input type="radio" name="Order" value="desc"><b style="color: whitesmoke">Decrease</b>
 			</div><br/>
 		</form>
 	</div>
