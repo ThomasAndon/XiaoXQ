@@ -325,7 +325,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!--
                 通过超链接带cmId值跳入servlet，在servlet进行数据库访问获取商品信息，再跳到single产品展示界面
                 -->
-                <a href=<%=request.getContextPath()+"/view?CommodityId=1"%>><img src="imagesOfUs/key1.jpg" alt=""/>
+                <a href=<%=request.getContextPath()+"/view?cmName=1"%>><img src="imagesOfUs/key1.jpg" alt=""/>
                     <div class="arrival-info">
                         <h4>Electronic organ1</h4>
                         <p>$1200-1600</p>
@@ -336,12 +336,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         --%>
                     </div>
                     <div class="viw">
-                        <a href=<%=request.getContextPath()+"/view?CommodityId=1"%>><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>View</a>
+                        <a href=<%=request.getContextPath()+"/view?cmName=1"%>><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>View</a>
                     </div>
                 </a>
 			</div>
 			<div class="col-md-3 feature-grid">
-				<a href=<%=request.getContextPath()+"/view?CommodityId=10"%>><img src="imagesOfUs/key2.jpg" alt=""/>
+				<a href=<%=request.getContextPath()+"/view?cmName=2"%>><img src="imagesOfUs/key2.jpg" alt=""/>
 					<div class="arrival-info">
 						<h4>Electronic organ2</h4>
 						<p>$2400-2800</p>
@@ -351,7 +351,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         --%>
 					</div>
 					<div class="viw">
-						<a href=<%=request.getContextPath()+"/view?CommodityId=2"%>><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>View</a>
+						<a href=<%=request.getContextPath()+"/view?cmName=2"%>><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>View</a>
 					</div>
 				</a>
 			</div>

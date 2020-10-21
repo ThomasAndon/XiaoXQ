@@ -62,7 +62,8 @@ public class LoginServlet extends HttpServlet {
             //购物车session构造
             Integer cmAmount = 0;//购物车商品总数量
             Float totalPrice = (float)(0.);//购物车商品总花费
-            Commodity tempCm = new Commodity();//暂存的商品对象
+            Commodity tempCm = new Commodity();//暂存的要购买的商品对象（已选好颜色）
+            ArrayList<Commodity> tempCmArray = new ArrayList<Commodity>();//访问商品时，暂存的同名商品数组
             ArrayList<Commodity> cmArray = new ArrayList<Commodity>();//购物车内的商品信息组
             HashMap<Integer, Integer> shopList = new HashMap<Integer, Integer>();//购物车商品编号-数量
             HashMap<Integer, Float> userPrice = new HashMap<Integer, Float>();//购物车商家-总价，方便统计和生成订单
@@ -92,6 +93,7 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("userPrice", userPrice);
             session.setAttribute("totalPrice", totalPrice);
             session.setAttribute("tempCm", tempCm);
+            session.setAttribute("tempCmArray", tempCmArray);
             session.setAttribute("cmArray", cmArray);
             session.setAttribute("shopList", shopList);
             //end add
