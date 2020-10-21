@@ -40,8 +40,8 @@ public class LoginServlet extends HttpServlet {
 //        resp.setCharacterEncoding("UTF-8");
 //        resp.setContentType("text/html;charset=UTF-8");
         //测试订单查询
-//        OrderDAOimpl dao1=new OrderDAOimpl();
-//         dao1.OrderSearch(1);
+        OrderDAOimpl dao1=new OrderDAOimpl();
+         dao1.OrderSearch(1);
 
         Customer customer= new Customer();
         customer.setAccount(req.getParameter("username"));

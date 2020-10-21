@@ -21,8 +21,8 @@ public class OrderDAOimpl implements OrderDAO {
      * @author Zeyang Sun
      */
     public ArrayList<Order> OrderSearch(Integer CustomerID) {
-        System.out.println(CustomerID+"&&^%&^%^&%&^%%");
-        ArrayList<Order> orders=null;
+//        System.out.println(CustomerID+"&&^%&^%^&%&^%%");
+        ArrayList<Order> orders= new ArrayList<Order>();
         String sql = "select * from Indent where CustomerID=?";
         String sql2 = "select * from itemdetail where OrderID=?";
         String sql3 = "select * from commodity where CommodityId=?";
@@ -40,23 +40,23 @@ public class OrderDAOimpl implements OrderDAO {
             pstmt.setInt(1,CustomerID);
             ResultSet rs = pstmt.executeQuery();
             while(rs.next()){
-                Order order=null;
+                Order order= new Order();
                 order.setCustomerID(1);
                 order.setOrderID(rs.getInt("Orderid"));
                 order.setTotalPrice(rs.getFloat("TotalPrice"));
                 order.setState(rs.getString("State"));
-                order.setOrderTime(rs.getString("OrderTime"));
+                order.setOrderTime(rs.getDate("OrderTime"));
                 pstmt2 = dbc.getConnection().prepareStatement(sql2) ;
                 pstmt2.setInt(1,rs.getInt("Orderid"));
-                System.out.println(order.getOrderID()+"######");
+//                System.out.println(order.getOrderTime()+"######");
                 ResultSet rs2 = pstmt2.executeQuery();
                 while (rs2.next()){
-                    ArrayList<Commodity> Commodities = null;
+                    ArrayList<Commodity> Commodities = new ArrayList<Commodity>();
                     pstmt3 = dbc.getConnection().prepareStatement(sql3) ;
                     pstmt3.setInt(1,rs2.getInt("commodityid"));
                     ResultSet rs3 = pstmt3.executeQuery();
                     while (rs3.next()){
-                        Commodity commodity = null;
+                        Commodity commodity = new Commodity();
                         commodity.setName(rs3.getString("name"));
                         commodity.setTheClass(rs3.getString("TheClass"));
                         commodity.setTheColor(rs3.getString("TheColor"));
@@ -64,7 +64,7 @@ public class OrderDAOimpl implements OrderDAO {
                         commodity.setPrice(rs3.getFloat("Price"));
                         commodity.setUserId(rs3.getInt("UserId"));
                         commodity.setCommodityId(rs3.getInt("CommodityId"));
-                        System.out.println(commodity.getName()+"######");
+//                        System.out.println(commodity.getName()+"######");
                         Commodities.add(commodity);
                     }
                     order.setCommodities(Commodities);
