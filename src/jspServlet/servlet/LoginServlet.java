@@ -1,8 +1,11 @@
 package jspServlet.servlet;
 
+import jspServlet.DAO.CommodityDAO;
 import jspServlet.DAO.CustomerDAO;
 
+import jspServlet.DAO.impl.CommodityDAOImpl;
 import jspServlet.DAO.impl.CustomerDAOImpl;
+import jspServlet.DAO.impl.OrderDAOimpl;
 import jspServlet.vo.Commodity;
 import jspServlet.vo.Customer;
 
@@ -36,6 +39,10 @@ public class LoginServlet extends HttpServlet {
 //        req.setCharacterEncoding("UTF-8");
 //        resp.setCharacterEncoding("UTF-8");
 //        resp.setContentType("text/html;charset=UTF-8");
+        //测试订单查询
+//        OrderDAOimpl dao1=new OrderDAOimpl();
+//         dao1.OrderSearch(1);
+
         Customer customer= new Customer();
         customer.setAccount(req.getParameter("username"));
         customer.setPassword(req.getParameter("password"));

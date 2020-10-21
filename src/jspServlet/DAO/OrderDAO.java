@@ -10,5 +10,5 @@ import java.util.ArrayList;
  * @author Zeyang Sun
  */
 public interface OrderDAO {
-    public ArrayList<Order> OrderSearch(Integer UserID);
+    public ArrayList<Order> OrderSearch(Integer CustomerID);
 }
