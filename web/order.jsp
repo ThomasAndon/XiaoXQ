@@ -3,6 +3,7 @@
 <%@ page import="jspServlet.DAO.impl.OrderDAOimpl" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="netscape.javascript.JSObject" %>
+<%@ page import="" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -251,6 +252,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<%
 	 ArrayList<Order> a = new OrderDAOimpl().OrderSearch((Integer) session.getAttribute("customerID"));
 //	 JSObject
+
 	%>
 	var olist = <%=a%>;
 	alert("111");
