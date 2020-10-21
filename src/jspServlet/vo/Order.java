@@ -1,5 +1,6 @@
 package jspServlet.vo;
 
+import java.sql.Date;
 import java.util.ArrayList;
 
 
@@ -14,7 +15,15 @@ public class Order {
     private ArrayList<Commodity> Commodities;
     private float TotalPrice;
     private String State;
-    private String OrderTime;
+    private Date OrderTime;
+
+    public Date getOrderTime() {
+        return OrderTime;
+    }
+
+    public void setOrderTime(Date orderTime) {
+        OrderTime = orderTime;
+    }
 
     public Integer getOrderID() {
         return OrderID;
@@ -56,11 +65,5 @@ public class Order {
         State = state;
     }
 
-    public String getOrderTime() {
-        return OrderTime;
-    }
 
-    public void setOrderTime(String orderTime) {
-        OrderTime = orderTime;
-    }
 }
