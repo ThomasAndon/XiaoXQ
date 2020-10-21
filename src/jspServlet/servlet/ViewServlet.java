@@ -34,19 +34,25 @@ public class ViewServlet extends HttpServlet {
         System.out.println("---ViewServlet---");
         String nameNum = req.getParameter("cmName");
         CommodityDAO dao = new CommodityDAOImpl();
-        ArrayList<Commodity> tempCmList = new ArrayList<Commodity>();
+        ArrayList<Commodity> tempCmArray = new ArrayList<Commodity>();
         HttpSession session = req.getSession();
 
         try{
-            tempCmList = dao.FQCommodity(nameNum, "desc");
+            tempCmArray = dao.FQCommodity(nameNum, "desc");
             //session.setAttribute("tempCm", cm);
             //System.out.println(cm.getCommodityId());
         }catch(Exception exception){
             exception.printStackTrace();
         }
 
-        resp.sendRedirect("./single.jsp");
-
-
+        String cmName = null;
+        if(tempCmArray.size() != 0){
+            cmName = tempCmArray.get(0).getName();
+            session.setAttribute("tempCmArray", tempCmArray);
+            resp.sendRedirect("./single.jsp?cmName=" + cmName);
+        }else{
+            System.out.println("There is no such commodity of this name!!!");
+            System.exit(1);
+        }
     }
 }
