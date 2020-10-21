@@ -248,15 +248,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <script src="js/vue.js"></script>
 
-<script type="text/javascript">
-	<%
-	 ArrayList<Order> a = new OrderDAOimpl().OrderSearch((Integer) session.getAttribute("customerID"));
-//	 JSObject
-
-	%>
-	var olist = <%=a%>;
-	alert("111");
-	</script>
 
 
 <script type="text/javascript">
@@ -288,20 +279,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
+<script type="text/javascript">
+    <%
+     ArrayList<Order> a = new OrderDAOimpl().OrderSearch((Integer) session.getAttribute("customerID"));
+//	 JSObject
+    String parsed = new Gson().toJson(a);
+    %>
+
+</script>
+
+
+<input id="arr" type="hidden" value="<%=parsed%>">
+
+
+<script type="javascript">
+	var thestring = document.getElementById("arr").value;
+	var tl = [];
+	tl = JSON.parse(thestring);
+	alert("111");
+</script>
 
 
 
 
-
-
-
-
-<div id="app">
-	<div v-for="i in <%=a%>">
-		{{i}}
-	</div>
-</div>
-
+<button onclick="alert(thestring)">111111</button>
 
 
 
