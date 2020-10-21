@@ -209,12 +209,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <input type="text" value="" name="Gender">
                 <h5>Address</h5>
                 <input type="text" value="" name="Address"><br>
-                <input type="checkbox" id="confirmcheck" class="checkbox" onclick="check()" style="float: left; width: 20px">
+                <input type="checkbox" id="confirmcheck" class="checkbox" onclick="check()" style="float: left; width: 20px" data-toggle="popover" title="">
                 <span style="overflow: auto">
                     <p>I accept the <a href="eula.html" target="_blank">end user license agreement</a> and <a href="t&c.html" target="_blank">terms and conditions</a></p>
                 </span>
 
-                <input type="submit" value="Register" disabled="disabled" id="regbtn">
+                <input type="submit" value="Register" disabled="disabled" id="regbtn"><p id="havetoprompt" class="alert alert-danger">You have to confirm first!</p>
             </form>
             <a href="./login.jsp">Back to Login</a>
 
@@ -228,8 +228,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         var a = document.getElementById("confirmcheck");
         if (a.checked === true) {
             document.getElementById("regbtn").removeAttribute("disabled");
+            document.getElementById("havetoprompt").style.display="none";
         } else {
             document.getElementById("regbtn").disabled="disabled";
+            document.getElementById("havetoprompt").style.display="block";
 
         }
     }
