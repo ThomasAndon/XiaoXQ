@@ -247,7 +247,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					 */
 
 
-					//根据cmId为页面显示准备变量，保证不同Id对应不同页面信息
+					//根据cmName为页面显示准备变量，保证不同Id对应不同页面信息
 					ArrayList<Commodity> tempCmArray = (ArrayList<Commodity>)session.getAttribute("tempCmArray");
 					String cmName = request.getParameter("cmName");
 					System.out.println("cmName = " + cmName);
