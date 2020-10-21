@@ -48,6 +48,7 @@ public class ViewServlet extends HttpServlet {
         String cmName = null;
         if(tempCmArray.size() != 0){
             cmName = tempCmArray.get(0).getName();
+            System.out.println(cmName);
             session.setAttribute("tempCmArray", tempCmArray);
             resp.sendRedirect("./single.jsp?cmName=" + cmName);
         }else{

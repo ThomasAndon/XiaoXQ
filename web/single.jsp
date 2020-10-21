@@ -1,4 +1,5 @@
 <%@ page import="jspServlet.vo.Commodity" %>
+<%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -247,9 +248,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 					//根据cmId为页面显示准备变量，保证不同Id对应不同页面信息
-					Commodity tempCm = (Commodity)session.getAttribute("tempCm");
-					int cmId = tempCm.getCommodityId();
-					System.out.println("cmId = " + cmId);
+					ArrayList<Commodity> tempCmArray = (ArrayList<Commodity>)session.getAttribute("tempCmArray");
+					String cmName = request.getParameter("cmName");
+					System.out.println("cmName = " + cmName);
 					//int cmId = Integer.parseInt(request.getParameter("CommodityId"));
 					//StringBuffer cmName = new StringBuffer();
 					//Double cmPrice = 0.;
@@ -257,6 +258,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					StringBuffer imageUrl1 = new StringBuffer();
 					StringBuffer imageUrl2 = new StringBuffer();
 					StringBuffer imageUrl3 = new StringBuffer();
+
+					/*
 
 					switch(cmId){
 						case 1:
@@ -285,6 +288,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							System.exit(1);
 							break;
 					}
+
+					 */
 
 					/*
 					session.setAttribute("cmName", cmName);
@@ -331,8 +336,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				-->
 				<div class="col-md-5 single-top-in simpleCart_shelfItem">
 					<div class="single-para ">
-						<h4><%=tempCm.getName()%></h4>
-						<h5 class="item_price">$ <%=tempCm.getPrice()%></h5>
+						<h4><%=cmName%></h4>
+						<!--用js写两个按钮？用来选择颜色，每一次onclick就会访问一次session中的对象，根据onclick所发送的值（颜色 String）来更新价格-->
+						<h5 class="item_price">$ <%//tempCm.getPrice()%></h5>
 						<p class="para"><%=descText.toString()%></p>
 						<div class="prdt-info-grid">
 							<ul>
