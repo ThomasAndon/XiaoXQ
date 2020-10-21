@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ViewServlet extends HttpServlet {
     @Override
@@ -31,15 +32,15 @@ public class ViewServlet extends HttpServlet {
      */
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("---ViewServlet---");
-        Integer cmId = Integer.parseInt(req.getParameter("CommodityId"));
+        String nameNum = req.getParameter("cmName");
         CommodityDAO dao = new CommodityDAOImpl();
-        Commodity cm = new Commodity();
+        ArrayList<Commodity> tempCmList = new ArrayList<Commodity>();
         HttpSession session = req.getSession();
 
         try{
-            cm = dao.SingleIdSearch(cmId);
-            session.setAttribute("tempCm", cm);
-            System.out.println(cm.getCommodityId());
+            tempCmList = dao.FQCommodity(nameNum, "desc");
+            //session.setAttribute("tempCm", cm);
+            //System.out.println(cm.getCommodityId());
         }catch(Exception exception){
             exception.printStackTrace();
         }
