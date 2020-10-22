@@ -13,6 +13,41 @@ import java.util.Date;
 public class CommodityDAOImpl implements CommodityDAO {
     @Override
     /**
+     * 通过名字模糊查询
+     * 不重复名字地查询所有商品，并提供同名商品的最大最小价格！
+     * @return ArrayList<Commodity>
+     * @author Zeyang Sun
+     */
+    public ArrayList<Commodity> NameSearch(String string, String Order) {
+        String sql = "Select Name,max(Price) as MXP,min(Price) as MIP from Commodity Where Name Like ? group by name order by MXP "+Order;
+
+        DBConnect DBC = null;
+        PreparedStatement PS;
+        ArrayList<Commodity> AL=new ArrayList<Commodity>();
+        try {
+            DBC = new DBConnect();
+            PS = DBC.getConnection().prepareStatement(sql);
+            PS.setString(1, "%" + string + "%");
+            ResultSet re = PS.executeQuery();
+            while (re.next()) {
+                Commodity C=new Commodity();
+                C.setName(re.getString("name"));
+                C.setMAXPrice(re.getFloat("MXP"));
+                C.setMINPrice(re.getFloat("MIP"));
+                AL.add(C);
+            }
+            re.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        DBC.close();
+        return AL;
+    }
+
+    @Override
+    /**
      * 向数据库中插入商品数据
      * @param commodity 商品实例
      * @throws Exception

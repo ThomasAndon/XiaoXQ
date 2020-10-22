@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public interface CommodityDAO {
+
+
+    public ArrayList<Commodity> NameSearch(String string,String Order);
     /**
      * 向数据库中插入商品数据
      * @param commodity 商品实例

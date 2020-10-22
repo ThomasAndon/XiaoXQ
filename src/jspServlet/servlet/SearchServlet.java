@@ -49,7 +49,7 @@ public class SearchServlet extends HttpServlet {
         CommodityDAO dao= new CommodityDAOImpl();
         try {
             if(string.equals("SN")){
-                AL=dao.FQCommodity(req.getParameter("SC"),order);
+                AL=dao.NameSearch(req.getParameter("SC"),order);
             }else {
                 if (string.equals("SLC")) {
                     AL = dao.ColorSearch(req.getParameter("SC"), order);
@@ -67,7 +67,7 @@ public class SearchServlet extends HttpServlet {
 //                    resp.getWriter().write("</br>");
 //                }
                 resp.getWriter().write("<div class=\"card shadow p-3 mb-5 bg-white rounded\" style=\"width: 18rem;\">\n" +
-                        "<img src=\"imagesOfUs/Electronic_organ_2.jpg\" class=\"card-img-top\" alt=\"Product\">"+
+                        "<img src=\"imagesOfUs/"+commodity.getName()+".jpg\" style=\"width: 200px;height: 150px\" class=\"card-img-top\" alt=\"Product\">"+
                         "  <div class=\"card-body\">\n" +
                         "    <h5 class=\"card-title\">"+commodity.getName()+"</h5>\n" +
                         "    <p class=\"card-text\">"+"Price: "+commodity.getMINPrice()+"-"+commodity.getMAXPrice()+"</p>\n" +
