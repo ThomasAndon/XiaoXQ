@@ -79,18 +79,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <%
 	System.out.println("---single---");
-	/*
-	Double totalPrice = (Double)session.getAttribute("totalPrice");
-	if(totalPrice == null){
-		totalPrice = 0.;
-	}
 
-	Integer cmAmount = (Integer)session.getAttribute("cmAmount");
-	if(cmAmount == null){
-		cmAmount = 0;
-	}
-
-	 */
 %>
 
 <div id="identifier" class="modal" data-toggle="modal" tabindex="-1" role="dialog">
@@ -251,9 +240,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					ArrayList<Commodity> tempCmArray = (ArrayList<Commodity>)session.getAttribute("tempCmArray");
 					String cmName = request.getParameter("cmName");
 					System.out.println("cmName = " + cmName);
-					//int cmId = Integer.parseInt(request.getParameter("CommodityId"));
-					//StringBuffer cmName = new StringBuffer();
-					//Double cmPrice = 0.;
+
+					float whitePrice = (float) 0.;
+					float blackPrice = (float) 0.;
+                    float lowPrice = (float) 0.;
+                    float highPrice = (float) 0.;
+					for(Commodity cm : tempCmArray){
+					    String cmColor = cm.getTheColor();
+					    //System.out.println(cmColor);
+					    if(cmColor.equals("white")){
+					        whitePrice = cm.getPrice();
+                        }else if(cmColor.equals("black")){
+					        blackPrice = cm.getPrice();
+                        }else{
+					        System.out.println("The color is neither black nor white!!!");
+                        }
+                    }
+
+                    if(whitePrice >= blackPrice){
+                        lowPrice = blackPrice;
+                        highPrice = whitePrice;
+                    }else{
+                        lowPrice = whitePrice;
+                        highPrice = blackPrice;
+                    }
+
 					StringBuffer descText = new StringBuffer();
 					StringBuffer imageUrl1 = new StringBuffer();
 					StringBuffer imageUrl2 = new StringBuffer();
@@ -336,7 +347,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="single-para ">
 						<h4><%=cmName%></h4>
 						<!--用js写两个按钮？用来选择颜色，每一次onclick就会访问一次session中的对象，根据onclick所发送的值（颜色 String）来更新价格-->
-						<h5 class="item_price">$ <%//tempCm.getPrice()%></h5>
+						<h5 id="priceLabel" class="item_price">$<%=lowPrice%>~<%=highPrice%>
+                        </h5>
 						<p class="para"><%=descText.toString()%></p>
 						<div class="prdt-info-grid">
 							<ul>
@@ -389,6 +401,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									document.addingCart.action="./shop";
 								}
 							}
+							//Luo Deng Add
+							function whitePrice(){
+                                var price = '<%=whitePrice%>';
+                                document.getElementById("priceLabel").innerHTML = '$'+price;
+                            }
+
+                            function blackPrice(){
+                                var price = '<%=blackPrice%>';
+                                document.getElementById("priceLabel").innerHTML = '$'+price;
+                            }
+                            //end add
 						</script>
 						<form name="addingCart" method="post" action="" onsubmit="IdCheck();">
 							<%--System.out.println(session.getAttribute("try"));--%>
@@ -404,8 +427,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 								<div style="width:50%;float:right;">
 									<p><h3>Choose the color: </h3></p>
-									<input type="radio" method="post" value="white"><b>white</b><br/>
-									<input type="radio" method="post" value="black"><b>black</b>
+									<input type="radio" name="color" method="post" value="white" onclick="whitePrice()"><b>white</b><br/>
+									<input type="radio" name="color" method="post" value="black" onclick="blackPrice()"><b>black</b>
 								</div>
 								<br/>
 							<input type="submit" value="Add to Cart" class="add-cart item_add" style="width:100%;">

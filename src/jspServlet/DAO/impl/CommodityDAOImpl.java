@@ -152,31 +152,34 @@ public class CommodityDAOImpl implements CommodityDAO {
     }
 
     @Override
-    /**  对单个商品进行编号搜索
-     * @return Commodity 对象
+    /**  对商品进行精确名字搜索
+     * @return ArrayList<Commodity>数组
      * @exception
      * @author Luo Deng
      */
-    public Commodity SingleIdSearch(Integer cmId) throws Exception{
-        String sql = "Select * from Commodity where CommodityId = ?";
-
+    public ArrayList<Commodity> NameSearch(String nameNum) throws Exception{
+        String sql = "Select * from Commodity where name = ?";
         DBConnect dbc = null;
         PreparedStatement ps;
-        Commodity cm = new Commodity();
+        ArrayList<Commodity> tempCmArray = new ArrayList<>();
+
 
         try{
             dbc = new DBConnect();
             ps = dbc.getConnection().prepareStatement(sql);
-            ps.setInt(1, cmId);
+            ps.setString(1, "Electronic_organ_"+nameNum);
             ResultSet re = ps.executeQuery();
             while (re.next()) {
+                Commodity cm = new Commodity();
                 cm.setName(re.getString("name"));
-                cm.setTheClass(re.getString("TheClass"));
-                cm.setTheColor(re.getString("TheColor"));
+                cm.setCommodityId(re.getInt("CommodityId"));
                 cm.setInstructions(re.getString("Instructions"));
+                cm.setTheColor(re.getString("TheColor"));
+                //System.out.println("color is "+cm.getTheColor());
+                cm.setTheClass(re.getString("TheClass"));
                 cm.setPrice(re.getFloat("Price"));
                 cm.setUserId(re.getInt("UserId"));
-                cm.setCommodityId(re.getInt("CommodityId"));
+                tempCmArray.add(cm);
             }
             re.close();
         } catch (SQLException throwables) {
@@ -184,12 +187,14 @@ public class CommodityDAOImpl implements CommodityDAO {
             throwables.printStackTrace();
         }
         dbc.close();
-        return cm;
+        return tempCmArray;
     }
 
     @Override
     /**   将购物车内的所有商品存入订单数据库
-     *
+     *  @return
+     *  @exception
+     *  @author Luo Deng
      */
     public void OrderCm(Integer customerID, ArrayList<Commodity> cmArray, HashMap<Integer, Integer> shopList, HashMap<Integer, Float> userPrice) throws Exception {
 

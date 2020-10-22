@@ -20,6 +20,7 @@ public class ShopServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("---ShopServlet---");
         Integer count = Integer.parseInt(req.getParameter("count"));
+        String color = req.getParameter("count");
         HttpSession session = req.getSession();
         /*
         Enumeration<?> enumeration1 = session.getAttributeNames();
@@ -39,6 +40,7 @@ public class ShopServlet extends HttpServlet {
         HashMap<Integer, Integer> shopList = (HashMap<Integer, Integer>) session.getAttribute("shopList");
         HashMap<Integer, Float> userPrice = (HashMap<Integer, Float>) session.getAttribute("userPrice");
         Commodity tempCm = (Commodity) session.getAttribute("tempCm");
+
 
         Iterator cmIt = cmArray.iterator();
         Iterator priceIt = userPrice.entrySet().iterator();

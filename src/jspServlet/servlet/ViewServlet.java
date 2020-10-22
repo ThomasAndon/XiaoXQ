@@ -38,11 +38,15 @@ public class ViewServlet extends HttpServlet {
         HttpSession session = req.getSession();
 
         try{
-            tempCmArray = dao.FQCommodity(nameNum, "desc");
+            tempCmArray = dao.NameSearch(nameNum);
             //session.setAttribute("tempCm", cm);
             //System.out.println(cm.getCommodityId());
         }catch(Exception exception){
             exception.printStackTrace();
+        }
+
+        for(Commodity cm: tempCmArray){
+            System.out.println(cm.getName());
         }
 
         String cmName = null;
