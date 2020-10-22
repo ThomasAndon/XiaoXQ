@@ -18,6 +18,7 @@ DonaldBox71:
 9. *checkout.jsp排版优化
 10. checkout 商品条单价未显示
 11. single.jsp图片显示问题
+12. *未登录时进行添加购物车，该商品会保留然后登陆后会跳至刚刚选择的商品的页面
 
 (:
 SZY:
