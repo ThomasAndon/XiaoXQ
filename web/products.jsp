@@ -326,8 +326,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<img src="imagesOfUs/key1.jpg" style="width: 200px;height: 150px" class="card-img-top center-block" alt="Product">
 								<div class="card-body">
 									<h5 class="card-title" style="font-size: 2.5rem;"><b style="font-size: 26px;">Electronic_organ_1</b></h5>
-									<p class="card-text" style="font-size: 16px;">Price: Price</p>
-									<a href="single.jsp?CommdityId=1" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
+									<p class="card-text" style="font-size: 16px;">Price: $1200-1400</p>
+									<a href="/view?cmName=1" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 								</div>
 							</div>
 
@@ -338,8 +338,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<img src="imagesOfUs/Electronic_organ_2.jpg" style="width: 200px;height: 150px" class="card-img-top center-block" alt="Product">
 								<div class="card-body">
 									<h5 class="card-title" style="font-size: 2.5rem;"><b style="font-size: 26px;">Electronic_organ_2</b></h5>
-									<p class="card-text" style="font-size: 16px;">Price: Price</p>
-									<a href="single.jsp?CommdityId=2" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
+									<p class="card-text" style="font-size: 16px;">Price: $1200-1400</p>
+									<a href="/view?cmName=2" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 								</div>
 							</div>
 						</div>
@@ -349,8 +349,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<img src="imagesOfUs/Electronic_organ_3.jpg" style="width: 200px;height: 150px" class="card-img-top center-block" alt="Product">
 								<div class="card-body">
 									<h5 class="card-title" style="font-size: 2.5rem;"><b style="font-size: 26px;">Electronic_organ_3</b></h5>
-									<p class="card-text" style="font-size: 16px;">Price: Price</p>
-									<a href="single.jsp?CommdityId=3" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
+									<p class="card-text" style="font-size: 16px;">Price: $1200</p>
+									<a href="/view?cmName=3" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 								</div>
 							</div>
 
@@ -382,8 +382,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<img id="product1" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
 							<h5 id="name1" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Product Name</b></h5>
-							<p class="card-text" style="font-size: 16px;">Price: Price</p>
-							<a href="single.jsp?CommdityId=4" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
+							<p class="card-text" style="font-size: 16px;">Price: $1400</p>
+							<a id="go1" href="/view?cmName=4" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 						</div>
 					</div>
 
@@ -394,8 +394,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<img id="product2" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
 							<h5 id="name2" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Product Name</b></h5>
-							<p class="card-text" style="font-size: 16px;">Price: Price</p>
-							<a href="single.jsp?CommdityId=5" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
+							<p class="card-text" style="font-size: 16px;">Price: $1300-1600</p>
+							<a id="go2" href="/view?cmName=5" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 						</div>
 					</div>
 				</div>
@@ -406,7 +406,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="card-body">
 							<h5 id="name3" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Product Name</b></h5>
 							<p class="card-text" style="font-size: 16px;">Price: Price</p>
-							<a href="single.jsp?CommdityId=5" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
+							<a id="go3" href="single.jsp?CommdityId=5" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 						</div>
 					</div>
 				</div>
@@ -425,7 +425,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="card-body">
 							<h5 id="name4" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Product Name</b></h5>
 							<p class="card-text" style="font-size: 16px;">Price: Price</p>
-							<a href="single.jsp?CommdityId=4" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
+							<a id="go4" href="single.jsp?CommdityId=4" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 						</div>
 					</div>
 
@@ -437,7 +437,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="card-body">
 							<h5 id="name5" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Product Name</b></h5>
 							<p class="card-text" style="font-size: 16px;">Price: Price</p>
-							<a href="single.jsp?CommdityId=5" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
+							<a id="go5" href="single.jsp?CommdityId=5" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 						</div>
 					</div>
 				</div>
@@ -447,7 +447,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="card-body">
 							<h5 id="name6" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Product Name</b></h5>
 							<p class="card-text" style="font-size: 16px;">Price: Price</p>
-							<a href="single.jsp?CommdityId=5" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
+							<a id="go6" href="single.jsp?CommdityId=5" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 						</div>
 					</div>
 				</div>
