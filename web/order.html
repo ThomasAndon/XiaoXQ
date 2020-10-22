@@ -277,7 +277,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 <!---->
 
+<script type="text/jsp">
+	<%
+	ArrayList<Order> a = new OrderDAOimpl().OrderSearch((Integer) session.getAttribute("customerID"));
+	//	 JSObject
+	String parsed = new Gson().toJson(a);
+	out.print("<input type='hidden' id='texter' value='"+parsed+"'/>");
+	%>
 
+</script>
 <%
 	ArrayList<Order> a = new OrderDAOimpl().OrderSearch((Integer) session.getAttribute("customerID"));
 //	 JSObject
