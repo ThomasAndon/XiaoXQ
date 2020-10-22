@@ -70,7 +70,7 @@ public class SearchServlet extends HttpServlet {
                         "<img src=\"imagesOfUs/"+commodity.getName()+".jpg\" style=\"width: 200px;height: 150px\" class=\"card-img-top\" alt=\"Product\">"+
                         "  <div class=\"card-body\">\n" +
                         "    <h5 class=\"card-title\">"+commodity.getName()+"</h5>\n" +
-                        "    <p class=\"card-text\">"+"Price: "+commodity.getMINPrice()+"-"+commodity.getMAXPrice()+"</p>\n" +
+                        "    <p class=\"card-text\">"+"Price: $"+commodity.getMINPrice()+"-"+commodity.getMAXPrice()+"</p>\n" +
                         "    <a href=\"single.jsp?CommdityId=1\" class=\"btn btn-primary\">Go</a>\n" +
                         "  </div>\n" +
                         "</div>");
