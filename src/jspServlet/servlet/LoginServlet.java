@@ -44,8 +44,9 @@ public class LoginServlet extends HttpServlet {
 //        OrderDAOimpl dao1=new OrderDAOimpl();
 //         dao1.OrderSearch(1);
 
-        CommodityDAOImpl dao2=new CommodityDAOImpl();
-        dao2.CommodityShow();
+        //商品展示接口实现测试
+//        CommodityDAOImpl dao2=new CommodityDAOImpl();
+//        dao2.CommodityShow();
 
 
         Customer customer= new Customer();
