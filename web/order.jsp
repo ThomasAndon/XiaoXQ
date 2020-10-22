@@ -60,12 +60,15 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 	<link href="css/order.css" type="text/css" rel="stylesheet">
 
+<!--注释了两行，过多BS引入-->
+<!--	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />-->
+<!--<link href="css/docs.min.css" rel="stylesheet">-->
 
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/docs.min.css" rel="stylesheet">
-<!-- Custom Theme files -->
+	<!-- Custom Theme files -->
 <!--theme style-->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <script src="js/jquery.min.js"></script>
 
 <!--//theme style-->
@@ -226,24 +229,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 
 
-<!--
-		<%&#45;&#45;		 <div id="user" class="cart box_1">&#45;&#45;%>
-		<%&#45;&#45;			 <a href="checkout.jsp"><img  src="imagesOfUs/user.jpg" href="#"/>&#45;&#45;%>
-		<%&#45;&#45;				 <%String name=(String)session.getAttribute("username");%>&#45;&#45;%>
-		<%&#45;&#45;				 <p>Welcome! <%=name%></p>&#45;&#45;%>
-		<%&#45;&#45;				 <div class="total">&#45;&#45;%>
-		<%&#45;&#45;					 <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)&#45;&#45;%>
-		<%&#45;&#45;				 </div>&#45;&#45;%>
-		<%&#45;&#45;				 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&#45;&#45;%>
-		<%&#45;&#45;			 </a>&#45;&#45;%>
-		<%&#45;&#45;			 <form method="post" action="./logout">&#45;&#45;%>
-		<%&#45;&#45;				 <input class="mysubmit" type="submit" value="Log out" style="line-height: 0px;">&#45;&#45;%>
-		<%&#45;&#45;			 </form>&#45;&#45;%>
+		<%--		 <div id="user" class="cart box_1">--%>
+		<%--			 <a href="checkout.jsp"><img  src="imagesOfUs/user.jpg" href="#"/>--%>
+		<%--				 <%String name=(String)session.getAttribute("username");%>--%>
+		<%--				 <p>Welcome! <%=name%></p>--%>
+		<%--				 <div class="total">--%>
+		<%--					 <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)--%>
+		<%--				 </div>--%>
+		<%--				 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>--%>
+		<%--			 </a>--%>
+		<%--			 <form method="post" action="./logout">--%>
+		<%--				 <input class="mysubmit" type="submit" value="Log out" style="line-height: 0px;">--%>
+		<%--			 </form>--%>
 
-		<%&#45;&#45;			 <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>&#45;&#45;%>
-		<%&#45;&#45;			 <div class="clearfix"> </div>&#45;&#45;%>
-		<%&#45;&#45;		 </div>&#45;&#45;%>
-		-->
+		<%--			 <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>--%>
+		<%--			 <div class="clearfix"> </div>--%>
+		<%--		 </div>--%>
 		<div class="clearfix"> </div>
 		<!---->
 	</div>
@@ -311,77 +312,77 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <div id="app">
-	<div id="containorders" style="!important;">
+	<div id="containorders" style="!important;" v-for="(order, ia) in orray" class="divwithorder">
 		<div class="container">
 			<div class="row clearfix">
-				<div class="col-md-12 column">
+				<div class="col-md-12">
 					<div class="row clearfix">
 						<div class="col-md-6 column">
 							<h3 class="text-info">
-								h3. 这是一套可视化布局系统.
+								Order No.: {{ia+1}}
 							</h3>
 						</div>
 						<div class="col-md-6 column">
 							<h3 class="text-info">
-								h3. 这是一套可视化布局系统.
+								Order ID: {{order.OrderID}}
 							</h3>
 						</div>
 					</div>
-					<table class="table">
+					<table class="table innertable">
 						<thead>
 						<tr>
 							<th>
-								编号
+								Name
 							</th>
 							<th>
-								产品
+								Price
 							</th>
 							<th>
-								交付时间
+								Color
 							</th>
 							<th>
-								状态
+								Style
 							</th>
+              <th>
+                Quantity
+              </th>
 						</tr>
 						</thead>
-						<tbody>
+						<tbody v-for="(item, ib) in order.Commodities">
 						<tr>
 							<td>
-								1
+								{{item.Name}}
 							</td>
 							<td>
-								TB - Monthly
+								{{item.Price}}
 							</td>
 							<td>
-								01/04/2012
+								{{item.TheColor}}
 							</td>
 							<td>
-								Default
+								{{item.TheClass}}
 							</td>
+              <td>
+                {{item.Number}}
+              </td>
 						</tr>
 
 						</tbody>
 					</table>
 					<div class="row clearfix">
-						<div class="col-md-6 column">
+						<div class="col-md-6 column"><br>
 							<h3>
-								h3. 这是一套可视化布局系统.
+								State: {{order.State}}
 							</h3>
 						</div>
-						<div class="col-md-6 column">
+						<div class="col-md-6 column"><br>
 							<h3>
-								h3. 这是一套可视化布局系统.
+								Total Price: {{order.TotalPrice}}
 							</h3>
 						</div>
-					</div>
-					<h2>
-						Heading
-					</h2>
+					</div><br>
 					<p>
-						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-					</p>
-					<p>
-						<a class="btn" href="#">View details »</a>
+            Order Time: {{order.OrderTime}}
 					</p>
 				</div>
 			</div>

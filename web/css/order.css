@@ -1,0 +1,16 @@
+#containorders {
+  border-width: 0px;
+  border-radius: 0px;
+}
+.divwithorder {
+  position: relative;
+  background-color: #FFFFFF;
+  margin-bottom: 81px;
+  margin-top: 35px;
+}
+.innertable {
+  margin-top: 33px;
+  margin-bottom: 43px;
+  position: relative;
+  background-color: #FBE1E0;
+}
