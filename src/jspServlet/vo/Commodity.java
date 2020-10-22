@@ -14,6 +14,24 @@ public class Commodity {
     private String Instructions;
     private int Number;
 
+
+    private Float MAXPrice;
+    private Float MINPrice;
+
+    public Float getMAXPrice() {
+        return MAXPrice;
+    }
+
+    public void setMAXPrice(Float MAXPrice) {
+        this.MAXPrice = MAXPrice;
+    }
+
+    public Float getMINPrice() {
+        return MINPrice;
+    }
+    public void setMINPrice(Float MINPrice) {
+        this.MINPrice = MINPrice;
+    }
     public int getNumber() {
         return Number;
     }

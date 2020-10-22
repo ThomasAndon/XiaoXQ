@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -42,6 +43,11 @@ public class LoginServlet extends HttpServlet {
         //测试订单查询
 //        OrderDAOimpl dao1=new OrderDAOimpl();
 //         dao1.OrderSearch(1);
+
+        //商品展示接口实现测试
+//        CommodityDAOImpl dao2=new CommodityDAOImpl();
+//        dao2.CommodityShow();
+
 
         Customer customer= new Customer();
         customer.setAccount(req.getParameter("username"));
