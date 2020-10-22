@@ -4,6 +4,7 @@ import jspServlet.DAO.CommodityDAO;
 import jspServlet.db.DBConnect;
 import jspServlet.vo.Commodity;
 
+import java.io.IOException;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -38,6 +39,43 @@ public class CommodityDAOImpl implements CommodityDAO {
             throwables.printStackTrace();
         }
         DBC.close();
+    }
+
+    @Override
+    /**
+     * 不重复名字地查询所有商品，并提供同名商品的最大最小价格！
+     * @return ArrayList<Commodity>
+     * @author Zeyang Sun
+     */
+    public ArrayList<Commodity> CommodityShow() {
+        String sql = "SELECT Name,max(Price) as MXP,min(Price) as MIP \n" +
+                " FROM managementsystem.commodity \n" +
+                " group by Name;";
+        PreparedStatement PS;
+        DBConnect DBC=null;
+        ArrayList<Commodity> Commodities = new ArrayList<Commodity>();
+        try {
+            DBC = new DBConnect();
+            PS = DBC.getConnection().prepareStatement(sql);
+            ResultSet rs = PS.executeQuery();
+            while (rs.next()){
+                Commodity commodity = new Commodity();
+                commodity.setName(rs.getString("name"));
+                commodity.setMAXPrice(rs.getFloat("MXP"));
+                commodity.setMINPrice(rs.getFloat("MIP"));
+                Commodities.add(commodity);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+//            for (int i=0;i<33;i++){
+//                System.out.println(Commodities.get(i).getName());
+//                System.out.println(Commodities.get(i).getMAXPrice());
+//                System.out.println(Commodities.get(i).getMINPrice());
+//            }
+        return Commodities;
     }
 
     @Override

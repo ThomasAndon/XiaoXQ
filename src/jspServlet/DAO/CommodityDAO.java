@@ -19,6 +19,13 @@ public interface CommodityDAO {
     public void InsertCommodity(Commodity commodity) throws Exception;
 
     /**
+     * 不重复名字地查询所有商品，并提供同名商品的最大最小价格！
+     * @return ArrayList<Commodity>
+     * @author Zeyang Sun
+     */
+
+    public ArrayList<Commodity> CommodityShow();
+    /**
      * 商品名称的模糊查询
      * @param string 模糊查询关键字
      * @param Order 按价格排序方式
