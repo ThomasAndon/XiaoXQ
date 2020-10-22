@@ -288,11 +288,11 @@ check out
 								"\t\t\t\t\t\t<img src=\"imagesOfUs/key1.jpg\" class=\"img-responsive\" alt=\"\"/>\n" +
 								"\t\t\t\t\t</div>";break;
 						case 10: picString = "<div class=\"cart-item cyc\">\n" +
-								"\t\t\t\t\t\t<img src=\"imagesOfUs/key2.jpg\" class=\"img-responsive\" alt=\"\"/>\n" +
+								"\t\t\t\t\t\t<img src=\"imagesOfUs/Electronic_organ_2.jpg\" class=\"img-responsive\" alt=\"\"/>\n" +
 								"\t\t\t\t\t</div>";break;
 						//随便选了一张图片
 						default: picString = "<div class=\"cart-item cyc\">\n" +
-								"\t\t\t\t\t\t<img src=\"imagesOfUs/key10.jpg\" class=\"img-responsive\" alt=\"\"/>\n" +
+								"\t\t\t\t\t\t<img src=\"imagesOfUs/Electronic_organ_10.jpg\" class=\"img-responsive\" alt=\"\"/>\n" +
 								"\t\t\t\t\t</div>";break;
 					}
 					out.println(picString);
