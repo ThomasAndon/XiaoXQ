@@ -9,10 +9,10 @@ DonaldBox71:
 3. 实现在checkout.jsp中能点击按钮直接增加或减少商品数量
 4. 实现将index.jsp上的传值转移到products.jsp，通过servlet生成内容不同的single.jsp；决定好用什么值
 5. √将商品聚类，用名字区分各种商品
-6. 实现single.jsp中个性化配置（选择颜色）,并将商品信息显示
+6. √实现single.jsp中个性化配置（选择颜色）,并将商品信息显示
     6.1. √点击不同颜色对应的选择按钮
     6.2. √访问session中的tempCmArray，动态更新页面上的价格
-    6.2. 添加到购物车后，根据颜色选择按钮结果的不同，获取tempCmArray中不同的对象，传入ShopServlet
+    6.3. √添加到购物车后，根据颜色选择按钮结果的不同，获取tempCmArray中不同的对象，传入ShopServlet
 7. √实现checkout.jsp购物车中商品信息的显示
 8. *checkout.jsp鲁棒性保证（无商品添加到购物车时，上面的按钮操作全部失效）
 9. *checkout.jsp排版优化
