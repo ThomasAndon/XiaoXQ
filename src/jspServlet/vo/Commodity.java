@@ -12,6 +12,15 @@ public class Commodity {
     private String TheColor;
     private String TheClass;
     private String Instructions;
+    private int Number;
+
+    public int getNumber() {
+        return Number;
+    }
+
+    public void setNumber(int number) {
+        Number = number;
+    }
 
     public void setPrice(Float price) {
         Price = price;

@@ -40,6 +40,7 @@ public class OrderDAOimpl implements OrderDAO {
             pstmt.setInt(1,CustomerID);
             ResultSet rs = pstmt.executeQuery();
             while(rs.next()){
+                ArrayList<Commodity> Commodities = new ArrayList<Commodity>();
                 Order order= new Order();
                 order.setCustomerID(CustomerID);
                 order.setOrderID(rs.getInt("Orderid"));
@@ -51,12 +52,12 @@ public class OrderDAOimpl implements OrderDAO {
 //                System.out.println(order.getOrderTime()+"######");
                 ResultSet rs2 = pstmt2.executeQuery();
                 while (rs2.next()){
-                    ArrayList<Commodity> Commodities = new ArrayList<Commodity>();
+                    Commodity commodity = new Commodity();
                     pstmt3 = dbc.getConnection().prepareStatement(sql3) ;
                     pstmt3.setInt(1,rs2.getInt("commodityid"));
+                    commodity.setNumber(rs2.getInt("Number"));
                     ResultSet rs3 = pstmt3.executeQuery();
                     while (rs3.next()){
-                        Commodity commodity = new Commodity();
                         commodity.setName(rs3.getString("name"));
                         commodity.setTheClass(rs3.getString("TheClass"));
                         commodity.setTheColor(rs3.getString("TheColor"));
@@ -65,12 +66,13 @@ public class OrderDAOimpl implements OrderDAO {
                         commodity.setUserId(rs3.getInt("UserId"));
                         commodity.setCommodityId(rs3.getInt("CommodityId"));
 //                        System.out.println(commodity.getName()+"######");
-                        Commodities.add(commodity);
+
                     }
-                    order.setCommodities(Commodities);
+                    Commodities.add(commodity);
                     rs3.close();
                     pstmt3.close() ;
                 }
+                order.setCommodities(Commodities);
                 orders.add(order);
                 rs2.close();
                 pstmt2.close() ;
@@ -80,8 +82,9 @@ public class OrderDAOimpl implements OrderDAO {
         }catch (SQLException | IOException e){
             System.out.println(e.getMessage());
         }finally{
-//            System.out.println(orders.get(0).getCommodities().get(0).getName()+"%%%%%######");
-
+//            System.out.println( "PNUMBERR"+orders.get(0).getCommodities().get(1).getTheColor()+"%%%%%######"
+//                    +orders.get(0).getCommodities().get(0).getTheColor()+
+//                    orders.get(0).getCommodities().get(1).getNumber());
             dbc.close() ;
         }
         //System.out.println(orders.get(0).getOrderID()+"@@@@@@");
