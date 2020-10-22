@@ -246,7 +246,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="clearfix"> </div>
 </div>
 
-<script src="js/vue.js"></script>
+
+
+
+
 
 
 
@@ -275,34 +278,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!---->
 
 
-
+<%
+	ArrayList<Order> a = new OrderDAOimpl().OrderSearch((Integer) session.getAttribute("customerID"));
+//	 JSObject
+	String parsed = new Gson().toJson(a);
+	out.print("<input type='hidden' id='text' value='"+parsed+"'/>");
+%>
 
 
 
 <script type="text/javascript">
-    <%
-     ArrayList<Order> a = new OrderDAOimpl().OrderSearch((Integer) session.getAttribute("customerID"));
-//	 JSObject
-    String parsed = new Gson().toJson(a);
-    %>
 
+	var thestring = 'aaaa';
+	var anotherstring = "<%=parsed%>";
 </script>
 
 
 <input id="arr" type="hidden" value="<%=parsed%>">
 
 
-<script type="javascript">
-	var thestring = document.getElementById("arr").value;
-	var tl = [];
-	tl = JSON.parse(thestring);
-	alert("111");
-</script>
 
 
 
 
-<button onclick="alert(thestring)">111111</button>
+<button onclick="alert(thisstring)">111111</button>
+<button onclick="aaa()">222222</button>
+
+<div id="app">
+	<div v-for="(item, i) in orray">
+		index--{{i}};
+		<div v-for="(coms,i) in item.Commodities">
+			i--{{i}}, cid--{{coms.CommodityId}}.
+		</div>
+	</div>
+</div>
 
 
 
@@ -312,14 +321,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
+<script src="js/vue.js"></script>
+<script src="js/Order.js"></script>
 <script type="text/javascript">
-	var vue = new Vue({
-		el: '#app',
-		data:{
-			<%=a%>
 
-		}
-	})
 </script>
 
 
