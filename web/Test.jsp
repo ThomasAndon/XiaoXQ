@@ -21,7 +21,6 @@
     </style>
 </head>
 <body>
-    <img id="11" data-mini="a" src="imagesOfUs/key1.jpg">
 <script>
 
     $(document).ready(

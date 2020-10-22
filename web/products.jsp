@@ -325,7 +325,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="onon card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
 								<img src="imagesOfUs/key1.jpg" style="width: 200px;height: 150px" class="card-img-top center-block" alt="Product">
 								<div class="card-body">
-									<h5 class="card-title" style="font-size: 3rem;"><b>Key1</b></h5>
+									<h5 class="card-title" style="font-size: 2.5rem;"><b style="font-size: 26px;">Electronic_organ_1</b></h5>
 									<p class="card-text" style="font-size: 16px;">Price: Price</p>
 									<a href="single.jsp?CommdityId=1" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 								</div>
@@ -335,9 +335,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="col-md-4 ">
 
 							<div class="onon card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
-								<img src="imagesOfUs/key2.jpg" style="width: 200px;height: 150px" class="card-img-top center-block" alt="Product">
+								<img src="imagesOfUs/Electronic_organ_2.jpg" style="width: 200px;height: 150px" class="card-img-top center-block" alt="Product">
 								<div class="card-body">
-									<h5 class="card-title" style="font-size: 3rem;"><b>Key2</b></h5>
+									<h5 class="card-title" style="font-size: 2.5rem;"><b style="font-size: 26px;">Electronic_organ_2</b></h5>
 									<p class="card-text" style="font-size: 16px;">Price: Price</p>
 									<a href="single.jsp?CommdityId=2" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 								</div>
@@ -346,9 +346,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="col-md-4 ">
 
 							<div class="onon card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
-								<img src="imagesOfUs/key3.jpg" style="width: 200px;height: 150px" class="card-img-top center-block" alt="Product">
+								<img src="imagesOfUs/Electronic_organ_3.jpg" style="width: 200px;height: 150px" class="card-img-top center-block" alt="Product">
 								<div class="card-body">
-									<h5 class="card-title" style="font-size: 3rem;"><b>Key3</b></h5>
+									<h5 class="card-title" style="font-size: 2.5rem;"><b style="font-size: 26px;">Electronic_organ_3</b></h5>
 									<p class="card-text" style="font-size: 16px;">Price: Price</p>
 									<a href="single.jsp?CommdityId=3" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 								</div>
@@ -381,7 +381,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="popo card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
 						<img id="product1" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
-							<h5 id="name1" class="card-title" style="font-size: 3rem;"><b>Product Name</b></h5>
+							<h5 id="name1" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Product Name</b></h5>
 							<p class="card-text" style="font-size: 16px;">Price: Price</p>
 							<a href="single.jsp?CommdityId=4" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 						</div>
@@ -393,7 +393,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="popo card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
 						<img id="product2" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
-							<h5 id="name2" class="card-title" style="font-size: 3rem;"><b>Product Name</b></h5>
+							<h5 id="name2" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Product Name</b></h5>
 							<p class="card-text" style="font-size: 16px;">Price: Price</p>
 							<a href="single.jsp?CommdityId=5" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 						</div>
@@ -404,7 +404,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="popo  card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
 						<img id="product3" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
-							<h5 id="name3" class="card-title" style="font-size: 3rem;"><b>Product Name</b></h5>
+							<h5 id="name3" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Product Name</b></h5>
 							<p class="card-text" style="font-size: 16px;">Price: Price</p>
 							<a href="single.jsp?CommdityId=5" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 						</div>
@@ -423,7 +423,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="popo card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
 						<img id="product4" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
-							<h5 id="name4" class="card-title" style="font-size: 3rem;"><b>Product Name</b></h5>
+							<h5 id="name4" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Product Name</b></h5>
 							<p class="card-text" style="font-size: 16px;">Price: Price</p>
 							<a href="single.jsp?CommdityId=4" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 						</div>
@@ -435,18 +435,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="popo card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
 						<img id="product5" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
-							<h5 id="name5" class="card-title" style="font-size: 3rem;"><b>Product Name</b></h5>
+							<h5 id="name5" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Product Name</b></h5>
 							<p class="card-text" style="font-size: 16px;">Price: Price</p>
 							<a href="single.jsp?CommdityId=5" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 ">
-
 					<div class="popo card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
 						<img id="product6" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
-							<h5 id="name6" class="card-title" style="font-size: 3rem;"><b>Product Name</b></h5>
+							<h5 id="name6" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Product Name</b></h5>
 							<p class="card-text" style="font-size: 16px;">Price: Price</p>
 							<a href="single.jsp?CommdityId=5" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a>
 						</div>
@@ -473,7 +472,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <%--		换页js--%>
 		<script>
 			// $(document).ready(function h(){
-			// 	document.getElementById("product4").src="/key5.jpg";
+			// 	document.getElementById("product4").src="/Electronic_organ_5.jpg";
 			// $("#product4").attr("src","http://localhost/web/imagesOfUs/key5.jpg")
 			// })
 			function Pic() {
@@ -481,7 +480,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				document.getElementById(1).style.backgroundColor="#f60202";
 				document.getElementById(1).style.color="#ffffff"
 				var PN = (Pnumber-1)*6+4;
-				var Pname = "imagesOfUs/key";
+				var Pname = "imagesOfUs/Electronic_organ_";
 				var Pname1 = Pname + PN +".jpg";
 				var Pname2 = Pname + (PN+1) +".jpg";
 				var Pname3 = Pname + (PN+2) +".jpg";
@@ -489,17 +488,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				var Pname5 = Pname + (PN+4) +".jpg";
 				var Pname6 = Pname + (PN+5) +".jpg";
 				document.getElementById("product1").src = Pname1;
-				document.getElementById("name1").innerHTML = "<b>key"+PN+"</b>";
+				document.getElementById("name1").innerHTML = "<b style=\"font-size: 26px;\">Electronic_organ_"+PN+"</b>";
 				document.getElementById("product2").src = Pname2;
-				document.getElementById("name2").innerHTML = "<b>key"+(PN+1)+"</b>";
+				document.getElementById("name2").innerHTML = "<b style=\"font-size: 26px;\">Electronic_organ_"+(PN+1)+"</b>";
 				document.getElementById("product3").src = Pname3;
-				document.getElementById("name3").innerHTML = "<b>key"+(PN+2)+"</b>";
+				document.getElementById("name3").innerHTML = "<b style=\"font-size: 26px;\">Electronic_organ_"+(PN+2)+"</b>";
 				document.getElementById("product4").src = Pname4;
-				document.getElementById("name4").innerHTML = "<b>key"+(PN+3)+"</b>";
+				document.getElementById("name4").innerHTML = "<b style=\"font-size: 26px;\">Electronic_organ_"+(PN+3)+"</b>";
 				document.getElementById("product5").src = Pname5;
-				document.getElementById("name5").innerHTML = "<b>key"+(PN+4)+"</b>";
+				document.getElementById("name5").innerHTML = "<b style=\"font-size: 26px;\">Electronic_organ_"+(PN+4)+"</b>";
 				document.getElementById("product6").src = Pname6;
-				document.getElementById("name6").innerHTML = "<b>key"+(PN+5)+"</b>";
+				document.getElementById("name6").innerHTML = "<b style=\"font-size: 26px;\">Electronic_organ_"+(PN+5)+"</b>";
 			}
 
 			function CP(n){
@@ -510,7 +509,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				document.getElementById(n).style.backgroundColor="#dc0000";
 				document.getElementById(n).style.color="#ffffff"
 				var PN = (n-1)*6+4;
-				var Pname = "imagesOfUs/key";
+				var Pname = "imagesOfUs/Electronic_organ_";
 				var Pname1 = Pname + PN +".jpg";
 				var Pname2 = Pname + (PN+1) +".jpg";
 				var Pname3 = Pname + (PN+2) +".jpg";
@@ -518,17 +517,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				var Pname5 = Pname + (PN+4) +".jpg";
 				var Pname6 = Pname + (PN+5) +".jpg";
 				document.getElementById("product1").src = Pname1;
-				document.getElementById("name1").innerHTML = "<b>key"+PN+"</b>";
+				document.getElementById("name1").innerHTML = "<b style=\"font-size: 26px;\">Electronic_organ_"+PN+"</b>";
 				document.getElementById("product2").src = Pname2;
-				document.getElementById("name2").innerHTML = "<b>key"+(PN+1)+"</b>";
+				document.getElementById("name2").innerHTML = "<b style=\"font-size: 26px;\">Electronic_organ_"+(PN+1)+"</b>";
 				document.getElementById("product3").src = Pname3;
-				document.getElementById("name3").innerHTML = "<b>key"+(PN+2)+"</b>";
+				document.getElementById("name3").innerHTML = "<b style=\"font-size: 26px;\">Electronic_organ_"+(PN+2)+"</b>";
 				document.getElementById("product4").src = Pname4;
-				document.getElementById("name4").innerHTML = "<b>key"+(PN+3)+"</b>";
+				document.getElementById("name4").innerHTML = "<b style=\"font-size: 26px;\">Electronic_organ_"+(PN+3)+"</b>";
 				document.getElementById("product5").src = Pname5;
-				document.getElementById("name5").innerHTML = "<b>key"+(PN+4)+"</b>";
+				document.getElementById("name5").innerHTML = "<b style=\"font-size: 26px;\">Electronic_organ_"+(PN+4)+"</b>";
 				document.getElementById("product6").src = Pname6;
-				document.getElementById("name6").innerHTML = "<b>key"+(PN+5)+"</b>";
+				document.getElementById("name6").innerHTML = "<b style=\"font-size: 26px;\">Electronic_organ_"+(PN+5)+"</b>";
 			}
 
 			window.onload=Pic;
@@ -545,10 +544,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li style="list-style-type: none" class="lc-goods-rank__item lc-goods-rank__item--nth1 lc-goods-rank__item--top" clstag="pageclick|keycount|goods_rank_1575269733572|list_0_0">
 						<div style="left: 0" class="lc-goods-rank__order lc-goods-rank__order-1 reg-right"><h1 style="color: #ff0000">1</h1></div>
 						<div class="lc-goods-rank__img">
-							<a href="single.jsp?CommdityId=6"><img class="center-block img-circle shadow-lg" src="imagesOfUs/key6.jpg" style="width: 150px;height: 150px"></a>
+							<a href="single.jsp?CommdityId=6"><img class="center-block img-circle shadow-lg" src="imagesOfUs/Electronic_organ_6.jpg" style="width: 150px;height: 150px"></a>
 						</div>
 						<div class="lc-goods-rank__info">
-							<div class="lc-goods-rank__name text-center"><h3 style="line-height: 4;"><b>Key6</b></h3></div>
+							<div class="lc-goods-rank__name text-center"><h3 style="line-height: 4;"><b>Electronic_organ_6</b></h3></div>
 							<div class="lc-goods-rank__price-row">
 								<hr/>
 							</div></div>
@@ -556,58 +555,58 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li style="list-style-type: none" class="lc-goods-rank__item lc-goods-rank__item--nth2 lc-goods-rank__item--top" clstag="pageclick|keycount|goods_rank_1575269733572|list_0_1">
 						<div class="lc-goods-rank__order lc-goods-rank__order-2 reg-right"><h1 style="color: red">2</h1></div>
 						<div class="lc-goods-rank__img">
-							<a href="single.jsp?CommdityId=7"> <img class="center-block img-circle shadow-lg" src="imagesOfUs/key7.jpg" style="width: 150px;height: 150px"> </a></div>
+							<a href="single.jsp?CommdityId=7"> <img class="center-block img-circle shadow-lg" src="imagesOfUs/Electronic_organ_7.jpg" style="width: 150px;height: 150px"> </a></div>
 						<div class="lc-goods-rank__info">
-							<div class="lc-goods-rank__name text-center"><h3 style="line-height: 4;"><b>Key7</b></h3></div>
+							<div class="lc-goods-rank__name text-center"><h3 style="line-height: 4;"><b>Electronic_organ_7</b></h3></div>
 							<div class="lc-goods-rank__price-row">
 								<hr/>
 							</div></div></li>
 					<li style="list-style-type: none" class="lc-goods-rank__item lc-goods-rank__item--nth3 lc-goods-rank__item--top" clstag="pageclick|keycount|goods_rank_1575269733572|list_0_2">
 						<div class="lc-goods-rank__order lc-goods-rank__order-3 reg-right"><h1 style="color: red">3</h1></div>
 						<div class="lc-goods-rank__img">
-							<a href="single.jsp?CommdityId=8"><img class="center-block img-circle shadow-lg" src="imagesOfUs/key8.jpg" style="width: 150px;height: 150px"></a></div>
+							<a href="single.jsp?CommdityId=8"><img class="center-block img-circle shadow-lg" src="imagesOfUs/Electronic_organ_8.jpg" style="width: 150px;height: 150px"></a></div>
 						<div class="lc-goods-rank__info">
-							<div class="lc-goods-rank__name text-center"><h3 style="line-height: 4;"><b>Key8</b></h3></div>
+							<div class="lc-goods-rank__name text-center"><h3 style="line-height: 4;"><b>Electronic_organ_8</b></h3></div>
 							<div class="lc-goods-rank__price-row">
 								<hr/>
 							</div></div></li>
 					<li style="list-style-type: none" class="lc-goods-rank__item lc-goods-rank__item--nth4" clstag="pageclick|keycount|goods_rank_1575269733572|list_0_3">
 						<div class="lc-goods-rank__order lc-goods-rank__order-4 reg-right"><h4>4</h4></div><div class="lc-goods-rank__img">
-						<a href="single.jsp?CommdityId=4"><img class="center-block img-circle shadow-lg" src="imagesOfUs/key4.jpg" style="width: 150px;height: 150px"></a></div>
-						<div class="lc-goods-rank__info"><div class="lc-goods-rank__name text-center"><h3 style="line-height: 4;"><b>Key4</b></h3></div>
+						<a href="single.jsp?CommdityId=4"><img class="center-block img-circle shadow-lg" src="imagesOfUs/Electronic_organ_4.jpg" style="width: 150px;height: 150px"></a></div>
+						<div class="lc-goods-rank__info"><div class="lc-goods-rank__name text-center"><h3 style="line-height: 4;"><b>Electronic_organ_4</b></h3></div>
 							<div class="lc-goods-rank__price-row">
 								<hr/>
 							</div></div></li>
 					<li style="list-style-type: none" class="lc-goods-rank__item lc-goods-rank__item--nth5" clstag="pageclick|keycount|goods_rank_1575269733572|list_0_4">
 						<div class="lc-goods-rank__order lc-goods-rank__order-5 reg-right"><h4>5</h4></div><div class="lc-goods-rank__img">
-						<a href="single.jsp?CommdityId=5"><img class="center-block img-circle shadow-lg" src="imagesOfUs/key5.jpg" style="width: 150px;height: 150px"></a></div><div class="lc-goods-rank__info">
-						<div class="lc-goods-rank__name text-center"><h3 style="line-height: 4;"><b>Key5</b></h3></div><div class="lc-goods-rank__price-row">
+						<a href="single.jsp?CommdityId=5"><img class="center-block img-circle shadow-lg" src="imagesOfUs/Electronic_organ_5.jpg" style="width: 150px;height: 150px"></a></div><div class="lc-goods-rank__info">
+						<div class="lc-goods-rank__name text-center"><h3 style="line-height: 4;"><b>Electronic_organ_5</b></h3></div><div class="lc-goods-rank__price-row">
 						<hr/>
 					</div></div></li>
 					<li style="list-style-type: none" class="lc-goods-rank__item lc-goods-rank__item--nth6" clstag="pageclick|keycount|goods_rank_1575269733572|list_0_5">
 						<div class="lc-goods-rank__order lc-goods-rank__order-6 reg-right"><h4>6</h4></div>
 						<div class="lc-goods-rank__img"><a href="single.jsp?CommdityId=1"><img class="center-block img-circle shadow-lg" src="imagesOfUs/key1.jpg" style="width: 150px;height: 150px"></a></div><div class="lc-goods-rank__info">
-						<div class="lc-goods-rank__name text-center"><h3 style="line-height: 4;"><b>Key1</b></h3></div><div class="lc-goods-rank__price-row">
+						<div class="lc-goods-rank__name text-center"><h3 style="line-height: 4;"><b>Electronic_organ_1</b></h3></div><div class="lc-goods-rank__price-row">
 						<hr/>
 					</div></div></li>
 
 
 					<li style="list-style-type: none" class="lc-goods-rank__item lc-goods-rank__item--nth6" clstag="pageclick|keycount|goods_rank_1575269733572|list_0_5">
 						<div class="lc-goods-rank__order lc-goods-rank__order-6 reg-right"><h4>7</h4></div>
-						<div class="lc-goods-rank__img"><a href="single.jsp?CommdityId=2"><img class="center-block img-circle shadow-lg" src="imagesOfUs/key2.jpg" style="width: 150px;height: 150px"></a></div><div class="lc-goods-rank__info">
-						<div class="lc-goods-rank__name text-center"><h3 style="line-height: 4;"><b>Key2</b></h3></div><div class="lc-goods-rank__price-row">
+						<div class="lc-goods-rank__img"><a href="single.jsp?CommdityId=2"><img class="center-block img-circle shadow-lg" src="imagesOfUs/Electronic_organ_2.jpg" style="width: 150px;height: 150px"></a></div><div class="lc-goods-rank__info">
+						<div class="lc-goods-rank__name text-center"><h3 style="line-height: 4;"><b>Electronic_organ_2</b></h3></div><div class="lc-goods-rank__price-row">
 						<hr/>
 					</div></div></li>
 					<li style="list-style-type: none" class="lc-goods-rank__item lc-goods-rank__item--nth6" clstag="pageclick|keycount|goods_rank_1575269733572|list_0_5">
 						<div class="lc-goods-rank__order lc-goods-rank__order-6 reg-right"><h4>8</h4></div>
-						<div class="lc-goods-rank__img"><a href="single.jsp?CommdityId=3"><img class="center-block img-circle shadow-lg" src="imagesOfUs/key3.jpg" style="width: 150px;height: 150px"></a></div><div class="lc-goods-rank__info">
-						<div class="lc-goods-rank__name text-center"><h3 style="line-height: 4;"><b>Key3</b></h3></div><div class="lc-goods-rank__price-row">
+						<div class="lc-goods-rank__img"><a href="single.jsp?CommdityId=3"><img class="center-block img-circle shadow-lg" src="imagesOfUs/Electronic_organ_3.jpg" style="width: 150px;height: 150px"></a></div><div class="lc-goods-rank__info">
+						<div class="lc-goods-rank__name text-center"><h3 style="line-height: 4;"><b>Electronic_organ_3</b></h3></div><div class="lc-goods-rank__price-row">
 						<hr/>
 					</div></div></li>
 					<li style="list-style-type: none" class="lc-goods-rank__item lc-goods-rank__item--nth6" clstag="pageclick|keycount|goods_rank_1575269733572|list_0_5">
 						<div class="lc-goods-rank__order lc-goods-rank__order-6 reg-right"><h4>9</h4></div>
-						<div class="lc-goods-rank__img"><a href="single.jsp?CommdityId=9"><img class="center-block img-circle shadow-lg" src="imagesOfUs/key9.jpg" style="width: 150px;height: 150px"></a></div><div class="lc-goods-rank__info">
-						<div class="lc-goods-rank__name text-center"><h3 style="line-height: 4;"><b>Key9</b></h3></div><div class="lc-goods-rank__price-row">
+						<div class="lc-goods-rank__img"><a href="single.jsp?CommdityId=9"><img class="center-block img-circle shadow-lg" src="imagesOfUs/Electronic_organ_9.jpg" style="width: 150px;height: 150px"></a></div><div class="lc-goods-rank__info">
+						<div class="lc-goods-rank__name text-center"><h3 style="line-height: 4;"><b>Electronic_organ_9</b></h3></div><div class="lc-goods-rank__price-row">
 					</div></div></li>
 				</ul>
 			</div>

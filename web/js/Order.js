@@ -8,11 +8,13 @@ var orderarray = JSON.parse(thisstring);
 // var testorray = JSON.parse(testString);
 
 
-var vue = new Vue({
+
+const vue = new Vue({
     el: '#app',
     data:{
         msg: 'hello',
         orray: orderarray,
     }
 });
+
 

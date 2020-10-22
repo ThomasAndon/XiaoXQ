@@ -281,16 +281,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	window.onload = carr();
 </script>
 <!---->
-<script type="text/jsp">
 	<%
-	ArrayList<Order> a = new OrderDAOimpl().OrderSearch((Integer) session.getAttribute("customerID"));
-	//	 JSObject
-	String parsed = new Gson().toJson(a);
-	out.print("<input type='hidden' id='texter' value='"+parsed+"'/>");
-	%>
+ArrayList<Order> a = new OrderDAOimpl().OrderSearch((Integer) session.getAttribute("customerID"));
+//	 JSObject
+String parsed = new Gson().toJson(a);
+out.print("<input type='hidden' id='texter' value='"+parsed+"'/>");
+%>
 
 
-</script>
+
+
 
 
 
@@ -312,6 +312,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <div id="app">
+
 	<div id="containorders" style="!important;" v-for="(order, ia) in orray" class="divwithorder">
 		<div class="container">
 			<div class="row clearfix">
@@ -400,8 +401,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <script src="js/vue.js"></script>
 <script src="js/Order.js"></script>
-<script type="text/javascript">
-
+<script type="javascript">
+	var inpagestring = document.getElementById("texter").value;
 </script>
 
 
