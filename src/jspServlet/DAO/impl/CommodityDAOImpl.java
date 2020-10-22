@@ -126,7 +126,7 @@ public class CommodityDAOImpl implements CommodityDAO {
      */
     public ArrayList<Commodity> ColorSearch(String string,String Order) throws Exception {
         ArrayList<Commodity> vogue = new ArrayList<>();
-        String sql = "Select * from Commodity Where TheColor Like ? order by Price "+Order;
+        String sql = "Select name,max(Price) as MXP,min(Price) as MIP from Commodity Where TheColor Like ? group by name order by MXP "+Order;
         DBConnect dbc = null;
         PreparedStatement ps;
         try {
@@ -137,12 +137,8 @@ public class CommodityDAOImpl implements CommodityDAO {
             while (result.next()) {
                 Commodity temp = new Commodity();
                 temp.setName(result.getString("name"));
-                temp.setCommodityId(result.getInt("CommodityId"));
-                temp.setInstructions(result.getString("Instructions"));
-                temp.setTheColor(result.getString("TheColor"));
-                temp.setTheClass(result.getString("TheClass"));
-                temp.setPrice(result.getFloat("Price"));
-                temp.setUserId(result.getInt("UserId"));
+                temp.setMAXPrice(result.getFloat("MXP"));
+                temp.setMINPrice(result.getFloat("MIP"));
                 vogue.add(temp);
             }
         } catch(Exception e) {
@@ -163,7 +159,7 @@ public class CommodityDAOImpl implements CommodityDAO {
      */
     public ArrayList<Commodity> ClassSearch(String string,String Order) throws Exception {
         ArrayList<Commodity> vogue = new ArrayList<>();
-        String sql = "Select * from Commodity Where TheClass Like ? order by Price "+Order;
+        String sql = "Select name,max(Price) as MXP,min(Price) as MIP from Commodity Where TheClass Like ? group by name order by MXP "+Order;
         DBConnect dbc = null;
         PreparedStatement ps;
         try {
@@ -174,12 +170,8 @@ public class CommodityDAOImpl implements CommodityDAO {
             while (result.next()) {
                 Commodity temp = new Commodity();
                 temp.setName(result.getString("name"));
-                temp.setCommodityId(result.getInt("CommodityId"));
-                temp.setInstructions(result.getString("Instructions"));
-                temp.setTheColor(result.getString("TheColor"));
-                temp.setTheClass(result.getString("TheClass"));
-                temp.setPrice(result.getFloat("Price"));
-                temp.setUserId(result.getInt("UserId"));
+                temp.setMAXPrice(result.getFloat("MXP"));
+                temp.setMINPrice(result.getFloat("MIP"));
                 vogue.add(temp);
             }
         } catch(Exception e) {

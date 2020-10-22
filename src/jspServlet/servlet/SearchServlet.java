@@ -39,7 +39,7 @@ public class SearchServlet extends HttpServlet {
         String order=req.getParameter("Order");
         System.out.println(order);
         resp.setContentType("text/html;charset=UTF-8");
-        resp.getWriter().write("<a class=\"btn btn-primary\" href=\"./index(welcome).jsp\" role=\"button\">Back</a>");
+        resp.getWriter().write("<a class=\"btn btn-primary\" href=\"./products.jsp\" role=\"button\">Back</a>");
 
 //        resp.getWriter().write("<a href=\"./index(welcome).jsp\">Back</a>");
         resp.getWriter().write("</br>");
@@ -50,13 +50,13 @@ public class SearchServlet extends HttpServlet {
         try {
             if(string.equals("SN")){
                 AL=dao.FQCommodity(req.getParameter("SC"),order);
-            }else
-                if(string.equals("SLC")){
-                    AL=dao.ColorSearch(req.getParameter("SC"),order);
-                }else
-                    if(string.equals("SSC")){
-                        AL=dao.ClassSearch(req.getParameter("SC"),order);
-                    }
+            }else {
+                if (string.equals("SLC")) {
+                    AL = dao.ColorSearch(req.getParameter("SC"), order);
+                } else if (string.equals("SSC")) {
+                    AL = dao.ClassSearch(req.getParameter("SC"), order);
+                }
+            }
             resp.getWriter().write("Total "+AL.size()+" result(s)");
             resp.getWriter().write("</br>");
             resp.getWriter().write("</br>");
@@ -70,7 +70,7 @@ public class SearchServlet extends HttpServlet {
                         "<img src=\"imagesOfUs/Electronic_organ_2.jpg\" class=\"card-img-top\" alt=\"Product\">"+
                         "  <div class=\"card-body\">\n" +
                         "    <h5 class=\"card-title\">"+commodity.getName()+"</h5>\n" +
-                        "    <p class=\"card-text\">"+"Price: "+commodity.getPrice()+"</p>\n" +
+                        "    <p class=\"card-text\">"+"Price: "+commodity.getMINPrice()+"-"+commodity.getMAXPrice()+"</p>\n" +
                         "    <a href=\"single.jsp?CommdityId=1\" class=\"btn btn-primary\">Go</a>\n" +
                         "  </div>\n" +
                         "</div>");
