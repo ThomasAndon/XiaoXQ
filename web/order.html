@@ -16,38 +16,41 @@
 			overflow-y:scroll;
 			padding-right: 0 !important;
 		}
-		.mysubmit {
+		/*.mysubmit {*/
 
-			-webkit-transition-duration: 0.4s;
+		/*	-webkit-transition-duration: 0.4s;*/
 
-			transition-duration: 0.4s;
+		/*	transition-duration: 0.4s;*/
 
-			padding: 16px 32px;
+		/*	padding: 16px 32px;*/
 
-			text-align: center;
+		/*	text-align: center;*/
 
-			background-color: white;
+		/*	background-color: white;*/
 
-			size: 1px;
+		/*	size: 1px;*/
 
-			color: black;
+		/*	color: black;*/
 
-			border: 2px red ;
+		/*	border: 2px red ;*/
 
-			border-radius:5px;
+		/*	border-radius:5px;*/
 
-			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-		}
+		/*	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
+		/*}*/
 
-		.mysubmit:hover {
+		/*.mysubmit:hover {*/
 
-			background-color: red;
+		/*	background-color: red;*/
 
-			color: white;
+		/*	color: white;*/
 
-		}
+		/*}*/
 
 	</style>
+
+
+	<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.0.1/css/bootstrap-theme.css" rel="stylesheet">
 
 
 	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
@@ -55,7 +58,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+	<link href="css/order.css" type="text/css" rel="stylesheet">
 
 
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -223,23 +226,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 
 
+<!--
+		<%&#45;&#45;		 <div id="user" class="cart box_1">&#45;&#45;%>
+		<%&#45;&#45;			 <a href="checkout.jsp"><img  src="imagesOfUs/user.jpg" href="#"/>&#45;&#45;%>
+		<%&#45;&#45;				 <%String name=(String)session.getAttribute("username");%>&#45;&#45;%>
+		<%&#45;&#45;				 <p>Welcome! <%=name%></p>&#45;&#45;%>
+		<%&#45;&#45;				 <div class="total">&#45;&#45;%>
+		<%&#45;&#45;					 <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)&#45;&#45;%>
+		<%&#45;&#45;				 </div>&#45;&#45;%>
+		<%&#45;&#45;				 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&#45;&#45;%>
+		<%&#45;&#45;			 </a>&#45;&#45;%>
+		<%&#45;&#45;			 <form method="post" action="./logout">&#45;&#45;%>
+		<%&#45;&#45;				 <input class="mysubmit" type="submit" value="Log out" style="line-height: 0px;">&#45;&#45;%>
+		<%&#45;&#45;			 </form>&#45;&#45;%>
 
-		<%--		 <div id="user" class="cart box_1">--%>
-		<%--			 <a href="checkout.jsp"><img  src="imagesOfUs/user.jpg" href="#"/>--%>
-		<%--				 <%String name=(String)session.getAttribute("username");%>--%>
-		<%--				 <p>Welcome! <%=name%></p>--%>
-		<%--				 <div class="total">--%>
-		<%--					 <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)--%>
-		<%--				 </div>--%>
-		<%--				 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>--%>
-		<%--			 </a>--%>
-		<%--			 <form method="post" action="./logout">--%>
-		<%--				 <input class="mysubmit" type="submit" value="Log out" style="line-height: 0px;">--%>
-		<%--			 </form>--%>
-
-		<%--			 <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>--%>
-		<%--			 <div class="clearfix"> </div>--%>
-		<%--		 </div>--%>
+		<%&#45;&#45;			 <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>&#45;&#45;%>
+		<%&#45;&#45;			 <div class="clearfix"> </div>&#45;&#45;%>
+		<%&#45;&#45;		 </div>&#45;&#45;%>
+		-->
 		<div class="clearfix"> </div>
 		<!---->
 	</div>
@@ -276,7 +280,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	window.onload = carr();
 </script>
 <!---->
-
 <script type="text/jsp">
 	<%
 	ArrayList<Order> a = new OrderDAOimpl().OrderSearch((Integer) session.getAttribute("customerID"));
@@ -285,17 +288,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	out.print("<input type='hidden' id='texter' value='"+parsed+"'/>");
 	%>
 
+
 </script>
-<%
-	ArrayList<Order> a = new OrderDAOimpl().OrderSearch((Integer) session.getAttribute("customerID"));
-//	 JSObject
-	String parsed = new Gson().toJson(a);
-	out.print("<input type='hidden' id='text' value='"+parsed+"'/>");
-%>
 
 
 
-<script type="text/javascript">
+
+	<script type="text/javascript">
 
 	var thestring = 'aaaa';
 	var anotherstring = "<%=parsed%>";
@@ -309,14 +308,83 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
-<button onclick="alert(thisstring)">111111</button>
-<button onclick="aaa()">222222</button>
+
 
 <div id="app">
-	<div v-for="(item, i) in orray">
-		index--{{i}};
-		<div v-for="(coms,i) in item.Commodities">
-			i--{{i}}, cid--{{coms.CommodityId}}.
+	<div id="containorders" style="!important;">
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="row clearfix">
+						<div class="col-md-6 column">
+							<h3 class="text-info">
+								h3. 这是一套可视化布局系统.
+							</h3>
+						</div>
+						<div class="col-md-6 column">
+							<h3 class="text-info">
+								h3. 这是一套可视化布局系统.
+							</h3>
+						</div>
+					</div>
+					<table class="table">
+						<thead>
+						<tr>
+							<th>
+								编号
+							</th>
+							<th>
+								产品
+							</th>
+							<th>
+								交付时间
+							</th>
+							<th>
+								状态
+							</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>
+								1
+							</td>
+							<td>
+								TB - Monthly
+							</td>
+							<td>
+								01/04/2012
+							</td>
+							<td>
+								Default
+							</td>
+						</tr>
+
+						</tbody>
+					</table>
+					<div class="row clearfix">
+						<div class="col-md-6 column">
+							<h3>
+								h3. 这是一套可视化布局系统.
+							</h3>
+						</div>
+						<div class="col-md-6 column">
+							<h3>
+								h3. 这是一套可视化布局系统.
+							</h3>
+						</div>
+					</div>
+					<h2>
+						Heading
+					</h2>
+					<p>
+						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					</p>
+					<p>
+						<a class="btn" href="#">View details »</a>
+					</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

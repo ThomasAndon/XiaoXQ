@@ -1,6 +1,6 @@
-var thisstring = document.getElementById("texter").value;
-var orderarray = JSON.parse(thisstring);
-
+// var thisstring = document.getElementById("texter").value;
+// var orderarray = JSON.parse(thisstring);
+//
 
 
 //下列为Test用途

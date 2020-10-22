@@ -1,5 +1,5 @@
 #mainContainer {
-  height: 1200px;
+  height: 1400px;
   text-align: center;
   margin-right: 27%;
   margin-left: 27%;
@@ -91,4 +91,5 @@
   margin-top: 87px;
 }
 #section3 {
+  height: 0px;
 }
