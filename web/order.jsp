@@ -373,7 +373,7 @@ out.print("<input type='hidden' id='texter' value='"+parsed+"'/>");
 					<div class="row clearfix">
 						<div class="col-md-6 column"><br>
 							<h3>
-								State: {{order.State}}
+								Status: {{order.State}}
 							</h3>
 						</div>
 						<div class="col-md-6 column"><br>
