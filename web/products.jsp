@@ -382,7 +382,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<img id="product1" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
 							<h5 id="name1" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Product Name</b></h5>
-							<p id="price1" class="card-text" style="font-size: 16px;">Price: Price</p>
+							<p id="price1" class="card-text" style="font-size: 16px;">Price: $1400</p>
 							<div id="go1"><a href="<%=request.getContextPath()+"/view?cmName=4"%>" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a></div>>
 						</div>
 					</div>
@@ -394,7 +394,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<img id="product2" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
 							<h5 id="name2" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Product Name</b></h5>
-							<p id="price2" class="card-text" style="font-size: 16px;">Price: Price</p>
+							<p id="price2" class="card-text" style="font-size: 16px;">Price: $1300-1600</p>
 							<div id="go2"><a href="<%=request.getContextPath()+"/view?cmName=5"%>" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a></div>>
 						</div>
 					</div>
@@ -405,7 +405,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<img id="product3" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
 							<h5 id="name3" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Product Name</b></h5>
-							<p id="price3" class="card-text" style="font-size: 16px;">Price: Price</p>
+							<p id="price3" class="card-text" style="font-size: 16px;">Price: $1300</p>
 							<div id="go3"><a href="<%=request.getContextPath()+"/view?cmName=6"%>" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a></div>>
 						</div>
 					</div>
@@ -424,7 +424,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<img id="product4" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
 							<h5 id="name4" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Product Name</b></h5>
-							<p id="price4" class="card-text" style="font-size: 16px;">Price: Price</p>
+							<p id="price4" class="card-text" style="font-size: 16px;">Price: $1200-1300</p>
 							<div id="go4"><a href="<%=request.getContextPath()+"/view?cmName=7"%>" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a></div>>
 						</div>
 					</div>
@@ -436,7 +436,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<img id="product5" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
 							<h5 id="name5" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Product Name</b></h5>
-							<p id="price5" class="card-text" style="font-size: 16px;">Price: Price</p>
+							<p id="price5" class="card-text" style="font-size: 16px;">Price: $1200</p>
 							<div id="go5"><a href="<%=request.getContextPath()+"/view?cmName=8"%>" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a></div>>
 						</div>
 					</div>
@@ -446,7 +446,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<img id="product6" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
 							<h5 id="name6" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Product Name</b></h5>
-							<p id="price6 "class="card-text" style="font-size: 16px;">Price: Price</p>
+							<p id="price6 "class="card-text" style="font-size: 16px;">Price: $1350-1500</p>
 							<div id="go6"><a href="<%=request.getContextPath()+"/view?cmName=9"%>" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a></div>>
 						</div>
 					</div>

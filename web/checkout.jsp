@@ -87,7 +87,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</button>
 			</div>
 			<div class="modal-body">
-				<p>Are you sure you want to log out?<br/>Current shopcart will be <b>lost</b>></p>
+				<p>Are you sure you want to log out?<br/>Current shopping cart will be <b>lost</b>></p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
@@ -223,24 +223,19 @@ check out
 		<div class="col-md-3 cart-total" style="float:left;">
 			<a class="continue" href="products.jsp"><h4>Continue to basket</h4></a>
 			<div class="price-details">
-				<h3>Price Details</h3>
-				<span>Total</span>
-				<span class="total1">
-
-				</span>
-				<!--
-				<span>Discount</span>
-				<span class="total1">0%(Festival Offer)</span>
-
-				<span>Delivery Charges</span>
-				<span class="total1">total1></span>
-				-->
-
+				<h1>Price Details</h1>
+				<span><h3>Commodity amount:</h3></span>
+				<span class="total1"><h3><%=session.getAttribute("cmAmount")%></h3></span>
+				<div class="clearfix"></div>
+				<span><h3>Commodity type:</h3></span>
+				<span class="total1"><h3><%=cmArray.size()%> types</h3></span>
+				<div class="clearfix"></div>
+				<div class="clearfix"></div>
 				<div class="clearfix"></div>
 			</div>
 			<ul class="total_price">
-				<li class="last_price"> <h4>TOTAL</h4></li>
-				<li class="last_price"><span><%=totalPrice%></span></li>
+				<li class="last_price"> <h1>TOTAL:</h1></li>
+				<li class="last_price"><span><h1>$<%=totalPrice%></h1></span></li>
 			</ul>
 			<div class="clearfix"></div>
 			<div class="clearfix"></div>
@@ -254,11 +249,11 @@ check out
 					}
 				</script>
 			</a>
-			<div class="total-item">
+			<!--div class="total-item">
 				<h3>OPTIONS</h3>
 				<h4>COUPONS</h4>
 				<a class="cpns" href="#">Apply Coupons</a>
-			</div>
+			</div-->
 		</div>
 
 		<%--
@@ -283,21 +278,56 @@ check out
 				<div class="close1"> </div>
 				<div class="cart-sec simpleCart_shelfItem">
 					<%
-					switch (cm.getCommodityId()){
-						case 1: picString = "<div class=\"cart-item cyc\">\n" +
-								"\t\t\t\t\t\t<img src=\"imagesOfUs/key1.jpg\" class=\"img-responsive\" alt=\"\"/>\n" +
-								"\t\t\t\t\t</div>";break;
-						case 10: picString = "<div class=\"cart-item cyc\">\n" +
-								"\t\t\t\t\t\t<img src=\"imagesOfUs/Electronic_organ_2.jpg\" class=\"img-responsive\" alt=\"\"/>\n" +
-								"\t\t\t\t\t</div>";break;
-						//随便选了一张图片
-						default: picString = "<div class=\"cart-item cyc\">\n" +
-								"\t\t\t\t\t\t<img src=\"imagesOfUs/Electronic_organ_10.jpg\" class=\"img-responsive\" alt=\"\"/>\n" +
-								"\t\t\t\t\t</div>";break;
+						String urlString = "";
+						switch (cm.getName()){
+						case "Electronic_organ_1":
+							if(cm.getTheColor().equals("white")){
+								urlString = "imagesOfUs/M1.jpg";
+								break;
+							}else{
+								urlString = "imagesOfUs/M4.jpg";
+								break;
+							}
+						case "Electronic_organ_2": urlString = "imagesOfUs/Electronic_organ_2.jpg"; break;
+						case "Electronic_organ_3": urlString = "imagesOfUs/Electronic_organ_3.jpg"; break;
+						case "Electronic_organ_4": urlString = "imagesOfUs/Electronic_organ_4.jpg"; break;
+						case "Electronic_organ_5": urlString = "imagesOfUs/Electronic_organ_5.jpg"; break;
+						case "Electronic_organ_6": urlString = "imagesOfUs/Electronic_organ_6.jpg"; break;
+						case "Electronic_organ_7": urlString = "imagesOfUs/Electronic_organ_7.jpg"; break;
+						case "Electronic_organ_8": urlString = "imagesOfUs/Electronic_organ_8.jpg"; break;
+						case "Electronic_organ_9": urlString = "imagesOfUs/Electronic_organ_9.jpg"; break;
+						case "Electronic_organ_10": urlString = "imagesOfUs/Electronic_organ_10.jpg"; break;
+						case "Electronic_organ_11": urlString = "imagesOfUs/Electronic_organ_11.jpg"; break;
+						case "Electronic_organ_12": urlString = "imagesOfUs/Electronic_organ_12.jpg"; break;
+						case "Electronic_organ_13": urlString = "imagesOfUs/Electronic_organ_13.jpg"; break;
+						case "Electronic_organ_14": urlString = "imagesOfUs/Electronic_organ_14.jpg"; break;
+						case "Electronic_organ_15": urlString = "imagesOfUs/Electronic_organ_15.jpg"; break;
+						case "Electronic_organ_16": urlString = "imagesOfUs/Electronic_organ_16.jpg"; break;
+						case "Electronic_organ_17": urlString = "imagesOfUs/Electronic_organ_17.jpg"; break;
+						case "Electronic_organ_18": urlString = "imagesOfUs/Electronic_organ_18.jpg"; break;
+						case "Electronic_organ_19": urlString = "imagesOfUs/Electronic_organ_19.jpg"; break;
+						case "Electronic_organ_20": urlString = "imagesOfUs/Electronic_organ_20.jpg"; break;
+						case "Electronic_organ_21": urlString = "imagesOfUs/Electronic_organ_21.jpg"; break;
+						case "Electronic_organ_22": urlString = "imagesOfUs/Electronic_organ_22.jpg"; break;
+						case "Electronic_organ_23": urlString = "imagesOfUs/Electronic_organ_23.jpg"; break;
+						case "Electronic_organ_25": urlString = "imagesOfUs/Electronic_organ_25.jpg"; break;
+						case "Electronic_organ_26": urlString = "imagesOfUs/Electronic_organ_26.jpg"; break;
+						case "Electronic_organ_27": urlString = "imagesOfUs/Electronic_organ_27.jpg"; break;
+						case "Electronic_organ_28": urlString = "imagesOfUs/Electronic_organ_28.jpg"; break;
+						case "Electronic_organ_29": urlString = "imagesOfUs/Electronic_organ_29.jpg"; break;
+						case "Electronic_organ_30": urlString = "imagesOfUs/Electronic_organ_30.jpg"; break;
+						case "Electronic_organ_31": urlString = "imagesOfUs/Electronic_organ_31.jpg"; break;
+						case "Electronic_organ_32": urlString = "imagesOfUs/Electronic_organ_32.jpg"; break;
+						case "Electronic_organ_33": urlString = "imagesOfUs/Electronic_organ_33.jpg"; break;
+
+							//随便选了一张图片
+						default: urlString = "imagesOfUs/Electronic_organ_1.jpg"; break;
 					}
-					out.println(picString);
 					%>
-					<div class="cart-item-info">
+					<div class="cart-item cyc">
+						<img src=<%=urlString%> class="img-responsive" alt=""/>
+					</div>
+					<div class="cart-item-info" style="border: 2px #c7254e">
 						<b><h1><%=cm.getName()%></h1></b>
 						<ul class="qty">
 							<%
@@ -306,12 +336,14 @@ check out
 							<p><h2>Count : <%=shopList.get(cm.getCommodityId())%></h2></p>
 						</ul>
 						<div class="delivery">
-							<p><h3>Charges : <%=count * cm.getPrice()%></h3></p>
+							<p><h3>Unit-price : <%=cm.getPrice()%></h3></p>
 							<p><h3>Class : <%=cm.getTheClass()%></h3></p>
 							<p><h3>Color : <%=cm.getTheColor()%></h3></p>
 							<p><h3>SellerID : <%=cm.getUserId()%></h3></p>
-							<span>Delivered in 2-3 bussiness days</span>
 							<div class="clearfix"></div>
+							<div style="float:right">
+								<p><h2>Charges : $<%=count * cm.getPrice()%></h2></p>
+							</div>
 						</div>
 					</div>
 				</div>
