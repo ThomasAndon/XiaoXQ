@@ -20,7 +20,7 @@ public class ShopServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("---ShopServlet---");
         Integer count = Integer.parseInt(req.getParameter("count"));
-        String color = req.getParameter("count");
+        String color = req.getParameter("color");
         HttpSession session = req.getSession();
         /*
         Enumeration<?> enumeration1 = session.getAttributeNames();
@@ -39,7 +39,16 @@ public class ShopServlet extends HttpServlet {
         ArrayList<Commodity> cmArray = (ArrayList<Commodity>) session.getAttribute("cmArray");
         HashMap<Integer, Integer> shopList = (HashMap<Integer, Integer>) session.getAttribute("shopList");
         HashMap<Integer, Float> userPrice = (HashMap<Integer, Float>) session.getAttribute("userPrice");
-        Commodity tempCm = (Commodity) session.getAttribute("tempCm");
+        ArrayList<Commodity> tempCmArray = (ArrayList<Commodity>) session.getAttribute("tempCmArray");
+        Commodity tempCm = new Commodity();
+
+        //根据颜色来确定选择商品个体
+        for(Commodity cm : tempCmArray){
+            if(cm.getTheColor().equals(color)){
+                tempCm = cm;
+                break;
+            }
+        }
 
 
         Iterator cmIt = cmArray.iterator();
