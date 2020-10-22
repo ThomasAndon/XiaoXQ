@@ -229,24 +229,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 
 
-<!--
-		<%&#45;&#45;		 <div id="user" class="cart box_1">&#45;&#45;%>
-		<%&#45;&#45;			 <a href="checkout.jsp"><img  src="imagesOfUs/user.jpg" href="#"/>&#45;&#45;%>
-		<%&#45;&#45;				 <%String name=(String)session.getAttribute("username");%>&#45;&#45;%>
-		<%&#45;&#45;				 <p>Welcome! <%=name%></p>&#45;&#45;%>
-		<%&#45;&#45;				 <div class="total">&#45;&#45;%>
-		<%&#45;&#45;					 <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)&#45;&#45;%>
-		<%&#45;&#45;				 </div>&#45;&#45;%>
-		<%&#45;&#45;				 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&#45;&#45;%>
-		<%&#45;&#45;			 </a>&#45;&#45;%>
-		<%&#45;&#45;			 <form method="post" action="./logout">&#45;&#45;%>
-		<%&#45;&#45;				 <input class="mysubmit" type="submit" value="Log out" style="line-height: 0px;">&#45;&#45;%>
-		<%&#45;&#45;			 </form>&#45;&#45;%>
+		<%--		 <div id="user" class="cart box_1">--%>
+		<%--			 <a href="checkout.jsp"><img  src="imagesOfUs/user.jpg" href="#"/>--%>
+		<%--				 <%String name=(String)session.getAttribute("username");%>--%>
+		<%--				 <p>Welcome! <%=name%></p>--%>
+		<%--				 <div class="total">--%>
+		<%--					 <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)--%>
+		<%--				 </div>--%>
+		<%--				 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>--%>
+		<%--			 </a>--%>
+		<%--			 <form method="post" action="./logout">--%>
+		<%--				 <input class="mysubmit" type="submit" value="Log out" style="line-height: 0px;">--%>
+		<%--			 </form>--%>
 
-		<%&#45;&#45;			 <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>&#45;&#45;%>
-		<%&#45;&#45;			 <div class="clearfix"> </div>&#45;&#45;%>
-		<%&#45;&#45;		 </div>&#45;&#45;%>
-		-->
+		<%--			 <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>--%>
+		<%--			 <div class="clearfix"> </div>--%>
+		<%--		 </div>--%>
 		<div class="clearfix"> </div>
 		<!---->
 	</div>
