@@ -34,7 +34,7 @@ public class SearchServlet extends HttpServlet {
                 "\t\t}\n" +
                 "\t</style>");
 
-
+        int DistinctFLG = 1;
         String string=req.getParameter("Search");
         String order=req.getParameter("Order");
         System.out.println(order);
@@ -67,7 +67,7 @@ public class SearchServlet extends HttpServlet {
 //                    resp.getWriter().write("</br>");
 //                }
                 resp.getWriter().write("<div class=\"card shadow p-3 mb-5 bg-white rounded\" style=\"width: 18rem;\">\n" +
-                        "<img src=\"imagesOfUs/key2.jpg\" class=\"card-img-top\" alt=\"Product\">"+
+                        "<img src=\"imagesOfUs/Electronic_organ_2.jpg\" class=\"card-img-top\" alt=\"Product\">"+
                         "  <div class=\"card-body\">\n" +
                         "    <h5 class=\"card-title\">"+commodity.getName()+"</h5>\n" +
                         "    <p class=\"card-text\">"+"Price: "+commodity.getPrice()+"</p>\n" +

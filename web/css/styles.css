@@ -126,7 +126,7 @@ body {
   color: #FFA0A0;
 }
 .skw-page-1 .skw-page__half--left .skw-page__content {
-  background-image: url("../img/1.jpg");
+  /*background-image: url("../img/1.jpg");*/
 }
 .skw-page-1 .skw-page__half--right .skw-page__content {
   background: #292929;
@@ -135,10 +135,10 @@ body {
   background: #292929;
 }
 .skw-page-2 .skw-page__half--right .skw-page__content {
-  background-image: url("../img/2.jpg");
+  /*background-image: url("../img/2.jpg");*/
 }
 .skw-page-3 .skw-page__half--left .skw-page__content {
-  background-image: url("../img/3.jpg");
+  /*background-image: url("../img/3.jpg");*/
 }
 .skw-page-3 .skw-page__half--right .skw-page__content {
   background: #292929;
@@ -147,10 +147,10 @@ body {
   background: #292929;
 }
 .skw-page-4 .skw-page__half--right .skw-page__content {
-  background-image: url("../img/4.jpg");
+  /*background-image: url("../img/4.jpg");*/
 }
 .skw-page-5 .skw-page__half--left .skw-page__content {
-  background-image: url("../img/5.jpg");
+  /*background-image: url("../img/5.jpg");*/
 }
 .skw-page-5 .skw-page__half--right .skw-page__content {
   background: #292929;

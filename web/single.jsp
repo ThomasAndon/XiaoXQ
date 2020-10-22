@@ -269,7 +269,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									"with professional quality and gives you the best experience.");
 
 							imageUrl1.append("imagesOfUs/key1.jpg");
-							imageUrl2.append("imagesOfUs/key2.jpg");
+							imageUrl2.append("imagesOfUs/Electronic_organ_2.jpg");
 							imageUrl3.append("imagesOfUs/key3.png");
 							break;
 
@@ -278,9 +278,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							//cmPrice = 1400.;
 							descText.append("The keyboard comes with world leading digital audio technology, " +
 									"with professional quality and gives you the best experience.");
-							imageUrl1.append("imagesOfUs/key5.jpg");
-							imageUrl2.append("imagesOfUs/key7.jpg");
-							imageUrl3.append("imagesOfUs/key8.jpg");
+							imageUrl1.append("imagesOfUs/Electronic_organ_5.jpg");
+							imageUrl2.append("imagesOfUs/Electronic_organ_7.jpg");
+							imageUrl3.append("imagesOfUs/Electronic_organ_8.jpg");
 							break;
 
 						default:
@@ -308,10 +308,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="flexslider">
 						<ul class="slides">
 							<li data-thumb=“imagesOfUs/key1.jpg”>
-								<div class="thumb-image"> <img src="imagesOfUs/key1.jpg", data-imagezoom="true", class="img-responsive", alt=""/> </div>
+								<div class="thumb-image"> <img src="imagesOfUs/key1.jpg" , data-imagezoom="true" , class="img-responsive" , alt=""/> </div>
 							</li>
 							<li data-thumb=“imagesOfUs/key1.jpg”>
-								<div class="thumb-image"> <img src="imagesOfUs/key2.jpg", data-imagezoom="true", class="img-responsive", alt=""/> </div>
+								<div class="thumb-image"> <img src="imagesOfUs/Electronic_organ_2.jpg" , data-imagezoom="true" , class="img-responsive" , alt=""/> </div>
 							</li>
 							<li data-thumb=“imagesOfUs/key1.jpg”>
 								<div class="thumb-image"> <img src="imagesOfUs/key3.png", data-imagezoom="true", class="img-responsive", alt=""/> </div>

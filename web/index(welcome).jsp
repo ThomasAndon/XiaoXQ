@@ -341,7 +341,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </a>
 			</div>
 			<div class="col-md-3 feature-grid">
-				<a href=<%=request.getContextPath()+"/view?cmName=2"%>><img src="imagesOfUs/key2.jpg" alt=""/>
+				<a href=<%=request.getContextPath()+"/view?cmName=2"%>><img src="imagesOfUs/Electronic_organ_2.jpg" alt=""/>
 					<div class="arrival-info">
 						<h4>Electronic organ2</h4>
 						<p>$2400-2800</p>
@@ -358,7 +358,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 			<!--
 			<div class="col-md-3 feature-grid">
-				<a href="errorpage.jsp"><img src="imagesOfUs/key3.jpg" alt=""/>
+				<a href="errorpage.jsp"><img src="imagesOfUs/Electronic_organ_3.jpg" alt=""/>
 					<div class="arrival-info">
 						<h4>Electronic organ3</h4>
 						<%--
