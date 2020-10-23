@@ -313,7 +313,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="single-para">
 						<h4><%=cmName%></h4>
 						<!--用js写两个按钮？用来选择颜色，每一次onclick就会访问一次session中的对象，根据onclick所发送的值（颜色 String）来更新价格-->
-						<h5 id="priceLabel" class="item_price">$<%=lowPrice%>~<%=highPrice%>
+						<%
+							if(lowPrice == highPrice){
+								String str = "<h5 id=\"priceLabel\" class=\"item_price\">" + "$" + lowPrice
+										+ "</h5>";
+								out.print(str);
+							}else{
+								String str = "<h5 id=\"priceLabel\" class=\"item_price\">" + "$" + lowPrice
+										+ "~" + highPrice + "</h5>";
+								out.print(str);
+							}
+						%>
                         </h5>
 						<p class="para"><%=descText%></p>
 						<div class="prdt-info-grid">
