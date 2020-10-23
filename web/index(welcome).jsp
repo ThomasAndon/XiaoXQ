@@ -114,26 +114,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 @author Luo Deng
 -->
 <%
-	/*
-    Enumeration<?> enumeration = session.getAttributeNames();
-	while (enumeration.hasMoreElements()) {
-		String name = enumeration.nextElement().toString();
-		// 根据键值取session中的值
-		Object value = session.getAttribute(name);
-		// 打印结果
-		System.out.println(name+ "=" + value);
-	}
-	Double totalPrice = (Double)session.getAttribute("totalPrice");
-	if(totalPrice == null){
-		totalPrice = 0.;
-	}
-
-	Integer cmAmount = (Integer)session.getAttribute("cmAmount");
-	if(session.getAttribute("cmAmount") == null){
-		cmAmount = 0;
-	}
-    */
-
     //打印目前session所有的值
     System.out.println("---index---");
     Enumeration<?> enumeration1 = session.getAttributeNames();
