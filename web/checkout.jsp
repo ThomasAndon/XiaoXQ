@@ -327,13 +327,37 @@ check out
 					<div class="cart-item cyc">
 						<img src=<%=urlString%> class="img-responsive" alt=""/>
 					</div>
-					<div class="cart-item-info" style="border: 2px #c7254e">
+					<script type="text/javascript">
+						function increase()
+						{
+							var txt = document.getElementById('Bnumber');
+							var number=+txt.value;
+							number=number+1;
+							txt.value=number;
+						}
+						function decrease() {
+							var txt = document.getElementById('Bnumber');
+							var number=+txt.value;
+							number=number-1;
+							if(number<=0){
+								number=0;
+							}
+							txt.value=number;
+						}
+					</script>
+					<div id="<%=cm.getCommodityId()%>" class="cart-item-info" style="border: 2px #c7254e">
 						<b><h1><%=cm.getName()%></h1></b>
 						<ul class="qty">
 							<%
 								Integer count = shopList.get(cm.getCommodityId());
 							%>
-							<p><h2>Count : <%=shopList.get(cm.getCommodityId())%></h2></p>
+							<form method="post" >
+							<p id="count"><h2>Count : <%=shopList.get(cm.getCommodityId())%></h2>
+								<input type="button" name="decrease" value="-">
+								<input type="button" name="increase" value="+">
+								</p>
+							</form>
+
 						</ul>
 						<div class="delivery">
 							<p><h3>Unit-price : <%=cm.getPrice()%></h3></p>
