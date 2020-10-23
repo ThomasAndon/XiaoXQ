@@ -1,3 +1,6 @@
+<%@ page import="jspServlet.DAO.impl.CommodityDAOImpl" %>
+<%@ page import="jspServlet.vo.Commodity" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -121,6 +124,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </head>
 <body>
+<%
+	CommodityDAOImpl commodityDAO = new CommodityDAOImpl();
+	ArrayList<Commodity> commodities = commodityDAO.CommodityShow();
+	request.getSession().setAttribute("commodities",commodities);
+%>
 
 
 <div id="identifier" class="modal" data-toggle="modal" tabindex="-1" role="dialog">
@@ -477,7 +485,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			// })
 
 			function Pic() {
-				var Pnumber = 1;
+				<%--var commodities = <%=commodities%>;--%>
+				<%--commodities.get(0).--%>
+				<%--var Pnumber = 1;--%>
+				// console.log("aasasasas");
+				// console.log(JSON.parse("{\"a\":\"b\"}{\"c\":\"d\"}"));
+
 				document.getElementById(1).style.backgroundColor="#f60202";
 				document.getElementById(1).style.color="#ffffff"
 				var PN = (Pnumber-1)*6+4;
