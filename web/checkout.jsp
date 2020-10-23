@@ -333,14 +333,16 @@ check out
 								Integer count = shopList.get(cm.getCommodityId());
 							%>
 							<!--动态修改购物车内商品数量按钮-->
-							<p><h2>Count : <%=shopList.get(cm.getCommodityId())%></h2>
-							<form name="<%="decrease"+cm.getCommodityId()%>" method="post" action="./cart">
+							<table>
+								<tr><h2>Count : <%=shopList.get(cm.getCommodityId())%></h2></tr>
+
+								<tr><form name="<%="decrease"+cm.getCommodityId()%>" method="post" action="./cart">
 								<input type="submit" name="<%="d"+cm.getCommodityId()%>" value="-">
-							</form>
-							<form name="<%="increase"+cm.getCommodityId()%>" method="post" action="./cart">
+								</form></tr>
+							<tr><form name="<%="increase"+cm.getCommodityId()%>" method="post" action="./cart">
 								<input type="submit" name="<%="i"+cm.getCommodityId()%>" value="+">
-							</form>
-							</p>
+							</form></tr>
+							</table>
 						</ul>
 						</row>
 						<div class="delivery">

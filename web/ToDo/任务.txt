@@ -14,7 +14,7 @@ DonaldBox71:
     6.2. √访问session中的tempCmArray，动态更新页面上的价格
     6.3. √添加到购物车后，根据颜色选择按钮结果的不同，获取tempCmArray中不同的对象，传入ShopServlet
 7. √实现checkout.jsp购物车中商品信息的显示
-8. *checkout.jsp鲁棒性保证（无商品添加到购物车时，上面的按钮操作全部失效）
+8. *single.jsp鲁棒性保证（未选定颜色或数量为0时，添加操作失效）
 9. *checkout.jsp排版优化
 10. √checkout.jsp商品条单价未显示
 11. √single.jsp图片显示问题
@@ -25,10 +25,11 @@ DonaldBox71:
 16. √将电管兄弟的琴换上产品展示页面
 17. √两种颜色同价时，价格显示问题
 18. ！！！product.jsp产品展示上的价格显示问题
-19. ！！！在报告中添加流程图片！！！
+19. √在报告中添加流程图片
 20. *single.jsp 商品信息的排版
 21. 隐藏viewServlet向single.jsp传递参数
-22. *对数量为0的商品应及时清除（cmArray，shopList和userPrice）
+22. √对数量为0的商品应及时清除（cmArray，shopList和userPrice）
+23. √购物车加减按钮优化
 
 (:
 SZY:
