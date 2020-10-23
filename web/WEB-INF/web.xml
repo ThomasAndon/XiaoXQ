@@ -53,6 +53,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>CartChangeServlet</servlet-name>
+        <servlet-class>jspServlet.servlet.CartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CartChangeServlet</servlet-name>
+        <url-pattern>/cart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>Servley3</servlet-name>
         <servlet-class>jspServlet.servlet.WelcomeServlet</servlet-class>
     </servlet>

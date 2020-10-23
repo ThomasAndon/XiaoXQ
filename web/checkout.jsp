@@ -275,7 +275,6 @@ check out
 					//System.out.println("cmId = " + cm.getCommodityId());
 					%>
 			<div class="cart-header">
-				<div class="close1"> </div>
 				<div class="cart-sec simpleCart_shelfItem">
 					<%
 						String urlString = "";
@@ -327,38 +326,23 @@ check out
 					<div class="cart-item cyc">
 						<img src=<%=urlString%> class="img-responsive" alt=""/>
 					</div>
-					<script type="text/javascript">
-						function increase()
-						{
-							var txt = document.getElementById('Bnumber');
-							var number=+txt.value;
-							number=number+1;
-							txt.value=number;
-						}
-						function decrease() {
-							var txt = document.getElementById('Bnumber');
-							var number=+txt.value;
-							number=number-1;
-							if(number<=0){
-								number=0;
-							}
-							txt.value=number;
-						}
-					</script>
-					<div id="<%=cm.getCommodityId()%>" class="cart-item-info" style="border: 2px #c7254e">
+					<div class="cart-item-info" style="border: 2px #c7254e">
 						<b><h1><%=cm.getName()%></h1></b>
 						<ul class="qty">
 							<%
 								Integer count = shopList.get(cm.getCommodityId());
 							%>
-							<form method="post" >
-							<p id="count"><h2>Count : <%=shopList.get(cm.getCommodityId())%></h2>
-								<input type="button" name="decrease" value="-">
-								<input type="button" name="increase" value="+">
-								</p>
+							<!--动态修改购物车内商品数量按钮-->
+							<p><h2>Count : <%=shopList.get(cm.getCommodityId())%></h2>
+							<form name="<%="decrease"+cm.getCommodityId()%>" method="post" action="./cart">
+								<input type="submit" name="<%="d"+cm.getCommodityId()%>" value="-">
 							</form>
-
+							<form name="<%="increase"+cm.getCommodityId()%>" method="post" action="./cart">
+								<input type="submit" name="<%="i"+cm.getCommodityId()%>" value="+">
+							</form>
+							</p>
 						</ul>
+						</row>
 						<div class="delivery">
 							<p><h3>Unit-price : <%=cm.getPrice()%></h3></p>
 							<p><h3>Class : <%=cm.getTheClass()%></h3></p>
