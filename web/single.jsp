@@ -224,7 +224,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--header//-->
 <div class="product">
 	<div class="container">
-		<div class="product-price1">
+		<div class="product-price1" style="float:left">
 			<div class="top-sing">
 				<!--
 
@@ -239,6 +239,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					//根据cmName为页面显示准备变量，保证不同Name对应不同页面信息
 					ArrayList<Commodity> tempCmArray = (ArrayList<Commodity>)session.getAttribute("tempCmArray");
 					String cmName = request.getParameter("cmName");
+					String cmType = request.getParameter("cmType");
+					String cmWarranty = request.getParameter("cmWarranty");
+					Integer cmUserID = Integer.parseInt(request.getParameter("cmUserID"));
 					System.out.println("cmName = " + cmName);
 					String urlString = (String)session.getAttribute("urlString");
 
@@ -307,21 +310,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 
 				<div class="col-md-5 single-top-in simpleCart_shelfItem">
-					<div class="single-para ">
+					<div class="single-para">
 						<h4><%=cmName%></h4>
 						<!--用js写两个按钮？用来选择颜色，每一次onclick就会访问一次session中的对象，根据onclick所发送的值（颜色 String）来更新价格-->
 						<h5 id="priceLabel" class="item_price">$<%=lowPrice%>~<%=highPrice%>
                         </h5>
 						<p class="para"><%=descText%></p>
 						<div class="prdt-info-grid">
-							<ul>
-								<%--
+							<ul><h4>
+
                               <li>- Brand : Nice Key</li>
                               <li>- Dimensions : 80cm x 35cm x 20cm</li>
-                              <li>- Color : Black&nbsp;</li>
+                              <li>- Color : Black or White&nbsp;</li>
                               <li>- Material : Steel</li>
-                              --%>
-							</ul>
+								<li>- Type : <%=cmType%></li>
+								<li>- Warranty : <%=cmWarranty%></li>
+								<li>- SellerID : <%=cmUserID%></li>
+
+							</h4></ul>
 
 						</div>
 						<!--

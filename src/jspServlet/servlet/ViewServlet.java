@@ -50,9 +50,15 @@ public class ViewServlet extends HttpServlet {
             System.out.println(cm.getName());
         }
 
-        String cmName = null;
+        String cmName = "";
+        String cmType = "";
+        String cmWarranty = "";
+        Integer cmUserID = 0;
         if(tempCmArray.size() != 0){
             cmName = tempCmArray.get(0).getName();
+            cmType = tempCmArray.get(0).getTheClass();
+            cmWarranty = tempCmArray.get(0).getInstructions();
+            cmUserID = tempCmArray.get(0).getUserId();
             //System.out.println(cmName);
             session.setAttribute("tempCmArray", tempCmArray);
 
@@ -166,7 +172,7 @@ public class ViewServlet extends HttpServlet {
                     break;
             }
             session.setAttribute("urlString", urlString);
-            resp.sendRedirect("./single.jsp?cmName=" + cmName);
+            resp.sendRedirect("./single.jsp?cmName=" + cmName + "&cmType=" + cmType + "&cmWarranty=" + cmWarranty + "&cmUserID=" + cmUserID);
         }else{
             System.out.println("There is no such commodity of this name!!!");
             System.exit(1);
