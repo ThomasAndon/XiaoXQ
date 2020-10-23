@@ -236,10 +236,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					 */
 
 
-					//根据cmName为页面显示准备变量，保证不同Id对应不同页面信息
+					//根据cmName为页面显示准备变量，保证不同Name对应不同页面信息
 					ArrayList<Commodity> tempCmArray = (ArrayList<Commodity>)session.getAttribute("tempCmArray");
 					String cmName = request.getParameter("cmName");
 					System.out.println("cmName = " + cmName);
+					String urlString = (String)session.getAttribute("urlString");
 
 					float whitePrice = (float) 0.;
 					float blackPrice = (float) 0.;
@@ -265,57 +266,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         highPrice = blackPrice;
                     }
 
-					StringBuffer descText = new StringBuffer();
-					StringBuffer imageUrl1 = new StringBuffer();
-					StringBuffer imageUrl2 = new StringBuffer();
-					StringBuffer imageUrl3 = new StringBuffer();
-
-					/*
-
-					switch(cmId){
-						case 1:
-							//cmName.append("Electronic organ1");
-							//cmPrice = 1200.;
-							descText.append("The keyboard comes with world leading digital audio technology, " +
-									"with professional quality and gives you the best experience.");
-
-							imageUrl1.append("imagesOfUs/key1.jpg");
-							imageUrl2.append("imagesOfUs/Electronic_organ_2.jpg");
-							imageUrl3.append("imagesOfUs/key3.png");
-							break;
-
-						case 10:
-							//cmName.append("Electronic organ2");
-							//cmPrice = 1400.;
-							descText.append("The keyboard comes with world leading digital audio technology, " +
-									"with professional quality and gives you the best experience.");
-							imageUrl1.append("imagesOfUs/Electronic_organ_5.jpg");
-							imageUrl2.append("imagesOfUs/Electronic_organ_7.jpg");
-							imageUrl3.append("imagesOfUs/Electronic_organ_8.jpg");
-							break;
-
-						default:
-							System.out.println("Error");
-							System.exit(1);
-							break;
-					}
-
-					 */
-
-					/*
-					session.setAttribute("cmName", cmName);
-					session.setAttribute("cmPrice", cmPrice);
-					session.setAttribute("cmId", cmId);
-
-					 */
-
-
+					String descText = "The keyboard comes with world leading digital audio technology, " +
+                            "with professional quality and gives you the best experience.";
 				%>
 
 
 
 
 				<div class="col-md-7 single-top">
+                    <!--图片显示有问题，弃用
 					<div class="flexslider">
 						<ul class="slides">
 							<li data-thumb=“imagesOfUs/key1.jpg”>
@@ -340,6 +299,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							});
 						});
 					</script>
+					-->
+                    <div>
+                        <div id="img" class="thumb-image"> <img src="<%=urlString%>" , data-imagezoom="true" , class="img-responsive" , alt=""/> </div>
+                    </div>
 
 				</div>
 
@@ -349,7 +312,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!--用js写两个按钮？用来选择颜色，每一次onclick就会访问一次session中的对象，根据onclick所发送的值（颜色 String）来更新价格-->
 						<h5 id="priceLabel" class="item_price">$<%=lowPrice%>~<%=highPrice%>
                         </h5>
-						<p class="para"><%=descText.toString()%></p>
+						<p class="para"><%=descText%></p>
 						<div class="prdt-info-grid">
 							<ul>
 								<%--
@@ -439,43 +402,44 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="clearfix"> </div>
 			</div>
 		</div>
-<!--
+
 		 <div class="bottom-prdt">
 			 <div class="btm-grid-sec">
+				 <div><h1 class="center-block" style="background-color: #FFFFFF;line-height: 3;color: orangered"><b>You May Also Like</b></h1></div>
 				 <div class="col-md-2 btm-grid">
-					 <a href="product.html">
-						<img src="images/p3.jpg" alt=""/>
-						<h4>Product#1</h4>
-						<span>$1200</span></a>
-				 </div>
-				 <div class="col-md-2 btm-grid">
-					 <a href="product.html">
-						<img src="images/p10.jpg" alt=""/>
-						<h4>Product#1</h4>
-						<span>$700</span></a>
-				 </div>
-				 <div class="col-md-2 btm-grid">
-					  <a href="product.html">
-						<img src="images/p5.jpg" alt=""/>
-						<h4>Product#1</h4>
+					 <a href="<%=request.getContextPath()+"/view?cmName=6"%>">
+						<img src="imagesOfUs/Electronic_organ_6.jpg" style="width: 150px;height: 150px" alt=""/>
+						<h4>Electronic_organ_6</h4>
 						<span>$1300</span></a>
 				 </div>
 				 <div class="col-md-2 btm-grid">
-					  <a href="product.html">
-						<img src="images/p4.jpg" alt=""/>
-						<h4>Product#1</h4>
-						<span>$9000</span></a>
+					 <a href="<%=request.getContextPath()+"/view?cmName=7"%>">
+						<img src="imagesOfUs/Electronic_organ_7.jpg" style="width: 150px;height: 150px" alt=""/>
+						<h4>Electronic_organ_7</h4>
+						<span>$1200-1300</span></a>
 				 </div>
 				 <div class="col-md-2 btm-grid">
-					  <a href="product.html">
-						<img src="images/p2.jpg" alt=""/>
-						<h4>Product#1</h4>
-						<span>$450</span></a>
+					  <a href="<%=request.getContextPath()+"/view?cmName=8"%>">
+						<img src="imagesOfUs/Electronic_organ_8.jpg" style="width: 150px;height: 150px" alt=""/>
+						<h4>Electronic_organ_8</h4>
+						<span>$1200</span></a>
+				 </div>
+				 <div class="col-md-2 btm-grid">
+					  <a href="<%=request.getContextPath()+"/view?cmName=4"%>">
+						<img src="imagesOfUs/Electronic_organ_4.jpg" style="width: 150px;height: 150px" alt=""/>
+						<h4>Electronic_organ_4</h4>
+						<span>$1400</span></a>
+				 </div>
+				 <div class="col-md-2 btm-grid">
+					  <a href="<%=request.getContextPath()+"/view?cmName=5"%>">
+						<img src="imagesOfUs/Electronic_organ_5.jpg" style="width: 150px;height: 150px" alt=""/>
+						<h4>Electronic_organ_5</h4>
+						<span>$1300-1600</span></a>
 				 </div>
 				  <div class="clearfix"></div>
 			 </div>			
 		 </div>
--->
+
 	 </div>
 </div>
 <!---->
