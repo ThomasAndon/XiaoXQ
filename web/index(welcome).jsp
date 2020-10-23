@@ -158,17 +158,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<%--				 <div class="col-md-1">cmd1</div>--%>
 				<%--				 <div class="col-md-1">cmd1</div>--%>
 				<%--				 <div class="col-md-1">cmd1</div>--%>
-				<div id="logg" class="col-md-3 col-md-offset-10">
-					<a href="login.jsp">
-						<span style="font-size: 35px;line-height: 2.2;" class="glyphicon glyphicon-log-in btn-lg"></span>
-					</a>
-				</div>
-				<div class="col-md-3 col-md-offset-9" id="user">
+					<div id="logg" class="col-md-3 col-md-offset-10">
+						<a href="login.jsp">
+							<span style="font-size: 35px;line-height: 2.2;" class="glyphicon glyphicon-log-in btn-lg"></span>
+						</a>
+					</div>
+					<div id="cart" class="col-md-3 col-md-offset-9">
+						<a href="checkout.jsp"><img src="imagesOfUs/cart.png" width="15%"></a>
+					</div>
+				<div class="col-md-9 col-md-offset-6" id="user">
 					<div class="row justify-content-md-center">
-
 						<div class="col-md12">
 							<%String name=(String)session.getAttribute("username");%>
-							<a href="profile.jsp"><h4 style="line-height: 2.8">Welcome! <%=name%></h4></a>
+							<a href="profile.jsp"><h5 style="line-height: 2.5">Welcome! <%=name%></h5></a>
 						</div>
 					</div>
 					<%-->
@@ -191,9 +193,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</div>
 			</div>
-
-
-
 		</div>
 
 
@@ -231,6 +230,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			document.getElementById("rl1").style.display='none';
 			document.getElementById("rl2").style.display='inline';
 			document.getElementById("order").style.display='inline';
+			document.getElementById("cart").style.display='inline';
 
 		}else{
 			document.getElementById("order").style.display='none';
@@ -238,6 +238,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			document.getElementById("rl1").style.display='inline';
 			document.getElementById("rl2").style.display='none';
 			document.getElementById("logg").style.display='inline';
+			document.getElementById("cart").style.display='none';
 		}
 
 	}
