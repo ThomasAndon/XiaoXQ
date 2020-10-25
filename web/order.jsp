@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>NiceKey</title>
+<title>Order - NiceKey</title>
 	<style>
 		body {
 			padding-right: 0px !important;
@@ -96,7 +96,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</button>
 			</div>
 			<div class="modal-body">
-				<p>Are you sure you want to log out?</p>
+				<p>Are you sure you want to log out?<br/>Current shopping cart will be <b>lost</b></p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
@@ -195,33 +195,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<span style="font-size: 35px;line-height: 2.2;" class="glyphicon glyphicon-log-in btn-lg"></span>
 					</a>
 				</div>
-				<div class="col-md-3 col-md-offset-9" id="user">
-					<div class="row justify-content-md-center">
+					<div class="col-md-9 col-md-offset-6" id="user">
+						<div class="row justify-content-md-center">
+							<a href="checkout.jsp"><img src="imagesOfUs/cart.png" width="5%"></a>
+						</div>
+						<div class="row justify-content-md-center">
+							<div class="col-md12">
+								<%String name=(String)session.getAttribute("username");%>
+								<a href="profile.jsp"><h5 style="line-height: 2.5">Welcome! <%=name%></h5></a>
+							</div>
+						</div>
+						<%-->
+                        下面这段是购物车的金额
 
-						<div class="col-md12">
-							<%String name=(String)session.getAttribute("username");%>
-							<a href="profile.jsp"><h4 style="line-height: 2.8">Welcome! <%=name%></h4></a>
+                        <div class="row justify-content-md-center">
+                            <div class="col-md12">
+                                <h5 style="line-height: 36px"><span class="simpleCart_total"></span></h5>
+                            </div>
+                        </div>
+                        <--%>
+						<div class="row justify-content-md-center">
+							<div class="col-md12">
+								<a href="profile.jsp" class="btn btn-success btn-sm" style="font-size: 1.4rem;">Information</a>
+							</div>
+						</div>
+						<div class="row justify-content-md-center">
+							<div class="col-md12">
+								<button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#identifier" style="font-size: 1.1rem;line-height: 0.6;">Log out</button>						 </div>
 						</div>
 					</div>
-					<%-->
-					下面这段是购物车的金额
-
-					<div class="row justify-content-md-center">
-						<div class="col-md12">
-							<h5 style="line-height: 36px"><span class="simpleCart_total"></span></h5>
-						</div>
-					</div>
-					<--%>
-					<div class="row justify-content-md-center">
-						<div class="col-md12">
-							<a href="profile.jsp" class="btn btn-success btn-sm" style="font-size: 1.4rem;">Information</a>
-						</div>
-					</div>
-					<div class="row justify-content-md-center">
-						<div class="col-md12">
-							<button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#identifier" style="font-size: 1.1rem;line-height: 0.6;">Log out</button></div>
-					</div>
-				</div>
 			</div>
 
 

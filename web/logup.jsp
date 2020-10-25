@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Register</title>
+    <title>Register - NiceKey</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/docs.min.css" rel="stylesheet">
     <!-- Custom Theme files -->

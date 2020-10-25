@@ -3,7 +3,7 @@
 <%@ page import="jspServlet.vo.Commodity" %>
 <html>
 <head>
-	<title>Shopping Cart</title>
+	<title>Shopping Cart - NiceKey</title>
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
@@ -87,7 +87,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</button>
 			</div>
 			<div class="modal-body">
-				<p>Are you sure you want to log out?<br/>Current shopping cart will be <b>lost</b>></p>
+				<p>Are you sure you want to log out?<br/>Current shopping cart will be <b>lost</b></p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>

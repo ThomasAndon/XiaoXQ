@@ -85,7 +85,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</button>
 			</div>
 			<div class="modal-body">
-				<p>Are you sure you want to log out?<br/>Current shopping cart will be <b>lost</b>></p>
+				<p>Are you sure you want to log out?<br/>Current shopping cart will be <b>lost</b></p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
@@ -278,12 +278,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!---->
 <script src="js/bootstrap.js"> </script>
 
-<div class="items">
-	<div class="container">
-	</div>
-	<!--首页产品展示已全部删掉-->
-	<div class="clearfix"></div>
-</div>
+
 
 <!---->
 <!--

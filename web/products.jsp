@@ -139,9 +139,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
-			</div>
+			</div>s
 			<div class="modal-body">
-				<p>Are you sure you want to log out?<br/>Current shopping cart will be <b>lost</b>></p>
+				<p>Are you sure you want to log out?<br/>Current shopping cart will be <b>lost</b></p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
@@ -187,29 +187,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<span style="font-size: 35px;line-height: 2.2;" class="glyphicon glyphicon-log-in btn-lg"></span>
 					</a>
 				</div>
-				<div class="col-md-3 col-md-offset-9" id="user">
-					<div class="row justify-content-md-center">
+					<div class="col-md-9 col-md-offset-6" id="user">
+						<div class="row justify-content-md-center">
+							<a href="checkout.jsp"><img src="imagesOfUs/cart.png" width="5%"></a>
+						</div>
+						<div class="row justify-content-md-center">
+							<div class="col-md12">
+								<%String name=(String)session.getAttribute("username");%>
+								<a href="profile.jsp"><h5 style="line-height: 2.5">Welcome! <%=name%></h5></a>
+							</div>
+						</div>
+						<%-->
+                        下面这段是购物车的金额
 
-						<div class="col-md12">
-							<%String name=(String)session.getAttribute("username");%>
-							<a href="profile.jsp"><h4 style="line-height: 2.8">Welcome! <%=name%></h4></a>
+                        <div class="row justify-content-md-center">
+                            <div class="col-md12">
+                                <h5 style="line-height: 36px"><span class="simpleCart_total"></span></h5>
+                            </div>
+                        </div>
+                        <--%>
+						<div class="row justify-content-md-center">
+							<div class="col-md12">
+								<a href="profile.jsp" class="btn btn-success btn-sm" style="font-size: 1.4rem;">Information</a>
+							</div>
+						</div>
+						<div class="row justify-content-md-center">
+							<div class="col-md12">
+								<button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#identifier" style="font-size: 1.1rem;line-height: 0.6;">Log out</button>						 </div>
 						</div>
 					</div>
-<%--					<div class="row justify-content-md-center">--%>
-<%--						<div class="col-md12">--%>
-<%--							<h5 style="line-height: 36px"><span class="simpleCart_total"></span></h5>--%>
-<%--						</div>--%>
-<%--					</div>--%>
-					<div class="row justify-content-md-center">
-						<div class="col-md12">
-							<a href="profile.jsp" class="btn btn-success btn-sm" style="font-size: 1.4rem;">Information</a>
-						</div>
-					</div>
-					<div class="row justify-content-md-center">
-						<div class="col-md12">
-							<button  class="btn btn-danger btn-sm" data-toggle="modal" data-target="#identifier" style="font-size: 1.1rem;">Log out</button>						 </div>
-					</div>
-				</div>
 			</div>
 
 
@@ -387,11 +393,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 				<div id="TF" class="col-md-4">
 					<div class="popo card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
-						<img id="product1" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
+						<img id="product1" src="imagesOfUs/Electronic_organ_4.jpg" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
 							<h5 id="name1" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Electronic_organ_4</b></h5>
 							<p id="price1" class="card-text" style="font-size: 16px;">Price: $1400</p>
-							<div id="go1"><a href="<%=request.getContextPath()+"/view?cmName=4"%>" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a></div>>
+							<div id="go1"><a href="<%=request.getContextPath()+"/view?cmName=4"%>" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a></div>
 						</div>
 					</div>
 
@@ -399,22 +405,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-4 ">
 
 					<div class="popo card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
-						<img id="product2" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
+						<img id="product2" src="imagesOfUs/Electronic_organ_5.jpg" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
 							<h5 id="name2" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Electronic_organ_5</b></h5>
 							<p id="price2" class="card-text" style="font-size: 16px;">Price: $1300-1600</p>
-							<div id="go2"><a href="<%=request.getContextPath()+"/view?cmName=5"%>" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a></div>>
+							<div id="go2"><a href="<%=request.getContextPath()+"/view?cmName=5"%>" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a></div>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 ">
 
 					<div class="popo  card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
-						<img id="product3" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
+						<img id="product3" src="imagesOfUs/Electronic_organ_6.jpg" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
 							<h5 id="name3" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Electronic_organ_6</b></h5>
 							<p id="price3" class="card-text" style="font-size: 16px;">Price: $1300</p>
-							<div id="go3"><a href="<%=request.getContextPath()+"/view?cmName=6"%>" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a></div>>
+							<div id="go3"><a href="<%=request.getContextPath()+"/view?cmName=6"%>" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a></div>
 						</div>
 					</div>
 				</div>
@@ -429,11 +435,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-4 ">
 
 					<div class="popo card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
-						<img id="product4" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
+						<img id="product4" src="imagesOfUs/Electronic_organ_7.jpg" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
 							<h5 id="name4" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Electronic_organ_7</b></h5>
 							<p id="price4" class="card-text" style="font-size: 16px;">Price: $1200-1300</p>
-							<div id="go4"><a href="<%=request.getContextPath()+"/view?cmName=7"%>" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a></div>>
+							<div id="go4"><a href="<%=request.getContextPath()+"/view?cmName=7"%>" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a></div>
 						</div>
 					</div>
 
@@ -441,21 +447,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-4 ">
 
 					<div class="popo card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
-						<img id="product5" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
+						<img id="product5" src="imagesOfUs/Electronic_organ_8.jpg" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
 							<h5 id="name5" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Electronic_organ_8</b></h5>
 							<p id="price5" class="card-text" style="font-size: 16px;">Price: $1200</p>
-							<div id="go5"><a href="<%=request.getContextPath()+"/view?cmName=8"%>" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a></div>>
+							<div id="go5"><a href="<%=request.getContextPath()+"/view?cmName=8"%>" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a></div>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 ">
 					<div class="popo card shadow-lg p-3 mb-5 bg-white rounded center-block" style="width: 30rem;height: 40rem;font-size: 14px;line-height: 108px;">
-						<img id="product6" src="" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
+						<img id="product6" src="imagesOfUs/Electronic_organ_9.jpg" class="card-img-top center-block" style="width: 200px;height: 150px" alt="Product">
 						<div class="card-body">
 							<h5 id="name6" class="card-title" style="font-size: 2.5rem;"><b style="font-size: 27px;">Electronic_organ_9</b></h5>
 							<p id="price6 "class="card-text" style="font-size: 16px;">Price: $1350-1500</p>
-							<div id="go6"><a href="<%=request.getContextPath()+"/view?cmName=9"%>" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a></div>>
+							<div id="go6"><a href="<%=request.getContextPath()+"/view?cmName=9"%>" class="btn btn-primary center-block" style="line-height: 1.1;letter-spacing: 0.054em;font-size: 4rem;">Go</a></div>
 						</div>
 					</div>
 				</div>
