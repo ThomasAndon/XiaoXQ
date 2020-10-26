@@ -66,12 +66,14 @@ public class SearchServlet extends HttpServlet {
 //                    i=0;
 //                    resp.getWriter().write("</br>");
 //                }
+                Integer num = Integer.parseInt(commodity.getName().substring(17));
+                System.out.println(num);
                 resp.getWriter().write("<div class=\"card shadow p-3 mb-5 bg-white rounded\" style=\"width: 18rem;\">\n" +
                         "<img src=\"imagesOfUs/"+commodity.getName()+".jpg\" style=\"width: 200px;height: 150px\" class=\"card-img-top\" alt=\"Product\">"+
                         "  <div class=\"card-body\">\n" +
                         "    <h5 class=\"card-title\">"+commodity.getName()+"</h5>\n" +
                         "    <p class=\"card-text\">"+"Price: $"+commodity.getMINPrice()+"-"+commodity.getMAXPrice()+"</p>\n" +
-                        "    <a href=\"single.jsp?CommdityId=1\" class=\"btn btn-primary\">Go</a>\n" +
+                        "    <a href=\""+req.getContextPath()+"/view?cmName="+num+"\" class=\"btn btn-primary\">Go</a>\n" +
                         "  </div>\n" +
                         "</div>");
 //                resp.getWriter().write(j+". Name: "+commodity.getName()+"&emsp;");
