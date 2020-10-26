@@ -200,13 +200,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <form method="post" action="./logup">
                 <h5>User Name</h5>
                 <input type="text" value="" name="Name">
+                <h5>Gender</h5>
+                <%--                <input type="text" value="" name="Gender">--%>
+                Male<input type="radio" name="Gender" value="male">&nbsp;&nbsp;
+                Famale<input type="radio" name="Gender" value="famale">
+                <br><br>
                 <h5>Account</h5>
                 <input type="text" value="" name="Account">
                 <h5>Password</h5>
                 <input id="P" type="text" value="" name="Password">
                 <span style="color: red" position:="" absolute="" id="PT"></span>
-                <h5>Gender</h5>
-                <input type="text" value="" name="Gender">
                 <h5>Address</h5>
                 <input type="text" value="" name="Address"><br>
                 <input type="checkbox" id="confirmcheck" class="checkbox" onclick="check()" style="float: left; width: 20px" data-toggle="popover" title="">
@@ -214,7 +217,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <p>I accept the <a href="eula.html" target="_blank">end user license agreement</a> and <a href="t&c.html" target="_blank">terms and conditions</a></p>
                 </span>
 
-                <input type="submit" value="Register" disabled="disabled" id="regbtn"><p id="havetoprompt" class="alert alert-danger">You have to confirm first!</p>
+                <input type="submit" value="Register" onclick="FINE()" disabled="disabled" id="regbtn"><p id="havetoprompt" class="alert alert-danger">You have to confirm first!</p>
             </form>
             <a href="./login.jsp">Back to Login</a>
 
@@ -224,6 +227,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 </div>
 <script>
+    function FINE(){
+        alert("You got a new account SUCCESSFULLY!");
+    }
+
     function check() {
         var a = document.getElementById("confirmcheck");
         if (a.checked === true) {
