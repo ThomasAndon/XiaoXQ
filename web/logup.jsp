@@ -199,25 +199,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="col-md-6 log">
             <form method="post" action="./logup">
                 <h5>User Name</h5>
-                <input type="text" value="" name="Name">
+                <input id="namee" type="text" value="" name="Name" onblur="NISBL()">
+                <h5 id="ename" style="color: red;display: none">Please Enter your <b>name</b>!</h5>
                 <h5>Gender</h5>
                 <%--                <input type="text" value="" name="Gender">--%>
-                Male<input type="radio" name="Gender" value="male">&nbsp;&nbsp;
+                Male<input type="radio" name="Gender" value="male" checked>&nbsp;&nbsp;
                 Famale<input type="radio" name="Gender" value="famale">
                 <br><br>
                 <h5>Account</h5>
-                <input type="text" value="" name="Account">
+                <input id="account" type="text" value="" name="Account" onblur="AISBL()">
+                <h5 id="eaccount" style="color: red;display: none">Please Enter your <b>account</b>!</h5>
                 <h5>Password</h5>
-                <input id="P" type="text" value="" name="Password">
-                <span style="color: red" position:="" absolute="" id="PT"></span>
-                <h5>Address</h5>
+                <input id="password" type="text" value="" name="Password" onblur="PISBL()">
+                <span style="color: red" position:="" absolute="" id="PT"></span><br>
+                <h5 id="epassword"  style="color: red;display: none">Please Enter your <b>password</b>!</h5>
+                <h5>Address</h5><h6>(can be blank)</h6>
                 <input type="text" value="" name="Address"><br>
                 <input type="checkbox" id="confirmcheck" class="checkbox" onclick="check()" style="float: left; width: 20px" data-toggle="popover" title="">
                 <span style="overflow: auto">
                     <p>I accept the <a href="eula.html" target="_blank">end user license agreement</a> and <a href="t&c.html" target="_blank">terms and conditions</a></p>
                 </span>
 
-                <input type="submit" value="Register" onclick="FINE()" disabled="disabled" id="regbtn"><p id="havetoprompt" class="alert alert-danger">You have to confirm first!</p>
+                <input aria-disabled="true" type="submit" value="Register" onclick="FINE()" disabled="disabled" id="regbtn"><p id="havetoprompt" class="alert alert-danger">You have to confirm first!</p>
             </form>
             <a href="./login.jsp">Back to Login</a>
 
@@ -231,10 +234,48 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         alert("You got a new account SUCCESSFULLY!");
     }
 
+    function NISBL(){
+        if(document.getElementById("namee").value==""){
+            document.getElementById("ename").style.display="block";
+            document.getElementById("regbtn").disabled="disabled";
+        }else {
+            document.getElementById("ename").style.display="none";
+            if(document.getElementById("eaccount").style.display=="none"&&document.getElementById("epassword").style.display=="none"&&document.getElementById("confirmcheck").checked === true){
+                document.getElementById("regbtn").removeAttribute("disabled");
+            }
+        }
+    }
+
+    function AISBL(){
+        if(document.getElementById("account").value==""){
+            document.getElementById("eaccount").style.display="block";
+            document.getElementById("regbtn").disabled="disabled";
+        }else {
+            document.getElementById("eaccount").style.display="none";
+            if(document.getElementById("ename").style.display=="none"&&document.getElementById("epassword").style.display=="none"&&document.getElementById("confirmcheck").checked === true){
+                document.getElementById("regbtn").removeAttribute("disabled");
+            }
+        }
+    }
+
+    function PISBL(){
+        if(document.getElementById("password").value==""){
+            document.getElementById("epassword").style.display="block";
+            document.getElementById("regbtn").disabled="disabled";
+        }else {
+            document.getElementById("epassword").style.display="none";
+            if(document.getElementById("ename").style.display=="none"&&document.getElementById("eaccount").style.display=="none"&&document.getElementById("confirmcheck").checked === true){
+                document.getElementById("regbtn").removeAttribute("disabled");
+            }
+        }
+    }
+
     function check() {
         var a = document.getElementById("confirmcheck");
         if (a.checked === true) {
-            document.getElementById("regbtn").removeAttribute("disabled");
+            if(document.getElementById("ename").style.display=="none"&&document.getElementById("eaccount").style.display=="none"&&document.getElementById("epassword").style.display=="none"){
+                document.getElementById("regbtn").removeAttribute("disabled");
+            }
             document.getElementById("havetoprompt").style.display="none";
         } else {
             document.getElementById("regbtn").disabled="disabled";
@@ -246,7 +287,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </script>
 <script>
-    document.getElementById('P')
+    document.getElementById('password')
         .addEventListener("keyup",function () {
             let pt = document.getElementById('PT');
             let submit = document.getElementById('register');
